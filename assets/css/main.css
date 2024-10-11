@@ -1,0 +1,27 @@
+/* Navigation buttons styling */
+.nav-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00FF41;  /* neon green for hacker aesthetic */
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0CFCE5;  /* neon cyan hover effect */
+    color: black;
+}
+
+/* Center the navigation */
+nav ul {
+    display: flex;
+    justify-content: center;  /* Center the nav items */
+    gap: 20px;  /* Space between the nav items */
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
