@@ -1,6 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: "Home"
 ---
+
+# Welcome to C1pherKn1ght
+
+This is the portfolio of Travis R. Lee, specializing in Red Teaming and Offensive Security tactics.
+
