@@ -20,8 +20,21 @@ nav ul {
     justify-content: center;  /* Center the nav items */
     gap: 20px;  /* Space between the nav items */
     padding: 0;
+    flex-wrap: wrap;  /* Ensure items wrap on small screens */
 }
 
 nav li {
     list-style: none;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 8px 16px;  /* Adjust padding for smaller screens */
+        font-size: 0.9em;  /* Slightly smaller font size */
+    }
+
+    nav ul {
+        gap: 10px;  /* Reduce gap between nav items */
+    }
 }
