@@ -31,35 +31,5 @@ nav li {
 @media (max-width: 600px) {
     .nav-button {
         padding: 8px 16px;  /* Adjust padding for smaller screens */
-        font-size: 0.9em;  /* Slightly smaller font size */
-    }
+        font-size: 0.9em;  /* Slightly sm
 
-    nav ul {
-        gap: 10px;  /* Reduce gap between nav items */
-    }
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode .nav-button {
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-.dark-mode .nav-button:hover {
-    background-color: #444;
-}
-
-/* Center and adjust the image */
-header img {
-    width: 150px; /* Size of the logo */
-    height: 150px; /* Ensures a square for proper circle cropping */
-    border-radius: 50%;  /* Create the circular shape */
-    object-fit: cover;  /* Ensures the image fills the circle, cropped if needed */
-    background-color: #fff;  /* Fills background if the logo has transparency */
-    display: block;
-    margin: 0 auto
