@@ -53,7 +53,7 @@ nav li {
     list-style: none;
 }
 
-/* Navigation buttons styling with red border */
+/* Navigation buttons styling with uniform width and red border */
 .nav-button {
     text-decoration: none;
     padding: 12px 25px;
@@ -63,6 +63,9 @@ nav li {
     font-weight: bold;
     border: 2px solid #FF3131;  /* Red border */
     transition: background-color 0.3s ease;
+    width: 180px;  /* Uniform button width */
+    text-align: center;  /* Center text within buttons */
+    display: inline-block;  /* Ensure buttons align properly */
 }
 
 .nav-button:hover {
