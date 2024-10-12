@@ -5,23 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C1pherKn1ght | Red Team Tactics & Offensive Security Mastery | Travis R. Lee</title>
+    
     <link rel="stylesheet" href="/assets/css/main.css"> <!-- Link to your main.css -->
+    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Travis R. Lee (C1pherKn1ght) - Red Team Expert specializing in Offensive Security and Advanced Hacking Tactics.">
     <meta name="keywords" content="Offensive Security, Red Team, Travis R. Lee, C1pherKn1ght">
     <meta name="author" content="Travis R. Lee">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="C1pherKn1ght | Red Team Tactics & Offensive Security Mastery">
+    <meta property="og:description" content="Travis R. Lee's expertise in Red Teaming and Offensive Security.">
+    <meta property="og:image" content="/assets/images/C1pherKn1ght_logo.jpeg">
+    <meta property="og:url" content="https://travrl12.github.io/">
+    
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Header Section -->
+    <!-- Header Section with Lazy Loading for Logo -->
     <header>
         <div class="header-content">
-            <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo">
+            <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" loading="lazy">
             <h1>Travis R. Lee | Offensive Security | Red Team</h1>
             <p><strong>HTB: C1pherKn1ght</strong></p>
         </div>
+        
+        <!-- Main Navigation -->
         <nav>
             <ul>
                 <li><a href="/" class="nav-button">Home</a></li>
@@ -32,6 +45,13 @@
         </nav>
     </header>
 
+    <!-- Hero Section for Homepage with Interactive Text Typing Effect -->
+    <section class="hero">
+        <h2 id="intro-text"></h2>
+        <a href="/projects/" class="cta-button">View Projects</a>
+    </section>
+
+    <!-- Main Content Section -->
     <main>
         <!-- Content gets injected here -->
         {{ content }}
@@ -39,18 +59,20 @@
 
     <!-- Dark Mode Toggle Button -->
     <button id="darkModeToggle" class="toggle-button">
-        <i class="fas fa-adjust"></i> Toggle Dark Mode
+        <i class="fas fa-adjust" aria-hidden="true"></i> <span>Toggle Dark Mode</span>
     </button>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
         <div class="social-links">
-            <a href="https://github.com/Travrl12" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-            <a href="https://www.linkedin.com/in/travisrlee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a> |
+            <a href="https://www.linkedin.com/in/travisrlee" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
         </div>
     </footer>
 
+    <!-- JavaScript for Dark Mode and Interactive Text -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const darkModeToggle = document.getElementById('darkModeToggle');
@@ -64,6 +86,14 @@
                 document.body.classList.toggle('dark-mode');
                 const darkModeEnabled = document.body.classList.contains('dark-mode');
                 localStorage.setItem('darkMode', darkModeEnabled);
+            });
+
+            // Interactive typing effect for the hero section
+            const typed = new Typed('#intro-text', {
+                strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
             });
         });
     </script>
