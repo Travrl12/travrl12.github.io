@@ -6,6 +6,13 @@ header {
     padding: 2rem;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 header img {
     width: 150px;  /* Width of the logo */
     height: auto;  /* Maintain aspect ratio */
