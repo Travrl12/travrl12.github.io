@@ -77,9 +77,9 @@ footer {
     background-color: #f4f4f4;
 }
 
-/* Faded Red for Light Mode Background */
+/* Red-Gray Tint for Light Mode Background */
 body {
-    background-color: #ffe6e6;  /* Light faded red */
+    background-color: #d9cfcf;  /* Red leaning towards gray */
     color: black;
 }
 
