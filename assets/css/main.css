@@ -18,9 +18,8 @@ header img {
 
 nav ul {
     display: flex;
-    flex-direction: column;  /* Stack buttons vertically */
-    align-items: center;  /* Center buttons */
-    gap: 10px;  /* Space between the buttons */
+    justify-content: center;  /* Center buttons horizontally */
+    gap: 20px;  /* Space between the buttons */
     padding: 0;
     list-style: none;
 }
@@ -49,6 +48,7 @@ nav ul {
     }
 
     nav ul {
+        flex-direction: column;  /* Stack buttons vertically on small screens */
         gap: 10px;  /* Reduce gap between nav items */
     }
 }
