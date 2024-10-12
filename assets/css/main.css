@@ -16,11 +16,16 @@ header img {
     margin-bottom: 1rem;  /* Space between logo and buttons */
 }
 
+/* Center the navigation */
 nav ul {
     display: flex;
-    justify-content: center;  /* Center buttons horizontally */
-    gap: 20px;  /* Space between the buttons */
+    justify-content: center;  /* Center the nav items */
+    gap: 20px;  /* Space between the nav items */
     padding: 0;
+    flex-wrap: wrap;  /* Ensure items wrap on small screens */
+}
+
+nav li {
     list-style: none;
 }
 
@@ -48,7 +53,6 @@ nav ul {
     }
 
     nav ul {
-        flex-direction: column;  /* Stack buttons vertically on small screens */
         gap: 10px;  /* Reduce gap between nav items */
     }
 }

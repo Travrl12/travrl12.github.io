@@ -11,14 +11,16 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="header-container">
             <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo">
             <h1>C1pherKn1ght</h1>
             <p>Travis R. Lee | Offensive Security | Red Team</p>
             <p><strong>HTB/GitHub: C1pherKn1ght</strong></p>
         </div>
+
+        <!-- Navigation Section -->
         <nav>
-            <ul>
+            <ul class="nav-buttons">
                 <li><a href="/" class="nav-button">Home</a></li>
                 <li><a href="/projects/" class="nav-button">Projects</a></li>
                 <li><a href="/about/" class="nav-button">About</a></li>
@@ -26,18 +28,22 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <!-- Content gets injected here -->
+        <h2>Welcome to C1pherKn1ght</h2>
+        <p>This is the portfolio of Travis R. Lee, specializing in Red Teaming and Offensive Security tactics.</p>
         {{ content }}
+        <button id="darkModeToggle">
+            <i class="fas fa-adjust"></i> Toggle Dark Mode
+        </button>
     </main>
-    <button id="darkModeToggle">
-        <i class="fas fa-adjust"></i> Toggle Dark Mode
-    </button>
+
     <footer>
         <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
         <a href="https://github.com/Travrl12" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
         <a href="https://www.linkedin.com/in/travisrlee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const darkModeToggle = document.getElementById('darkModeToggle');
