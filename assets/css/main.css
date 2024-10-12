@@ -44,7 +44,7 @@ header img {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;  /* Increased gap between buttons for better spacing */
     padding: 0;
     flex-wrap: wrap;
 }
@@ -105,7 +105,7 @@ footer p {
     }
 
     nav ul {
-        gap: 10px;
+        gap: 20px;  /* Reduced gap for mobile screens */
     }
 }
 
