@@ -24,13 +24,15 @@ header img {
     display: block;
 }
 
-/* Styling for Typed.js text */
+/* Typed.js text styling and height fix */
 #intro-text {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: black;
+    min-height: 50px;  /* Fixed height to prevent page jump */
+    overflow: hidden;  /* Prevent layout overflow */
 }
 
 /* Mobile fine-tuning for Typed.js */
@@ -44,7 +46,7 @@ header img {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;  /* Adjusted gap between buttons for better spacing */
+    gap: 20px;
     padding: 0;
     flex-wrap: wrap;
 }
@@ -61,11 +63,11 @@ nav li {
     color: black;
     border-radius: 5px;
     font-weight: bold;
-    border: 2px solid #FF3131;  /* Red border */
+    border: 2px solid #FF3131;
     transition: background-color 0.3s ease;
-    width: auto;  /* Flexible width */
+    width: auto;
     text-align: center;
-    display: inline-block; /* Display buttons in a row */
+    display: inline-block;
 }
 
 .nav-button:hover {
@@ -83,7 +85,7 @@ footer {
 
 /* Light Mode with Grayish Red Background */
 body {
-    background-color: #d9cfcf;  /* Grayish red background for cyber aesthetic */
+    background-color: #d9cfcf;
     color: black;
 }
 
@@ -103,12 +105,12 @@ footer p {
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 10px;  /* Smaller padding for mobile */
+        padding: 8px 10px;
         font-size: 0.9em;
     }
 
     nav ul {
-        gap: 10px;  /* Reduced gap on mobile */
+        gap: 10px;
     }
 }
 
@@ -126,7 +128,7 @@ body.dark-mode {
 .dark-mode .nav-button {
     background-color: #FF3131;
     color: #e0e0e0;
-    border: 2px solid #00FF41;  /* Green border for dark mode */
+    border: 2px solid #00FF41;
 }
 
 .dark-mode .nav-button:hover {
