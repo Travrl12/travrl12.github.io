@@ -53,3 +53,14 @@ body.dark-mode {
 .dark-mode .nav-button:hover {
     background-color: #444;
 }
+
+/* Center and adjust the image */
+header img {
+    width: 100px;
+    height: auto; /* Ensure the aspect ratio is maintained */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
