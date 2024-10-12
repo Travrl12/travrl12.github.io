@@ -7,20 +7,27 @@ header {
 }
 
 header img {
-    width: 140px;  /* Slightly decreased size for balance */
+    width: 140px;
     height: auto;
     background-color: #fff;
-    border-radius: 50%;  /* Circular background */
+    border-radius: 50%;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow */
-    margin-bottom: 0.8rem;  /* Less margin for balance */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+/* Main title styling for Travis R. Lee */
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 /* Center the navigation */
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 10px;  /* Reduced gap for a tighter layout */
+    gap: 10px;
     padding: 0;
     flex-wrap: wrap;
 }
@@ -32,8 +39,8 @@ nav li {
 /* Navigation buttons styling */
 .nav-button {
     text-decoration: none;
-    padding: 8px 15px;  /* Tighter padding for compact look */
-    background-color: #00FF41;  /* neon green for hacker aesthetic */
+    padding: 10px 20px;
+    background-color: #00FF41;
     color: black;
     border-radius: 5px;
     font-weight: bold;
@@ -41,28 +48,14 @@ nav li {
 }
 
 .nav-button:hover {
-    background-color: #0CFCE5;  /* neon cyan hover effect */
+    background-color: #0CFCE5;
     color: black;
-}
-
-/* Welcome Section Styling */
-main h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-main p {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
 }
 
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 7px 12px;  /* Adjust padding for smaller screens */
+        padding: 8px 16px;
         font-size: 0.9em;
     }
 

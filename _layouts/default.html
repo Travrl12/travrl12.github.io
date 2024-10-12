@@ -11,16 +11,16 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div>
+            <!-- Logo Section -->
             <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo">
-            <h1>C1pherKn1ght</h1>
-            <p>Travis R. Lee | Offensive Security | Red Team</p>
+            <!-- Main Title Now Larger and Centered -->
+            <h1>Travis R. Lee | Offensive Security | Red Team</h1>
             <p><strong>HTB/GitHub: C1pherKn1ght</strong></p>
         </div>
-
         <!-- Navigation Section -->
         <nav>
-            <ul class="nav-buttons">
+            <ul>
                 <li><a href="/" class="nav-button">Home</a></li>
                 <li><a href="/projects/" class="nav-button">Projects</a></li>
                 <li><a href="/about/" class="nav-button">About</a></li>
@@ -28,15 +28,16 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <h2>Welcome to C1pherKn1ght</h2>
-        <p>This is the portfolio of Travis R. Lee, specializing in Red Teaming and Offensive Security tactics.</p>
+        <!-- Content gets injected here -->
         {{ content }}
-        <button id="darkModeToggle">
-            <i class="fas fa-adjust"></i> Toggle Dark Mode
-        </button>
     </main>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle">
+        <i class="fas fa-adjust"></i> Toggle Dark Mode
+    </button>
 
     <footer>
         <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
@@ -62,3 +63,4 @@
     </script>
 </body>
 </html>
+
