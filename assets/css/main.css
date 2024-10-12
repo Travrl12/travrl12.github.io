@@ -54,12 +54,20 @@ body.dark-mode {
     background-color: #444;
 }
 
-/* Center and adjust the image */
+/* Center and adjust the logo with circular background */
+header {
+    display: flex;
+    justify-content: center;
+}
+
 header img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;  /* Create the circular shape */
-    object-fit: cover;  /* Ensure the image fills the circle */
+    width: 120px; /* Adjusted width */
+    height: auto;
+    background-color: #fff; /* Circular white background */
+    border-radius: 50%; /* Create circular shape */
+    padding: 20px; /* Padding to give space around the logo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
     display: block;
     margin: 0 auto;
 }
+
