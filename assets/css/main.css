@@ -56,12 +56,10 @@ body.dark-mode {
 
 /* Center and adjust the image */
 header img {
-    width: 140px; /* Slightly reduced width for better fit */
-    height: 140px; /* Matching height */
+    width: 140px;
+    height: 140px;
     border-radius: 50%;  /* Create the circular shape */
-    object-fit: contain;  /* Ensures the logo fits inside the circle */
-    background-color: #fff;  /* Background color for transparency */
-    padding: 15px;  /* Increased padding for proper spacing */
+    object-fit: cover;  /* Ensure the image fills the circle */
     display: block;
     margin: 0 auto;
 }
