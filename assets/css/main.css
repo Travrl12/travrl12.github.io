@@ -20,7 +20,7 @@ header img {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px; /* Increased spacing */
     padding: 0;
     flex-wrap: wrap;
 }
@@ -32,7 +32,7 @@ nav li {
 /* Navigation buttons styling */
 .nav-button {
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Increased padding */
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
@@ -48,8 +48,8 @@ nav li {
 /* Footer centering and spacing */
 footer {
     text-align: center;
-    margin-top: 3rem;
-    padding: 1rem;
+    margin-top: 4rem; /* Added more space */
+    padding: 2rem;
     background-color: #f4f4f4;
 }
 
