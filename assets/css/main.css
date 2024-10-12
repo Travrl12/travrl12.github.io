@@ -102,17 +102,32 @@ footer p {
     }
 }
 
+/* Light mode styles with cyber aesthetic */
+body {
+    background-color: #f0fff0; /* Light neon green tint to complement logo */
+    color: black;
+}
+
+header {
+    background: linear-gradient(135deg, #f0fff0, #e8ffe8); /* Light gradient for a cyber vibe */
+}
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
 }
 
+.dark-mode #intro-text {
+    color: #e0e0e0;  /* Ensures the title is visible in dark mode */
+}
+
+/* Cyber Red for Dark Mode Buttons */
 .dark-mode .nav-button {
-    background-color: #333;
+    background-color: #FF3131;  /* Cyber red for Red Team aesthetic */
     color: #e0e0e0;
 }
 
 .dark-mode .nav-button:hover {
-    background-color: #444;
+    background-color: #FF5151;  /* Slightly lighter red on hover */
 }
