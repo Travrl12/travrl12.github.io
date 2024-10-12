@@ -61,13 +61,14 @@ header {
 }
 
 header img {
-    width: 120px; /* Adjusted width */
+    width: 150px;  /* Slightly increased size for logo prominence */
     height: auto;
-    background-color: #fff; /* Circular white background */
-    border-radius: 50%; /* Create circular shape */
-    padding: 20px; /* Padding to give space around the logo */
+    background-color: #fff;
+    border-radius: 50%;  /* Create circular background */
+    padding: 10px;  /* Reduced padding for a cleaner look */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
     display: block;
     margin: 0 auto;
 }
+
 
