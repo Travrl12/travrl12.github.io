@@ -14,7 +14,7 @@ header {
 }
 
 header img {
-    width: 150px;  /* Logo size */
+    width: 150px;
     height: auto;
     background-color: #00FF41;
     border-radius: 50%;
@@ -36,7 +36,7 @@ header img {
 /* Mobile fine-tuning for Typed.js */
 @media (max-width: 600px) {
     #intro-text {
-        font-size: 1.2rem; /* Smaller size for mobile */
+        font-size: 1.2rem;
     }
 }
 
@@ -77,6 +77,12 @@ footer {
     background-color: #f4f4f4;
 }
 
+/* Faded Red for Light Mode Background */
+body {
+    background-color: #ffe6e6;  /* Light faded red */
+    color: black;
+}
+
 /* Dark mode footer contrast */
 body.dark-mode footer {
     background-color: #222;
@@ -102,16 +108,6 @@ footer p {
     }
 }
 
-/* Light mode styles with cyber aesthetic */
-body {
-    background-color: #f0fff0; /* Light neon green tint to complement logo */
-    color: black;
-}
-
-header {
-    background: linear-gradient(135deg, #f0fff0, #e8ffe8); /* Light gradient for a cyber vibe */
-}
-
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
@@ -119,15 +115,15 @@ body.dark-mode {
 }
 
 .dark-mode #intro-text {
-    color: #e0e0e0;  /* Ensures the title is visible in dark mode */
+    color: #e0e0e0;
 }
 
 /* Cyber Red for Dark Mode Buttons */
 .dark-mode .nav-button {
-    background-color: #FF3131;  /* Cyber red for Red Team aesthetic */
+    background-color: #FF3131;
     color: #e0e0e0;
 }
 
 .dark-mode .nav-button:hover {
-    background-color: #FF5151;  /* Slightly lighter red on hover */
+    background-color: #FF5151;
 }
