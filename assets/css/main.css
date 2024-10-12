@@ -1,7 +1,62 @@
-/* Navigation buttons styling with smaller size and row layout */
+/* Center and adjust the logo with circular background */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    background-color: #00FF41;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Styling for Typed.js text */
+#intro-text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+/* Mobile fine-tuning for Typed.js */
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Center the navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Adjusted gap between buttons for better spacing */
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    list-style: none;
+}
+
+/* Navigation buttons styling with smaller size and red border */
 .nav-button {
     text-decoration: none;
-    padding: 10px 15px; /* Smaller padding */
+    padding: 10px 15px;
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
@@ -18,19 +73,6 @@
     color: black;
 }
 
-/* Center the navigation and ensure row layout */
-nav ul {
-    display: flex;
-    justify-content: center;  /* Keep buttons in a row */
-    gap: 20px;  /* Adjusted gap between buttons */
-    padding: 0;
-    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
-}
-
-nav li {
-    list-style: none;
-}
-
 /* Footer centering and spacing */
 footer {
     text-align: center;
@@ -39,9 +81,9 @@ footer {
     background-color: #f4f4f4;
 }
 
-/* Light Mode with Purple Background */
+/* Light Mode with Grayish Red Background */
 body {
-    background-color: #ede7f6;  /* Light purple for cyber aesthetic */
+    background-color: #d9cfcf;  /* Grayish red background for cyber aesthetic */
     color: black;
 }
 
