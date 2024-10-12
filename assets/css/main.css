@@ -119,11 +119,11 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-/* Cyber Red for Dark Mode Buttons with Red Border */
+/* Cyber Red for Dark Mode Buttons with Green Border */
 .dark-mode .nav-button {
     background-color: #FF3131;
     color: #e0e0e0;
-    border: 2px solid #FF3131;  /* Red border for dark mode */
+    border: 2px solid #00FF41;  /* Green border for dark mode */
 }
 
 .dark-mode .nav-button:hover {
