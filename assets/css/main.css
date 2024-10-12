@@ -56,37 +56,10 @@ body.dark-mode {
 
 /* Center and adjust the image */
 header img {
-    width: 150px; /* Slightly larger for visibility */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: contain; /* Prevents cropping issues */
-    background-color: #fff; /* Avoids unwanted empty space */
+    width: 150px; /* Size of the logo */
+    height: 150px; /* Ensures a square for proper circle cropping */
+    border-radius: 50%;  /* Create the circular shape */
+    object-fit: cover;  /* Ensures the image fills the circle, cropped if needed */
+    background-color: #fff;  /* Fills background if the logo has transparency */
     display: block;
-    margin: 0 auto;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode .nav-button {
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-.dark-mode .nav-button:hover {
-    background-color: #444;
-}
-
-/* Center and adjust the image */
-header img {
-    width: 100px;
-    height: auto; /* Ensure the aspect ratio is maintained */
-    border-radius: 50%;
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    margin: 0 auto
