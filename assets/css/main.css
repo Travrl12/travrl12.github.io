@@ -24,15 +24,19 @@ header img {
     display: block;
 }
 
-/* Fine-tune Title for Mobile */
-.header-content h1 {
-    font-size: 2rem; /* Standard size */
-    margin: 0;
+/* Styling for Typed.js text */
+#intro-text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
 }
 
+/* Mobile fine-tuning for Typed.js */
 @media (max-width: 600px) {
-    .header-content h1 {
-        font-size: 1.5rem; /* Smaller size for mobile */
+    #intro-text {
+        font-size: 1.2rem; /* Smaller size for mobile */
     }
 }
 
