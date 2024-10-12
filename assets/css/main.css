@@ -15,10 +15,7 @@ header img {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for a subtle effect */
     margin-bottom: 1rem;  /* Space below the logo */
     display: block;  /* Display as block to enable centering */
-    margin-left: auto;  /* Center the logo horizontally */
-    margin-right: auto;  /* Center the logo horizontally */
 }
-
 
 /* Center the navigation */
 nav ul {
