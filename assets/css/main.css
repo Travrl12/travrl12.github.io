@@ -53,7 +53,7 @@ nav li {
     list-style: none;
 }
 
-/* Navigation buttons styling */
+/* Navigation buttons styling with red border */
 .nav-button {
     text-decoration: none;
     padding: 12px 25px;
@@ -61,6 +61,7 @@ nav li {
     color: black;
     border-radius: 5px;
     font-weight: bold;
+    border: 2px solid #FF3131;  /* Red border */
     transition: background-color 0.3s ease;
 }
 
@@ -77,9 +78,9 @@ footer {
     background-color: #f4f4f4;
 }
 
-/* Red-Gray Tint for Light Mode Background */
+/* Light Mode with Purple Background */
 body {
-    background-color: #d9cfcf;  /* Red leaning towards gray */
+    background-color: #ede7f6;  /* Light purple for cyber aesthetic */
     color: black;
 }
 
@@ -118,10 +119,11 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-/* Cyber Red for Dark Mode Buttons */
+/* Cyber Red for Dark Mode Buttons with Red Border */
 .dark-mode .nav-button {
     background-color: #FF3131;
     color: #e0e0e0;
+    border: 2px solid #FF3131;  /* Red border for dark mode */
 }
 
 .dark-mode .nav-button:hover {
