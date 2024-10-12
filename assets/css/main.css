@@ -16,7 +16,7 @@ header {
 header img {
     width: 150px;  /* Width of the logo */
     height: auto;  /* Maintain aspect ratio */
-    background-color: #fff;  /* White background */
+    background-color: #00FF41;  /* Same color as the buttons */
     border-radius: 50%;  /* Make the image round */
     padding: 10px;  /* Padding around the logo */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for a subtle effect */
