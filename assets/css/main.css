@@ -1,76 +1,34 @@
-/* Center and adjust the logo with circular background */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-header img {
-    width: 150px;
-    height: auto;
-    background-color: #00FF41;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-/* Styling for Typed.js text */
-#intro-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: black;
-}
-
-/* Mobile fine-tuning for Typed.js */
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
-}
-
-/* Center the navigation */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 50px;  /* Increased gap between buttons for better spacing */
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-nav li {
-    list-style: none;
-}
-
-/* Navigation buttons styling with uniform width and red border */
+/* Navigation buttons styling with smaller size and row layout */
 .nav-button {
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 10px 15px; /* Smaller padding */
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
     font-weight: bold;
     border: 2px solid #FF3131;  /* Red border */
     transition: background-color 0.3s ease;
-    width: 180px;  /* Uniform button width */
-    text-align: center;  /* Center text within buttons */
-    display: inline-block;  /* Ensure buttons align properly */
+    width: auto;  /* Flexible width */
+    text-align: center;
+    display: inline-block; /* Display buttons in a row */
 }
 
 .nav-button:hover {
     background-color: #0CFCE5;
     color: black;
+}
+
+/* Center the navigation and ensure row layout */
+nav ul {
+    display: flex;
+    justify-content: center;  /* Keep buttons in a row */
+    gap: 20px;  /* Adjusted gap between buttons */
+    padding: 0;
+    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
+}
+
+nav li {
+    list-style: none;
 }
 
 /* Footer centering and spacing */
@@ -103,12 +61,12 @@ footer p {
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 16px;
+        padding: 8px 10px;  /* Smaller padding for mobile */
         font-size: 0.9em;
     }
 
     nav ul {
-        gap: 20px;  /* Reduced gap for mobile screens */
+        gap: 10px;  /* Reduced gap on mobile */
     }
 }
 
