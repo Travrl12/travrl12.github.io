@@ -133,5 +133,22 @@ footer p {
     }
 }
 
+/* #intro-text styling to prevent page jumping during load */
+#intro-text {
+    visibility: hidden; /* Hide text initially */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 50px; /* Ensures space is reserved to prevent jump */
+    overflow: hidden;
+}
+
+/* Hide the blinking cursor */
+.typed-cursor {
+    opacity: 0;
+}
+
+
 
 
