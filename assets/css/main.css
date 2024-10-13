@@ -18,12 +18,13 @@ body.dark-mode #darkModeToggle i {
     color: #fff;  /* Icon color for dark mode */
 }
 
-/* Hero background styling */
+/* Background and padding for the hero section */
 .hero {
     background: url('/assets/images/hero-background.jpg') center/cover no-repeat;
     padding: 5rem 0;
 }
 
+/* Center and adjust the header content */
 .header-content {
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@ body.dark-mode #darkModeToggle i {
     text-align: center;
 }
 
+/* Logo styling */
 header img {
     width: 150px;
     height: auto;
@@ -85,12 +87,12 @@ nav li {
 
 /* Navigation buttons styling */
 .nav-button {
-    padding: 10px 15px;
+    text-decoration: none;
+    padding: 12px 25px; /* Increased padding */
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
     font-weight: bold;
-    border: 2px solid #FF3131;
     transition: background-color 0.3s ease;
     text-align: center;
     display: inline-block;
@@ -101,18 +103,41 @@ nav li {
     color: black;
 }
 
+/* HTB profile button styling */
+.htb-button {
+    text-decoration: none;
+    padding: 12px 25px; /* Match the size of other buttons */
+    background-color: #800080; /* Purple color */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.htb-button:hover {
+    background-color: #9932CC; /* Lighter purple on hover */
+    color: white;
+}
+
 /* Footer centering and spacing */
 footer {
     text-align: center;
-    margin-top: 4rem;
     padding: 2rem;
     background-color: #f4f4f4;
 }
 
 /* Light Mode with Grayish Red Background */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     background-color: #d9cfcf;
     color: black;
+}
+
+main {
+    flex: 1;
 }
 
 /* Dark mode footer contrast */
