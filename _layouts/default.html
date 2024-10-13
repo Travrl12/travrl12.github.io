@@ -87,10 +87,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             const darkModeToggle = document.getElementById('darkModeToggle');
             const introText = document.getElementById('intro-text');
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-            // Set initial color and mode on load
-            if (isDarkMode || isDarkMode === null) {  // Load dark mode by default
+            // Load dark mode preference from localStorage, default to dark mode
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled || darkModeEnabled === null) {
                 document.body.classList.add('dark-mode');
                 introText.style.color = '#00FF41';  // Neon green for dark mode
             } else {
@@ -100,11 +100,11 @@
             // Dark mode toggle button functionality
             darkModeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
-                const darkModeEnabled = document.body.classList.contains('dark-mode');
-                localStorage.setItem('darkMode', darkModeEnabled);
+                const darkModeStatus = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', darkModeStatus);
 
                 // Update Typed.js text color dynamically
-                if (darkModeEnabled) {
+                if (darkModeStatus) {
                     introText.style.color = '#00FF41';  // Neon green for dark mode
                 } else {
                     introText.style.color = '#FF3131';  // Red for light mode
@@ -118,7 +118,7 @@
                 backSpeed: 30,
                 loop: true,
                 onStart: function () {
-                    introText.style.visibility = 'visible'; // Show text when Typed.js starts
+                    introText.style.visibility = 'visible'; // Ensure text is visible when Typed.js starts
                 },
                 preStringTyped: function () {
                     // Update color dynamically for Typed.js
@@ -134,5 +134,6 @@
 </body>
 
 </html>
+
 
 
