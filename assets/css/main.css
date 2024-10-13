@@ -1,4 +1,4 @@
-/* Dark Mode Toggle Button */
+/* Dark Mode Toggle Button - Sticky */
 #darkModeToggle {
     position: fixed;
     top: 20px;
@@ -7,7 +7,7 @@
     border: none;
     cursor: pointer;
     font-size: 1.5rem;  /* Icon size */
-    z-index: 1000;  /* Ensures it's on top */
+    z-index: 1000;  /* Keeps it on top of other content */
 }
 
 #darkModeToggle i {
