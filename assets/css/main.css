@@ -8,7 +8,6 @@
     cursor: pointer;
     font-size: 1.5rem;  /* Icon size */
     z-index: 1000;  /* Keeps it on top of other content */
-}
 
 #darkModeToggle i {
     color: #000;  /* Icon color for light mode */
@@ -42,15 +41,18 @@ header img {
     display: block;
 }
 
-/* Typed.js text styling and height fix */
+/* Welcome message color */
+#welcome-message {
+    color: #00FF41;  /* Neon green for welcome message only */
+}
+
+/* General text for intro */
 #intro-text {
-    color: #00FF41;  /* Neon green color matching the logo */
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    min-height: 50px;
-    overflow: hidden;
+    color: black;  /* Default color for light mode */
+}
+
+body.dark-mode #intro-text {
+    color: #e0e0e0;  /* Lighter color for dark mode */
 }
 
 /* Mobile fine-tuning for Typed.js */
@@ -149,4 +151,6 @@ body.dark-mode {
 
 .dark-mode .nav-button:hover {
     background-color: #FF5151;
+}
+
 }
