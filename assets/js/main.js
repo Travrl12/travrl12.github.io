@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const introText = document.getElementById('intro-text');
 
     // Load dark mode preference from localStorage, default to dark mode
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-    if (darkModeEnabled || darkModeEnabled === null) {
+    if (darkModeEnabled || localStorage.getItem('darkMode') === null) {
         document.body.classList.add('dark-mode');
         introText.style.color = '#00FF41';  // Neon green for dark mode
     } else {
@@ -43,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-});
+};
+
