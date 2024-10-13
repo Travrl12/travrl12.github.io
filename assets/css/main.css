@@ -48,7 +48,7 @@ main {
     }
 }
 
-/* Fix: Social Icons - Ensure they stay fixed at the top right */
+/* Social Icons - Ensure they stay fixed at the top right */
 .social-icons {
     position: fixed; /* Make sure it stays in the top-right */
     top: 20px;
