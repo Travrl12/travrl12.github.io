@@ -1,30 +1,29 @@
-/* Flexbox layout for sticky footer */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+/* Dark Mode Toggle Button - Sticky */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;  /* Icon size */
+    z-index: 1000;  /* Keeps it on top of other content */
 }
 
-main {
-    flex: 1;
+#darkModeToggle i {
+    color: #000;  /* Icon color for light mode */
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
+body.dark-mode #darkModeToggle i {
+    color: #fff;  /* Icon color for dark mode */
 }
 
-footer .social-links {
-    margin-top: 10px;
+/* Hero background styling */
+.hero {
+    background: url('/assets/images/hero-background.jpg') center/cover no-repeat;
+    padding: 5rem 0;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Center and adjust the header content */
 .header-content {
     display: flex;
     flex-direction: column;
@@ -32,7 +31,6 @@ footer p {
     text-align: center;
 }
 
-/* Logo styling */
 header img {
     width: 150px;
     height: auto;
@@ -54,31 +52,48 @@ body.dark-mode h1, body.dark-mode h2 {
     color: #00FF41;  /* Neon green color for dark mode */
 }
 
-/* Typed.js text styling */
+/* Typed.js text styling and height fix */
 #intro-text {
+    color: #00FF41;  /* Neon green color matching the logo in dark mode */
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    overflow: hidden;
 }
 
-/* Typed.js text color for light mode */
-body:not(.dark-mode) #intro-text {
-    color: #FF3131;  /* Red color for light mode */
+/* Mobile fine-tuning for Typed.js */
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
 }
 
-/* Typed.js text color for dark mode */
-body.dark-mode #intro-text {
-    color: #00FF41;  /* Neon green color for dark mode */
+/* Center the navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    list-style: none;
 }
 
 /* Navigation buttons styling */
 .nav-button {
-    text-decoration: none;
-    padding: 12px 25px; /* Increased padding */
+    padding: 10px 15px;
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
     font-weight: bold;
+    border: 2px solid #FF3131;
     transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
 }
 
 .nav-button:hover {
@@ -86,43 +101,62 @@ body.dark-mode #intro-text {
     color: black;
 }
 
-/* HTB profile button styling */
-.htb-button {
-    text-decoration: none;
-    padding: 12px 25px; /* Match the size of other buttons */
-    background-color: #800080; /* Purple color */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+/* Footer centering and spacing */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
 }
 
-.htb-button:hover {
-    background-color: #9932CC; /* Lighter purple on hover */
-    color: white;
+/* Light Mode with Grayish Red Background */
+body {
+    background-color: #d9cfcf;
+    color: black;
+}
+
+/* Dark mode footer contrast */
+body.dark-mode footer {
+    background-color: #222;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
-    .nav-button, .htb-button {
-        padding: 10px 20px;
+    .nav-button {
+        padding: 8px 10px;
         font-size: 0.9em;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
     }
+}
 
-    nav ul li {
-        margin-bottom: 10px;
-    }
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
 
-    header img {
-        width: 120px;
-    }
+.dark-mode #intro-text {
+    color: #00FF41;  /* Ensure intro text is also green in dark mode */
+}
 
-    #intro-text {
-        font-size: 1.2rem;
-    }
+/* Cyber Red for Dark Mode Buttons with Green Border */
+.dark-mode .nav-button {
+    background-color: #FF3131;
+    color: #e0e0e0;
+    border: 2px solid #00FF41;
+}
+
+.dark-mode .nav-button:hover {
+    background-color: #FF5151;
 }
