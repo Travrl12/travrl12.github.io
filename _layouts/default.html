@@ -76,7 +76,16 @@
                 strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
                 typeSpeed: 50,
                 backSpeed: 30,
-                loop: true
+                loop: true,
+                preStringTyped: function(arrayPos, self) {
+                    // Update color dynamically for Typed.js
+                    const introText = document.getElementById('intro-text');
+                    if (document.body.classList.contains('dark-mode')) {
+                        introText.style.color = '#00FF41';  // Neon green for dark mode
+                    } else {
+                        introText.style.color = '#FF3131';  // Red for light mode
+                    }
+                }
             });
         });
     </script>
