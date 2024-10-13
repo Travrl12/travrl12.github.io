@@ -2,6 +2,10 @@
 body {
     background-color: #d9cfcf; /* Light Mode Background */
     color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes up at least the full screen height */
 }
 
 body.dark-mode {
@@ -29,6 +33,12 @@ body.dark-mode {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 600px) {
+    .main-logo {
+        width: 100px; /* Reduce logo size for mobile */
+    }
+}
+
 /* Social Icons */
 .social-icons {
     position: absolute;
@@ -54,6 +64,16 @@ body.dark-mode .social-icons a {
     object-fit: cover;
     border-radius: 50%;
     background: none;
+}
+
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 8px; /* Reduce gap between social icons */
+    }
+
+    .social-icons a {
+        font-size: 1.3rem; /* Reduce icon size on mobile */
+    }
 }
 
 /* Navigation Buttons */
@@ -86,14 +106,22 @@ body.dark-mode .nav-button {
     border: 2px solid #00FF41; /* Green Border in Dark Mode */
 }
 
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 6px 10px; /* Reduce padding for buttons on mobile */
+        width: 90%; /* Ensure buttons scale properly on small screens */
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
     background-color: #f4f4f4;
     padding: 2rem;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
+    clear: both; /* Ensure it clears floats/content */
+    box-sizing: border-box;
 }
 
 body.dark-mode footer {
@@ -114,22 +142,37 @@ footer p {
     border-radius: 50%;
 }
 
+@media (max-width: 600px) {
+    footer {
+        padding: 1rem; /* Adjust padding on smaller screens */
+    }
+
+    .footer-logo {
+        width: 30px; /* Reduce footer logo size on mobile */
+    }
+}
+
+/* Typography for Main Text */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
 /* Mobile-friendly Adjustments */
 @media (max-width: 600px) {
-    .main-logo {
-        width: 120px;
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
     }
 
-    .social-icons {
-        gap: 10px;
-    }
-
-    .social-icons a {
-        font-size: 1.5rem;
-    }
-
-    .nav-button {
-        padding: 8px 15px;
+    p {
+        font-size: 0.9rem; /* Adjust paragraph size for mobile */
     }
 }
 
@@ -144,9 +187,37 @@ footer p {
     overflow: hidden;
 }
 
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem; /* Adjust intro-text size for mobile */
+    }
+}
+
 /* Hide the blinking cursor */
 .typed-cursor {
     opacity: 0;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #FF3131; /* Red in light mode */
+}
+
+body.dark-mode .toggle-button {
+    color: #00FF41; /* Green in dark mode */
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        font-size: 1.5rem; /* Adjust toggle button size for mobile */
+    }
 }
 
 

@@ -21,19 +21,15 @@
 </head>
 
 <body>
-    <!-- Dark Mode Toggle Button -->
     <button id="darkModeToggle" class="toggle-button">
         <i class="fas fa-adjust" aria-hidden="true"></i>
     </button>
 
-    <!-- Header Section with Hero Background -->
     <header class="hero">
         <div class="header-content">
-            <!-- Main Logo (Header) -->
             <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" class="main-logo" loading="lazy">
             <h2 id="intro-text"></h2>
 
-            <!-- Social Icons Section -->
             <div class="social-icons">
                 <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
@@ -48,7 +44,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="/" class="nav-button">Home</a></li>
@@ -65,7 +60,6 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
         <div class="social-links">
@@ -87,7 +81,6 @@
             const introText = document.getElementById('intro-text');
             const darkModeToggle = document.getElementById('darkModeToggle');
             
-            // Default to dark mode on page load
             document.body.classList.add('dark-mode');
             localStorage.setItem('darkMode', true);
 
@@ -97,19 +90,19 @@
                 localStorage.setItem('darkMode', darkModeEnabled);
             });
 
-            // Interactive typing effect for the hero section
             const typed = new Typed('#intro-text', {
                 strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
                 typeSpeed: 50,
                 backSpeed: 30,
                 loop: true,
+                onStart: function () {
+                    introText.style.visibility = 'visible'; // Show text when Typed.js starts
+                },
                 preStringTyped: function(arrayPos, self) {
-                    // Update color dynamically for Typed.js
-                    const introText = document.getElementById('intro-text');
                     if (document.body.classList.contains('dark-mode')) {
-                        introText.style.color = '#00FF41';  // Neon green for dark mode
+                        introText.style.color = '#00FF41';
                     } else {
-                        introText.style.color = '#FF3131';  // Red for light mode
+                        introText.style.color = '#FF3131';
                     }
                 }
             });
@@ -118,4 +111,5 @@
 </body>
 
 </html>
+
 
