@@ -1,9 +1,21 @@
-/* Center and adjust the logo with circular background */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;  /* Icon size */
+    z-index: 1000;  /* Ensures it's on top */
+}
+
+#darkModeToggle i {
+    color: #000;  /* Icon color for light mode */
+}
+
+body.dark-mode #darkModeToggle i {
+    color: #fff;  /* Icon color for dark mode */
 }
 
 /* Hero background styling */
@@ -30,26 +42,6 @@ header img {
     display: block;
 }
 
-/* Dark Mode Toggle Button */
-#darkModeToggle {
-    position: fixed;
-    top: 20px; /* Moves it to the top */
-    right: 20px; /* Aligns it to the right */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;  /* Smaller icon size */
-    z-index: 1000;  /* Keeps it above other content */
-}
-
-#darkModeToggle i {
-    color: #000;  /* Icon color for light mode */
-}
-
-body.dark-mode #darkModeToggle i {
-    color: #fff;  /* Icon color for dark mode */
-}
-
 /* Typed.js text styling and height fix */
 #intro-text {
     font-size: 1.5rem;
@@ -57,8 +49,8 @@ body.dark-mode #darkModeToggle i {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: black;
-    min-height: 50px;  /* Fixed height to prevent page jump */
-    overflow: hidden;  /* Prevent layout overflow */
+    min-height: 50px;
+    overflow: hidden;
 }
 
 /* Mobile fine-tuning for Typed.js */
@@ -72,7 +64,7 @@ body.dark-mode #darkModeToggle i {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;  /* Adjusted gap between buttons for better spacing */
+    gap: 20px;
     padding: 0;
     flex-wrap: wrap;
 }
@@ -81,9 +73,8 @@ nav li {
     list-style: none;
 }
 
-/* Navigation buttons styling with smaller size and red border */
+/* Navigation buttons styling */
 .nav-button {
-    text-decoration: none;
     padding: 10px 15px;
     background-color: #00FF41;
     color: black;
@@ -91,7 +82,6 @@ nav li {
     font-weight: bold;
     border: 2px solid #FF3131;
     transition: background-color 0.3s ease;
-    width: auto;
     text-align: center;
     display: inline-block;
 }
@@ -131,7 +121,7 @@ footer p {
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 10px;  /* Smaller padding for mobile */
+        padding: 8px 10px;
         font-size: 0.9em;
     }
 
