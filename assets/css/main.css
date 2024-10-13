@@ -30,145 +30,24 @@ header img {
     display: block;
 }
 
-/* Typed.js text styling and height fix */
-#intro-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: black;
-    min-height: 50px;  /* Fixed height to prevent page jump */
-    overflow: hidden;  /* Prevent layout overflow */
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px; /* Moves it to the top */
+    right: 20px; /* Aligns it to the right */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;  /* Smaller icon size */
+    z-index: 1000;  /* Keeps it above other content */
 }
 
-/* Mobile fine-tuning for Typed.js */
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
+#darkModeToggle i {
+    color: #000;  /* Icon color for light mode */
 }
 
-/* Center the navigation */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;  /* Adjusted gap between buttons for better spacing */
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-nav li {
-    list-style: none;
-}
-
-/* Navigation buttons styling with smaller size and red border */
-.nav-button {
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #00FF41;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 2px solid #FF3131;
-    transition: background-color 0.3s ease;
-    width: auto;
-    text-align: center;
-    display: inline-block;
-}
-
-.nav-button:hover {
-    background-color: #0CFCE5;
-    color: black;
-}
-
-/* Footer centering and spacing */
-footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
-/* Light Mode with Grayish Red Background */
-body {
-    background-color: #d9cfcf;
-    color: black;
-}
-
-/* Dark mode footer contrast */
-body.dark-mode footer {
-    background-color: #222;
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 10px;  /* Smaller padding for mobile */
-        font-size: 0.9em;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode #intro-text {
-    color: #e0e0e0;
-}
-
-/* Cyber Red for Dark Mode Buttons with Green Border */
-.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41;
-}
-
-.dark-mode .nav-button:hover {
-    background-color: #FF5151;
-}/* Center and adjust the logo with circular background */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* Hero background styling */
-.hero {
-    background: url('/assets/images/hero-background.jpg') center/cover no-repeat;
-    padding: 5rem 0;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-header img {
-    width: 150px;
-    height: auto;
-    background-color: #00FF41;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    display: block;
+body.dark-mode #darkModeToggle i {
+    color: #fff;  /* Icon color for dark mode */
 }
 
 /* Typed.js text styling and height fix */
