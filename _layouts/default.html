@@ -89,7 +89,7 @@
             
             // Load dark mode preference from localStorage
             const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-            if (darkModeEnabled) {
+            if (darkModeEnabled || darkModeEnabled === null) {  // Load dark mode by default
                 document.body.classList.add('dark-mode');
             }
 
@@ -123,3 +123,4 @@
 </body>
 
 </html>
+

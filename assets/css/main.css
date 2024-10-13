@@ -122,12 +122,14 @@ body.dark-mode .nav-button {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Ensure all elements are centered */
     background-color: #f4f4f4;
     padding: 2rem;
     width: 100%;
-    text-align: center;
     box-sizing: border-box;
-    position: relative;
 }
 
 body.dark-mode footer {
@@ -136,10 +138,12 @@ body.dark-mode footer {
 
 footer .social-links {
     margin-top: 10px;
+    text-align: center;
 }
 
 footer p {
     margin: 0;
+    text-align: center;
 }
 
 .footer-logo {
