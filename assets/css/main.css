@@ -185,7 +185,16 @@ p {
     }
 }
 
-
+/* #intro-text styling to prevent page jumping during load */
+#intro-text {
+    visibility: hidden; /* Hide text initially */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 50px; /* Reserve space to prevent jumping */
+    overflow: hidden;
+}
 
 @media (max-width: 600px) {
     #intro-text {
@@ -195,7 +204,8 @@ p {
 
 /* Hide the blinking cursor */
 .typed-cursor {
-    opacity: 0;
+    opacity: 0; /* Set opacity to 0 to hide the cursor */
+    display: none; /* Alternatively, use display: none to remove it */
 }
 
 /* Dark Mode Toggle Button */
