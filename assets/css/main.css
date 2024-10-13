@@ -1,3 +1,21 @@
+/* Flexbox layout to ensure footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* This makes the main content take up remaining space */
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
 /* Dark Mode Toggle Button - Sticky */
 #darkModeToggle {
     position: fixed;
@@ -63,6 +81,28 @@ body.dark-mode h1, body.dark-mode h2 {
     overflow: hidden;
 }
 
+/* Hide the blinking cursor */
+.typed-cursor {
+    opacity: 0; /* Hides the cursor */
+}
+
+/* HTB profile button styling */
+.htb-button {
+    text-decoration: none;
+    padding: 12px 25px; /* Match the size of other buttons */
+    background-color: #800080; /* Purple color */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid #9932CC; /* Slightly lighter purple border */
+}
+
+.htb-button:hover {
+    background-color: #9932CC; /* Lighter purple on hover */
+    color: white;
+}
+
 /* Mobile fine-tuning for Typed.js */
 @media (max-width: 600px) {
     #intro-text {
@@ -124,39 +164,3 @@ footer .social-links {
     margin-top: 10px;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 10px;
-        font-size: 0.9em;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode #intro-text {
-    color: #00FF41;  /* Ensure intro text is also green in dark mode */
-}
-
-/* Cyber Red for Dark Mode Buttons with Green Border */
-.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41;
-}
-
-.dark-mode .nav-button:hover {
-    background-color: #FF5151;
-}
