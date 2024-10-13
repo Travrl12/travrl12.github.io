@@ -90,7 +90,7 @@
 
             // Load dark mode preference from localStorage, default to dark mode
             const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-            if (darkModeEnabled || darkModeEnabled === null) {
+            if (darkModeEnabled || localStorage.getItem('darkMode') === null) {
                 document.body.classList.add('dark-mode');
                 introText.style.color = '#00FF41';  // Neon green for dark mode
             } else {
@@ -104,11 +104,7 @@
                 localStorage.setItem('darkMode', darkModeStatus);
 
                 // Update Typed.js text color dynamically
-                if (darkModeStatus) {
-                    introText.style.color = '#00FF41';  // Neon green for dark mode
-                } else {
-                    introText.style.color = '#FF3131';  // Red for light mode
-                }
+                introText.style.color = darkModeStatus ? '#00FF41' : '#FF3131';
             });
 
             // Initialize Typed.js for typing effect
@@ -122,11 +118,7 @@
                 },
                 preStringTyped: function () {
                     // Update color dynamically for Typed.js
-                    if (document.body.classList.contains('dark-mode')) {
-                        introText.style.color = '#00FF41';  // Neon green for dark mode
-                    } else {
-                        introText.style.color = '#FF3131';  // Red for light mode
-                    }
+                    introText.style.color = document.body.classList.contains('dark-mode') ? '#00FF41' : '#FF3131';
                 }
             });
         });
@@ -134,7 +126,3 @@
 </body>
 
 </html>
-
-
-
-
