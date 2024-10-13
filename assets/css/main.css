@@ -202,7 +202,6 @@ p {
 
 /* #intro-text styling to prevent page jumping during load */
 #intro-text {
-    visibility: hidden; /* Hide text initially */
     font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
