@@ -28,48 +28,36 @@ footer {
     display: flex;
     justify-content: center;  /* Centers icons horizontally */
     align-items: center;  /* Aligns icons vertically */
-    gap: 20px;  /* Space between icons */
-    margin-top: 1rem;  /* Space above social icons */
+    gap: 15px;  /* Space between icons */
+    margin-top: 1.5rem;  /* Space above social icons */
 }
 
-/* Style for each icon (GitHub, LinkedIn, HTB) */
+/* Style for each icon (GitHub, LinkedIn) */
 .social-icons a {
     color: #00FF41;
     font-size: 2rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; /* Standardizing padding for hover consistency */
+    padding: 10px;
+    transition: transform 0.3s ease;
 }
 
+.social-icons a:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+/* HTB icon */
 .social-icons img {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
-    background-color: transparent;
-    padding: 0; /* Remove extra padding */
-}
-
-/* HTB Icon Hover Box Fix */
-.htb-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; /* Ensures hover box is similar to font icons */
-}
-
-.htb-link:hover img {
-    transform: scale(1.1); /* Adds a hover effect */
     transition: transform 0.3s ease;
 }
 
-/* Adjusting the margin of the header-content to push social icons closer to the title */
-.header-content {
-    margin-bottom: 1rem;
+.social-icons img:hover {
+    transform: scale(1.1); /* Consistent hover effect for image icon */
 }
 
-/* Dark Mode Toggle Button - Sticky with rotation on hover */
+/* Dark Mode Toggle Button - Sticky */
 #darkModeToggle {
     position: fixed;
     top: 20px;
@@ -82,11 +70,11 @@ footer {
 }
 
 #darkModeToggle i {
-    color: #000;  /* Light mode icon color */
+    color: #000;  /* Icon color for light mode */
 }
 
 body.dark-mode #darkModeToggle i {
-    color: #fff;  /* Dark mode icon color */
+    color: #fff;  /* Icon color for dark mode */
 }
 
 #darkModeToggle:hover i {
@@ -100,15 +88,53 @@ body.dark-mode #darkModeToggle i {
     padding: 5rem 0;
 }
 
-/* Dark Mode - Footer Styling */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Hero Image */
+header img {
+    width: 150px;
+    height: auto;
+    background-color: #00FF41;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Dark Mode Footer Styling */
 body.dark-mode footer {
     background-color: #222;
 }
 
-.footer p {
+footer p {
     margin: 0;
 }
 
-/* Responsive mobile adjustments */
-@media (max-width:
+/* Light Mode with Grayish Red Background */
+body {
+    background-color: #d9cfcf;
+    color: black;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 10px; /* Reduce gap between icons */
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
 
