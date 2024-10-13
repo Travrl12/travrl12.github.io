@@ -44,11 +44,11 @@ header img {
 
 /* Typed.js text styling and height fix */
 #intro-text {
+    color: #00FF41;  /* Neon green color matching the logo */
     font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: black;
     min-height: 50px;
     overflow: hidden;
 }
