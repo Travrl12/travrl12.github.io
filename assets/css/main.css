@@ -36,6 +36,10 @@ footer {
 .social-icons a {
     color: #00FF41;
     font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Standardizing padding for hover consistency */
 }
 
 .social-icons img {
@@ -44,6 +48,20 @@ footer {
     object-fit: cover;
     border-radius: 50%;
     background-color: transparent;
+    padding: 0; /* Remove extra padding */
+}
+
+/* HTB Icon Hover Box Fix */
+.htb-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Ensures hover box is similar to font icons */
+}
+
+.htb-link:hover img {
+    transform: scale(1.1); /* Adds a hover effect */
+    transition: transform 0.3s ease;
 }
 
 /* Adjusting the margin of the header-content to push social icons closer to the title */
@@ -92,13 +110,5 @@ body.dark-mode footer {
 }
 
 /* Responsive mobile adjustments */
-@media (max-width: 600px) {
-    .social-icons {
-        gap: 10px;  /* Reduce spacing between social icons for mobile */
-    }
+@media (max-width:
 
-    .social-icons img {
-        width: 30px;  /* Smaller icons for mobile */
-        height: 30px;
-    }
-}
