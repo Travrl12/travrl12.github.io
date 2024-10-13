@@ -92,6 +92,24 @@ header img {
     color: #0CFCE5;
 }
 
+/* Replace HTB icon with C1pherKn1ght logo */
+.htb-icon, .htb-icon-footer {
+    width: 40px;  /* Adjust the size of your logo */
+    height: 40px;
+    object-fit: cover;  /* Ensures the image fits the area without distortion */
+    border-radius: 50%;  /* Keeps the logo circular */
+    background-color: transparent;
+    display: inline-block;
+}
+
+/* Ensure the logo image itself fits correctly */
+.htb-icon img, .htb-icon-footer img {
+    width: 100%; /* Ensures the image takes up the full width */
+    height: 100%; /* Ensures height fits */
+    border-radius: 50%; /* Keeps it circular */
+    object-fit: cover; /* Prevents stretching */
+}
+
 /* Change GitHub and LinkedIn icons to red in light mode */
 body:not(.dark-mode) .social-icons a {
     color: #FF3131;  /* Red for light mode */
@@ -99,15 +117,6 @@ body:not(.dark-mode) .social-icons a {
 
 .social-icons a:hover {
     color: #FF5151; /* Slightly lighter red on hover in light mode */
-}
-
-/* HTB Icon Styling */
-.htb-icon, .htb-icon-footer {
-    width: 40px;  /* Adjust the size of your logo */
-    height: 40px;
-    vertical-align: middle;
-    border-radius: 50%;
-    background-color: transparent;
 }
 
 /* Header text color for light mode */
