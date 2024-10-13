@@ -82,22 +82,33 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Dark Mode Toggle and Typed.js -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const introText = document.getElementById('intro-text');
             const darkModeToggle = document.getElementById('darkModeToggle');
-            
-            // Load dark mode preference from localStorage
-            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-            if (darkModeEnabled || darkModeEnabled === null) {  // Load dark mode by default
+            const introText = document.getElementById('intro-text');
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+            // Set initial color and mode on load
+            if (isDarkMode || isDarkMode === null) {  // Load dark mode by default
                 document.body.classList.add('dark-mode');
+                introText.style.color = '#00FF41';  // Neon green for dark mode
+            } else {
+                introText.style.color = '#FF3131';  // Red for light mode
             }
 
-            // Add event listener for dark mode toggle
+            // Dark mode toggle button functionality
             darkModeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
-                const darkModeStatus = document.body.classList.contains('dark-mode');
-                localStorage.setItem('darkMode', darkModeStatus); // Save preference
+                const darkModeEnabled = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', darkModeEnabled);
+
+                // Update Typed.js text color dynamically
+                if (darkModeEnabled) {
+                    introText.style.color = '#00FF41';  // Neon green for dark mode
+                } else {
+                    introText.style.color = '#FF3131';  // Red for light mode
+                }
             });
 
             // Initialize Typed.js for typing effect
@@ -109,7 +120,7 @@
                 onStart: function () {
                     introText.style.visibility = 'visible'; // Show text when Typed.js starts
                 },
-                preStringTyped: function (arrayPos, self) {
+                preStringTyped: function () {
                     // Update color dynamically for Typed.js
                     if (document.body.classList.contains('dark-mode')) {
                         introText.style.color = '#00FF41';  // Neon green for dark mode
@@ -123,4 +134,5 @@
 </body>
 
 </html>
+
 
