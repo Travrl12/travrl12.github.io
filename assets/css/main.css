@@ -23,6 +23,34 @@ footer {
     background-color: #f4f4f4;
 }
 
+/* Social Icons Section - Flexbox Row */
+.social-icons {
+    display: flex;
+    justify-content: center;  /* Centers icons horizontally */
+    align-items: center;  /* Aligns icons vertically */
+    gap: 20px;  /* Space between icons */
+    margin-top: 1rem;  /* Space above social icons */
+}
+
+/* Style for each icon (GitHub, LinkedIn, HTB) */
+.social-icons a {
+    color: #00FF41;
+    font-size: 2rem;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* Adjusting the margin of the header-content to push social icons closer to the title */
+.header-content {
+    margin-bottom: 1rem;
+}
+
 /* Dark Mode Toggle Button - Sticky with rotation on hover */
 #darkModeToggle {
     position: fixed;
@@ -54,200 +82,23 @@ body.dark-mode #darkModeToggle i {
     padding: 5rem 0;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-header img {
-    width: 150px;
-    height: auto;
-    background-color: #00FF41;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-/* Social Icons Styling */
-.social-icons {
-    margin: 1rem 0;
-    font-size: 2rem;
-}
-
-.social-icons a {
-    display: inline-block;
-    padding: 0.5rem;
-    border-radius: 50%;
-    margin: 0 10px;
-    color: #00FF41;  /* Default icon color in dark mode */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: rgba(0, 255, 65, 0.1);
-    color: #0CFCE5;
-}
-
-/* Replace HTB icon with C1pherKn1ght logo */
-.htb-icon, .htb-icon-footer {
-    width: 40px;  /* Adjust the size of your logo */
-    height: 40px;
-    object-fit: cover;  /* Ensures the image fits the area without distortion */
-    border-radius: 50%;  /* Keeps the logo circular */
-    background-color: transparent;
-    display: inline-block;
-}
-
-/* Ensure the logo image itself fits correctly */
-.htb-icon img, .htb-icon-footer img {
-    width: 100%; /* Ensures the image takes up the full width */
-    height: 100%; /* Ensures height fits */
-    border-radius: 50%; /* Keeps it circular */
-    object-fit: cover; /* Prevents stretching */
-}
-
-/* Change GitHub and LinkedIn icons to red in light mode */
-body:not(.dark-mode) .social-icons a {
-    color: #FF3131;  /* Red for light mode */
-}
-
-.social-icons a:hover {
-    color: #FF5151; /* Slightly lighter red on hover in light mode */
-}
-
-/* Header text color for light mode */
-h1, h2 {
-    color: #FF3131;
-    letter-spacing: 0.05rem;
-    line-height: 1.3;
-}
-
-/* Header text in dark mode */
-body.dark-mode h1, body.dark-mode h2 {
-    color: #00FF41;
-}
-
-/* Typed.js text styling */
-#intro-text {
-    color: #00FF41;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    min-height: 50px;
-    overflow: hidden;
-}
-
-/* Hide the blinking cursor */
-.typed-cursor {
-    opacity: 0;
-}
-
-/* Mobile fine-tuning for Typed.js */
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
-    
-    .hero {
-        padding: 2.5rem 0;
-    }
-    
-    .social-icons {
-        font-size: 1.5rem;
-    }
-}
-
-/* Center the navigation */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-nav li {
-    list-style: none;
-}
-
-/* Navigation buttons styling */
-.nav-button {
-    padding: 10px 15px;
-    background-color: #00FF41;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 2px solid #FF3131;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    display: inline-block;
-}
-
-.nav-button:hover {
-    background-color: #0CFCE5;
-    color: black;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Light Mode with Grayish Red Background */
-body {
-    background-color: #d9cfcf;
-    color: black;
-}
-
-/* Dark mode footer contrast */
+/* Dark Mode - Footer Styling */
 body.dark-mode footer {
     background-color: #222;
 }
 
-/* Mobile adjustments */
+.footer p {
+    margin: 0;
+}
+
+/* Responsive mobile adjustments */
 @media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 10px;
-        font-size: 0.9em;
+    .social-icons {
+        gap: 10px;  /* Reduce spacing between social icons for mobile */
     }
 
-    nav ul {
-        gap: 10px;
+    .social-icons img {
+        width: 30px;  /* Smaller icons for mobile */
+        height: 30px;
     }
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode #intro-text {
-    color: #00FF41;
-}
-
-.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41;
-}
-
-.dark-mode .nav-button:hover {
-    background-color: #FF5151;
 }
