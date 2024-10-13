@@ -18,18 +18,23 @@
     <meta property="og:url" content="https://travrl12.github.io/">
 
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
+    <!-- Dark Mode Toggle Button -->
     <button id="darkModeToggle" class="toggle-button">
         <i class="fas fa-adjust" aria-hidden="true"></i>
     </button>
 
+    <!-- Header Section with Hero Background -->
     <header class="hero">
         <div class="header-content">
+            <!-- Main Logo (Header) -->
             <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" class="main-logo" loading="lazy">
             <h2 id="intro-text"></h2>
 
+            <!-- Social Icons Section -->
             <div class="social-icons">
                 <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
@@ -44,6 +49,7 @@
         </div>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="/" class="nav-button">Home</a></li>
@@ -60,6 +66,7 @@
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
         <div class="social-links">
@@ -75,21 +82,25 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const introText = document.getElementById('intro-text');
             const darkModeToggle = document.getElementById('darkModeToggle');
             
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('darkMode', true);
+            // Load dark mode preference from localStorage
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled) {
+                document.body.classList.add('dark-mode');
+            }
 
+            // Add event listener for dark mode toggle
             darkModeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
-                const darkModeEnabled = document.body.classList.contains('dark-mode');
-                localStorage.setItem('darkMode', darkModeEnabled);
+                const darkModeStatus = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', darkModeStatus); // Save preference
             });
 
+            // Initialize Typed.js for typing effect
             const typed = new Typed('#intro-text', {
                 strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
                 typeSpeed: 50,
@@ -98,11 +109,13 @@
                 onStart: function () {
                     introText.style.visibility = 'visible'; // Show text when Typed.js starts
                 },
-                preStringTyped: function(arrayPos, self) {
+                preStringTyped: function (arrayPos, self) {
+                    // Update color dynamically for Typed.js
+                    const introText = document.getElementById('intro-text');
                     if (document.body.classList.contains('dark-mode')) {
-                        introText.style.color = '#00FF41';
+                        introText.style.color = '#00FF41';  // Neon green for dark mode
                     } else {
-                        introText.style.color = '#FF3131';
+                        introText.style.color = '#FF3131';  // Red for light mode
                     }
                 }
             });
@@ -111,5 +124,6 @@
 </body>
 
 </html>
+
 
 
