@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C1pherKn1ght | Red Team Tactics & Offensive Security Mastery | Travis R. Lee</title>
+    <title>C1pherKn1ght</title> <!-- Simplified title for SEO and fallback -->
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -30,6 +30,7 @@
     <header class="hero">
         <div class="header-content">
             <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" loading="lazy">
+            <h1 id="typed-title"></h1> <!-- Placeholder for Typed.js -->
             <h2 id="intro-text"></h2>
             <p><strong>HTB: C1pherKn1ght</strong></p>
         </div>
@@ -60,10 +61,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const darkModeToggle = document.getElementById('darkModeToggle');
-            
-            // Default to dark mode on page load
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('darkMode', true);
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
 
             darkModeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
@@ -71,16 +73,14 @@
                 localStorage.setItem('darkMode', darkModeEnabled);
             });
 
-            // Interactive typing effect for the hero section
-            const typed = new Typed('#intro-text', {
-                strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
+            // Initialize Typed.js for the dynamic title
+            new Typed('#typed-title', {
+                strings: ["C1pherKn1ght | Red Team Tactics & Offensive Security Mastery | Travis R. Lee"],
                 typeSpeed: 50,
-                backSpeed: 30,
+                backSpeed: 25,
                 loop: true
             });
         });
     </script>
 </body>
-
 </html>
-
