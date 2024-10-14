@@ -11,9 +11,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
-body.dark-mode {
-    background-color: #121212; /* Dark Mode Background */
-    color: #f0f0f0; /* Brighter color for better readability */
+/* Ensure Dark Mode applies immediately based on system preferences */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Dark Mode Background */
+        color: #f0f0f0; /* Brighter text color for dark mode */
+    }
 }
 
 /* Main content should take up available space */
@@ -87,8 +90,10 @@ p, ul, li {
     transform: scale(1.1); /* Hover effect for scaling */
 }
 
-body.dark-mode .social-icons a {
-    color: #00FF41; /* Green in Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .social-icons a {
+        color: #00FF41; /* Green in Dark Mode */
+    }
 }
 
 /* Remove padding from HTB icons */
@@ -134,10 +139,12 @@ nav ul {
     background-color: #0CFCE5;
 }
 
-body.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41; /* Green Border in Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .nav-button {
+        background-color: #FF3131;
+        color: #e0e0e0;
+        border: 2px solid #00FF41; /* Green Border in Dark Mode */
+    }
 }
 
 .nav-button:focus {
@@ -164,8 +171,10 @@ footer {
     box-sizing: border-box;
 }
 
-body.dark-mode footer {
-    background-color: #222;
+@media (prefers-color-scheme: dark) {
+    footer {
+        background-color: #222;
+    }
 }
 
 footer .social-links {
@@ -247,8 +256,10 @@ p {
     z-index: 2000; /* Ensure it's above other elements */
 }
 
-body.dark-mode .toggle-button {
-    color: #00FF41; /* Green in dark mode */
+@media (prefers-color-scheme: dark) {
+    .toggle-button {
+        color: #00FF41; /* Green in dark mode */
+    }
 }
 
 @media (max-width: 600px) {
