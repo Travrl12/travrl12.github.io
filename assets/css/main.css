@@ -21,6 +21,11 @@ main {
     flex-grow: 1; /* Allows the main content to expand and push the footer down */
 }
 
+/* Center all headings */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 /* Header Section */
 .hero {
     display: flex;
@@ -181,7 +186,6 @@ footer p {
 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 p {
@@ -246,4 +250,3 @@ body.dark-mode .toggle-button {
         font-size: 1.5rem; /* Adjust toggle button size for mobile */
     }
 }
-
