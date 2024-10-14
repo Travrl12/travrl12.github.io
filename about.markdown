@@ -12,6 +12,10 @@ Beyond the tech world, I’m a family man, deeply rooted in my **faith**, and bl
 
 For me, cybersecurity isn’t just about hacking systems—it's about **working together** to solve problems creatively, protecting what matters, and constantly pushing myself to learn and grow. Whether it's in my professional life or with my family, I'm always looking to make meaningful contributions and help others.
 
+### My Mission
+
+My mission is to apply my growing expertise in **offensive security** to help organizations identify vulnerabilities and secure their digital assets. I am passionate about solving complex security challenges while working alongside a team. I'm actively seeking opportunities with a company that values teamwork, growth, and innovation, where I can contribute to **red teaming** and **penetration testing** efforts while aligning with a culture of integrity and continuous improvement.
+
 ### My Resume
 
 Feel free to <a href="https://travrl12.github.io/assets/Resume/Travis__Lee_Resume_2024.pdf" target="_blank">Download My Resume</a> for more details about my experience and skills.
@@ -40,4 +44,3 @@ My background in sports taught me the value of collaboration, and I bring that t
 ---
 
 Feel free to connect with me on [GitHub](https://github.com/Travrl12), [LinkedIn](https://www.linkedin.com/in/travisrlee), or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile to see my progress.
-
