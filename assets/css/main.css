@@ -257,3 +257,20 @@ body.dark-mode .toggle-button {
     }
 }
 
+/* Custom Styles for Meow and Fawn Images */
+.meow-image, .fawn-image {
+    max-width: 100%; /* Ensure the image is responsive on smaller screens */
+    height: auto; /* Maintain the original aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the images */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetics */
+}
+
+/* For larger screens (desktops), restrict the image size */
+@media (min-width: 768px) {
+    .meow-image, .fawn-image {
+        max-width: 70%; /* Restrict to 70% width on larger screens */
+    }
+}
