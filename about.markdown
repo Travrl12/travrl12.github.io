@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD022 MD041 -->
 ---
 layout: default
 title: "Get to Know Travis R. Lee"
