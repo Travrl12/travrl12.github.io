@@ -1,10 +1,9 @@
 ---
----
 layout: default
 title: "Get to Know Travis R. Lee"
 permalink: /about/
 ---
-<!-- markdownlint-disable MD003 -->
+
 ## About Me
 
 Hello! I'm Travis R. Lee, also known as C1pherKn1ght, and I'm at the beginning of an exciting journey into the world of cybersecurity, with a focus on offensive security and red teaming.
