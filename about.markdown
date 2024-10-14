@@ -11,8 +11,13 @@ Hello! I'm Travis R. Lee, also known as C1pherKn1ght, and I'm at the beginning o
 ### My Mission
 My mission is to apply my growing expertise in offensive security to help organizations identify vulnerabilities and secure their digital assets. I am passionate about solving complex security challenges while leading and collaborating within a team. I am actively seeking to join a company that shares my commitment to teamwork, growth, and innovation in the cybersecurity space, where I can contribute to red teaming and penetration testing efforts while aligning with a culture of integrity and continuous improvement.
 
+### My Resume
+Feel free to [Download My Resume](https://travrl12.github.io/assets/Resume/Travis__Lee_Resume_2024.pdf) for more details about my experience and skills.
+
+
 ### My Skills
 Here are the key skills I've gained from my training and work experience:
+
 - **Python**: Developing scripts for automation and penetration testing.
 - **HTML, CSS, JavaScript**: Used for building and securing web applications.
 - **Network Security Fundamentals**
@@ -26,6 +31,7 @@ I am currently seeking opportunities to match with an **employer** who values ha
 
 ### My Goals
 While I’m still early in my career, I’m committed to continuous learning and developing the skills needed to become an effective part of a red team. I’m currently exploring:
+
 - **Penetration testing** techniques and tools.
 - **Offensive security methodologies** like social engineering and exploit development.
 - **Cybersecurity fundamentals** to ensure a strong foundation.
