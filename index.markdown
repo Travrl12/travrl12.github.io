@@ -10,7 +10,10 @@ Welcome to the portfolio of Travis R. Lee, specializing in Red Teaming and Offen
 
 ## My Hack The Box Journey
 
-I've completed the following Hack The Box challenges:
+### Meow
+[Completed Meow Machine on Hack The Box](https://www.hackthebox.com/achievement/machine/2105172/393)  
+![Meow Machine](assets/images/meow.jpg)
 
-<!-- HTB Start -->
-<!-- HTB End -->
+### Fawn
+[Completed Fawn Machine on Hack The Box](https://www.hackthebox.com/achievement/machine/2105172/394)  
+![Fawn Machine](assets/images/fawn.jpg)
