@@ -1,3 +1,9 @@
+// Immediately apply dark mode based on system preference or localStorage before page load
+if (localStorage.getItem('darkMode') === 'true' || 
+    (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-mode');
+}
+
 window.onload = function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const introText = document.getElementById('intro-text');
@@ -25,9 +31,13 @@ window.onload = function () {
         }
     });
 
-    // Initialize Typed.js for typing effect
+    // Initialize Typed.js with the updated text
     const typed = new Typed('#intro-text', {
-        strings: ["Hi, I'm Travis R. Lee...", "Offensive Security Expert", "Red Team Professional"],
+        strings: [
+            "Hi, I'm Travis R. Lee...",
+            "Passionate About Ethical Hacking",
+            "Challenging Myself with Offensive Security Projects"
+        ],
         typeSpeed: 50,
         backSpeed: 30,
         loop: true,
@@ -44,5 +54,3 @@ window.onload = function () {
         }
     });
 };
-
-
