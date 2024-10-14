@@ -12,8 +12,8 @@ Welcome to the portfolio of Travis R. Lee, specializing in Red Teaming and Offen
 
 ### Meow
 [Completed Meow Machine on Hack The Box](https://www.hackthebox.com/achievement/machine/2105172/393)  
-![Meow Machine](assets/images/Meow.jpg)
+<img src="assets/images/Meow.jpg" alt="Meow Machine" class="meow-image">
 
 ### Fawn
 [Completed Fawn Machine on Hack The Box](https://www.hackthebox.com/achievement/machine/2105172/394)  
-![Fawn Machine](assets/images/Fawn.jpg)
+<img src="assets/images/Fawn.jpg" alt="Fawn Machine" class="fawn-image">
