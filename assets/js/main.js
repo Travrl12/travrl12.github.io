@@ -1,7 +1,7 @@
 // Immediately apply dark mode based on system preference or localStorage before page load
 if (localStorage.getItem('darkMode') === 'true' || 
     (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark-mode');
+    document.documentElement.classList.add('dark-mode');  // Apply to entire document
 }
 
 window.onload = function () {
@@ -11,7 +11,7 @@ window.onload = function () {
     // Load dark mode preference from localStorage, default to dark mode
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     if (darkModeEnabled || localStorage.getItem('darkMode') === null) {
-        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');  // Apply to entire document
         introText.style.color = '#00FF41';  // Neon green for dark mode
     } else {
         introText.style.color = '#FF3131';  // Red for light mode
@@ -19,8 +19,8 @@ window.onload = function () {
 
     // Dark mode toggle button functionality
     darkModeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-        const darkModeStatus = document.body.classList.contains('dark-mode');
+        document.documentElement.classList.toggle('dark-mode');  // Toggle globally
+        const darkModeStatus = document.documentElement.classList.contains('dark-mode');
         localStorage.setItem('darkMode', darkModeStatus);
 
         // Update Typed.js text color dynamically
@@ -31,7 +31,7 @@ window.onload = function () {
         }
     });
 
-    // Initialize Typed.js with the updated text
+    // Initialize Typed.js with updated text
     const typed = new Typed('#intro-text', {
         strings: [
             "Hi, I'm Travis R. Lee...",
@@ -46,7 +46,7 @@ window.onload = function () {
         },
         preStringTyped: function () {
             // Update color dynamically for Typed.js
-            if (document.body.classList.contains('dark-mode')) {
+            if (document.documentElement.classList.contains('dark-mode')) {
                 introText.style.color = '#00FF41';  // Neon green for dark mode
             } else {
                 introText.style.color = '#FF3131';  // Red for light mode
