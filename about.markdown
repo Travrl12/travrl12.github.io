@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD022 MD041 -->
 ---
 layout: default
 title: "Get to Know Travis R. Lee"
@@ -6,16 +5,19 @@ permalink: /about/
 ---
 
 ## About Me
-Hello! I'm Travis R. Lee, also known as C1pherKn1ght, and I'm at the beginning of an exciting journey into the world of cybersecurity, with a focus on offensive security and red teaming.
 
-### My Mission
-My mission is to apply my growing expertise in offensive security to help organizations identify vulnerabilities and secure their digital assets. I am passionate about solving complex security challenges while leading and collaborating within a team. I am actively seeking to join a company that shares my commitment to teamwork, growth, and innovation in the cybersecurity space, where I can contribute to red teaming and penetration testing efforts while aligning with a culture of integrity and continuous improvement.
+Hi, I'm Travis R. Lee—though in the cybersecurity world, I'm often known as **C1pherKn1ght**. I’m at the start of an exciting journey into **offensive security**, specifically **red teaming** and **penetration testing**. What excites me most about this field is the opportunity to think like an attacker, find vulnerabilities, and help organizations strengthen their defenses before any real threats emerge.
+
+Beyond the tech world, I’m a family man, deeply rooted in my **faith**, and blessed to be surrounded by loved ones—including my two amazing dogs, who always keep life interesting! I also love spending time outdoors—whether it's **relaxing at the beach** or heading out on a hike, being in nature helps me recharge. Growing up, I played sports, and being part of a team has been a huge part of my life ever since. That teamwork mentality is something I bring with me into every project I work on.
+
+For me, cybersecurity isn’t just about hacking systems—it's about **working together** to solve problems creatively, protecting what matters, and constantly pushing myself to learn and grow. Whether it's in my professional life or with my family, I'm always looking to make meaningful contributions and help others.
 
 ### My Resume
-Feel free to [Download My Resume](https://travrl12.github.io/assets/Resume/Travis__Lee_Resume_2024.pdf) for more details about my experience and skills.
 
+Feel free to <a href="https://travrl12.github.io/assets/Resume/Travis__Lee_Resume_2024.pdf" target="_blank">Download My Resume</a> for more details about my experience and skills.
 
 ### My Skills
+
 Here are the key skills I've gained from my training and work experience:
 
 - **Python**: Developing scripts for automation and penetration testing.
@@ -29,16 +31,13 @@ Here are the key skills I've gained from my training and work experience:
 
 I am currently seeking opportunities to match with an **employer** who values hands-on cybersecurity skills and is looking for a dedicated professional eager to grow in offensive security.
 
-### My Goals
-While I’m still early in my career, I’m committed to continuous learning and developing the skills needed to become an effective part of a red team. I’m currently exploring:
-
-- **Penetration testing** techniques and tools.
-- **Offensive security methodologies** like social engineering and exploit development.
-- **Cybersecurity fundamentals** to ensure a strong foundation.
-
 ### Why Offensive Security?
-There’s something incredibly rewarding about understanding how systems can be exploited, not for malicious reasons, but to build stronger defenses. The offensive side of cybersecurity allows me to creatively solve problems, think critically, and always stay one step ahead of potential attackers.
+
+What excites me about offensive security is the challenge of **thinking like an attacker** to help organizations strengthen their defenses. It's not just about finding vulnerabilities—it's about **staying ahead of threats** and working as part of a team to solve complex problems creatively.
+
+My background in sports taught me the value of collaboration, and I bring that team-first mentality to every project. Combined with my **work experience**—where I've honed my technical skills and ability to work under pressure—I’m able to tackle challenges effectively while contributing to a larger mission. Offensive security allows me to combine my love for **problem-solving** with my desire to **make an impact**—helping companies protect what matters most.
 
 ---
 
 Feel free to connect with me on [GitHub](https://github.com/Travrl12), [LinkedIn](https://www.linkedin.com/in/travisrlee), or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile to see my progress.
+
