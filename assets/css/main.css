@@ -26,6 +26,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+/* Left-align paragraphs and lists for readability */
+p, ul, li {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Ensures text doesn't stretch too wide on larger screens */
+}
+
 /* Header Section */
 .hero {
     display: flex;
@@ -183,22 +191,16 @@ footer p {
 }
 
 /* Typography for Main Text */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
 p {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: center;
+    text-align: left; /* Ensure paragraphs are left-aligned for readability */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Set a max-width to avoid wide lines on large screens */
 }
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.5rem; /* Adjust heading size for mobile */
-    }
-
     p {
         font-size: 0.9rem; /* Adjust paragraph size for mobile */
     }
