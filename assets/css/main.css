@@ -19,6 +19,10 @@ body.dark-mode {
 /* Main content should take up available space */
 main {
     flex-grow: 1; /* Allows the main content to expand and push the footer down */
+    max-width: 1000px; /* Limit the width of content on large screens */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Add some padding on the sides for spacing */
 }
 
 /* Center all headings */
@@ -252,3 +256,4 @@ body.dark-mode .toggle-button {
         font-size: 1.5rem; /* Adjust toggle button size for mobile */
     }
 }
+
