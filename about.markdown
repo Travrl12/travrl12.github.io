@@ -4,11 +4,26 @@ title: "Get to Know Travis R. Lee"
 permalink: /about/
 ---
 
+<!-- markdownlint-disable MD012 -->
+
 ## About Me
 
 Hello! I'm Travis R. Lee, also known as C1pherKn1ght, and I'm at the beginning of an exciting journey into the world of cybersecurity, with a focus on offensive security and red teaming.
 
 I recently earned my **Google Cybersecurity Certificate**, which sparked my passion for exploring vulnerabilities and learning how to think like an attacker to strengthen defenses. Soon after, I joined **Hack The Box**, where I’ve been sharpening my skills through hands-on labs and challenges. Every challenge fuels my desire to become a proficient Red Team expert.
+
+### My Skills
+
+Here are the key skills I've gained from my training and work experience:
+
+- **Network Security Fundamentals**
+- **Risk Assessment & Vulnerability Management**
+- **SIEM Tools**: Experience in analyzing events and responding to security incidents.
+- **Linux & SQL**
+- **Incident Response**
+- **Project Coordination & Leadership**
+
+I am currently seeking opportunities to match with an **employer** who values hands-on cybersecurity skills and is looking for a dedicated professional eager to grow in offensive security.
 
 ### My Goals
 
