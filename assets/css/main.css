@@ -177,7 +177,7 @@ nav ul {
 }
 
 .nav-button {
-    padding: 10px 20px;
+    padding: 10px 20px;  /* Regular padding for larger screens */
     background-color: #00FF41;
     color: black;
     border-radius: 5px;
@@ -185,7 +185,7 @@ nav ul {
     text-align: center;
     transition: background-color 0.3s ease;
     border: 2px solid #FF3131;
-    margin-top: 15px;  /* Add space above the buttons if needed */
+    margin-top: 15px;  /* Add space above the buttons */
 }
 
 .nav-button:hover {
@@ -203,10 +203,16 @@ html.dark-mode .nav-button {
     outline-offset: 2px;
 }
 
+/* Mobile Button Styling */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 6px 10px;
-        width: 90%;
+        padding: 8px 12px;  /* Reduced padding for smaller screens */
+        font-size: 0.9rem;  /* Slightly smaller font size to fit text */
+        width: auto;  /* Allow the button to adjust width dynamically */
+    }
+
+    nav ul {
+        gap: 10px;  /* Slightly reduced gap between buttons */
     }
 }
 
