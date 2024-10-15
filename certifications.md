@@ -12,7 +12,7 @@ As I continue to advance my expertise in **offensive security** and **ethical ha
 
 <div class="certifications">
     <a href="https://coursera.org/share/4970cf570c15d208359b7d0d20f310db" target="_blank">
-        <img src="/assets/images/google-cybersecurity-badge.png" alt="Google Cybersecurity Certification" class="cert-badge">
+        <img src="/assets/images/Google Cybersecurity Certificate 2024.png" alt="Google Cybersecurity Certification" class="cert-badge">
         <p>View Google Cybersecurity Certification on Coursera</p>
     </a>
 </div>
