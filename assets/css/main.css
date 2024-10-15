@@ -377,7 +377,6 @@ html.dark-mode .toggle-button {
 .certifications p a {
     display: inline-block;  /* Ensures the link behaves like a block-level element */
     text-decoration: none;  /* Remove underline from the link */
-    color: inherit;  /* Inherit color from global link styling */
 }
 
 .certifications p a:hover {
