@@ -32,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+/* Add space above main headings */
+#intro-text {
+    margin-top: 40px;  /* Adds space above "Welcome to C1pherKn1ght" heading */
+}
+
+main h2 {
+    margin-top: 40px;  /* Adds space above main headings like on the "About" page */
+}
+
 /* Centered hyperlinks */
 .centered-links {
     text-align: center;
@@ -147,6 +156,7 @@ nav ul {
     text-align: center;
     transition: background-color 0.3s ease;
     border: 2px solid #FF3131;
+    margin-top: 15px;  /* Add space above the buttons if needed */
 }
 
 .nav-button:hover {
@@ -232,7 +242,7 @@ p {
 #intro-text {
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 40px;  /* Updated: adds space above the intro text */
     margin-bottom: 1rem;
     min-height: 50px;
     overflow: hidden;
@@ -277,7 +287,7 @@ html.dark-mode .toggle-button {
 
 /* Meow and Fawn Images */
 .meow-image, .fawn-image {
-    max-width: 90%; /* Make images smaller on all devices */
+    max-width: 90%;
     height: auto;
     display: block;
     margin-left: auto;
