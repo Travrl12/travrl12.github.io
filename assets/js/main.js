@@ -43,17 +43,6 @@ window.onload = function () {
         ],
         typeSpeed: 50,
         backSpeed: 30,
-        loop: true,
-        onStart: function () {
-            introText.style.visibility = 'visible';  // Ensure text is visible when Typed.js starts
-        },
-        preStringTyped: function () {
-            // Update color dynamically for Typed.js
-            if (document.documentElement.classList.contains('dark-mode')) {
-                introText.style.color = '#00FF41';  // Neon green for dark mode
-            } else {
-                introText.style.color = '#FF3131';  // Red for light mode
-            }
-        }
+        loop: true
     });
 };
