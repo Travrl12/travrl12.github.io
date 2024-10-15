@@ -12,7 +12,7 @@ Beyond the tech world, I’m a family man, deeply rooted in my **faith**, and bl
 
 For me, cybersecurity isn’t just about hacking systems—it's about **working together** to solve problems creatively, protecting what matters, and constantly pushing myself to learn and grow. Whether it's in my professional life or with my family, I'm always looking to make meaningful contributions and help others.
 
-To see more... <a href="https://travrl12.github.io/assets/Resume/Travis__Lee_Resume_2024.pdf" target="_blank">Download My Resume</a> for more details about my experience and skills.
+To see more... <a href="https://github.com/Travrl12/travrl12.github.io/blob/master/assets/Resume/Travis_Lee_Resume_2024.pdf" target="_blank">Download My Resume</a> for more details about my experience and skills.
 
 ### My Mission
 
