@@ -17,7 +17,9 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 ### Meow
 
 <div class="centered-links">
-    <a href="https://app.hackthebox.com/achievement/machine/2105172/393" target="_blank">Completed Meow Machine on Hack The Box</a>
+    <a href="https://app.hackthebox.com/achievement/machine/2105172/393" target="_blank" rel="noopener noreferrer">
+        Completed Meow Machine on Hack The Box
+    </a>
 </div>
 
 ![Meow Achievement](assets/images/Meow.jpg){: .meow-image }
@@ -25,7 +27,9 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 ### Fawn
 
 <div class="centered-links">
-    <a href="https://app.hackthebox.com/achievement/machine/2105172/394" target="_blank">Completed Fawn Machine on Hack The Box</a>
+    <a href="https://app.hackthebox.com/achievement/machine/2105172/394" target="_blank" rel="noopener noreferrer">
+        Completed Fawn Machine on Hack The Box
+    </a>
 </div>
 
 ![Fawn Achievement](assets/images/Fawn.jpg){: .fawn-image }
@@ -33,5 +37,3 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 ---
 
 I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on [GitHub](https://github.com/Travrl12) and [LinkedIn](https://www.linkedin.com/in/travisrlee) or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile for the latest progress!
-
-
