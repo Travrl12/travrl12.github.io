@@ -1,19 +1,20 @@
-/* Body Backgrounds for Light and Dark Modes */
+/* Light and Dark Modes for html and body */
+html, body {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for both */
+}
+
+/* Light Mode (default) */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure body takes up the full screen height */
     background-color: #d9cfcf; /* Light Mode Background */
-    color: black;
+    color: black; /* Light mode text color */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
-/* Dark Mode for the entire document (html) */
-html.dark-mode {
-    background-color: #121212; /* Dark mode background */
+/* Dark Mode for the entire document (html and body) */
+html.dark-mode, body.dark-mode {
+    background-color: #121212; /* Dark Mode Background */
     color: #f0f0f0; /* Bright text for dark mode */
 }
 
@@ -68,7 +69,7 @@ p, ul, li {
     }
 }
 
-/* Social Icons - Ensure they stay fixed at the top right */
+/* Social Icons */
 .social-icons {
     position: fixed; /* Make sure it stays in the top-right */
     top: 20px;
