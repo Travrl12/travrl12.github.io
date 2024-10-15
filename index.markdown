@@ -6,7 +6,9 @@ permalink: /
 
 ## Welcome to C1pherKn1ght
 
-Welcome to the portfolio of **Travis R. Lee**, also known as **C1pherKn1ght**. Here, I showcase my journey in **offensive security**, red teaming, and ethical hacking. I'm passionate about penetration testing, problem-solving, and helping organizations secure their systems by thinking like an attacker.
+Welcome to the portfolio of Travis R. Lee, specializing in Red Teaming and Offensive Security tactics.
+
+I’m passionate about offensive security and red teaming. This portfolio highlights my progress, my completed projects, and my journey through Hack The Box and other platforms as I hone my skills in penetration testing and ethical hacking.
 
 ---
 
@@ -18,7 +20,7 @@ Welcome to the portfolio of **Travis R. Lee**, also known as **C1pherKn1ght**. H
     <a href="https://app.hackthebox.com/achievement/machine/2105172/393" target="_blank">Completed Meow Machine on Hack The Box</a>
 </div>
 
-![Meow Achievement](assets/images/Meow.jpg)
+![Meow Achievement](assets/images/Meow.jpg){: .meow-image }
 
 ### Fawn
 
@@ -26,9 +28,10 @@ Welcome to the portfolio of **Travis R. Lee**, also known as **C1pherKn1ght**. H
     <a href="https://app.hackthebox.com/achievement/machine/2105172/394" target="_blank">Completed Fawn Machine on Hack The Box</a>
 </div>
 
-![Fawn Achievement](assets/images/Fawn.jpg)
+![Fawn Achievement](assets/images/Fawn.jpg){: .fawn-image }
 
 ---
 
-Feel free to explore more of my work and connect with me on [GitHub](https://github.com/Travrl12) or [LinkedIn](https://www.linkedin.com/in/travisrlee).
+I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on [GitHub](https://github.com/Travrl12) and [LinkedIn](https://www.linkedin.com/in/travisrlee) or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile for the latest progress!
+
 

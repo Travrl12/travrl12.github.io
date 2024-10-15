@@ -1,63 +1,63 @@
 /* Light and Dark Modes for html and body */
 html, body {
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for both */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light Mode (default) */
+/* Light Mode */
 body {
-    background-color: #d9cfcf; /* Light Mode Background */
-    color: black; /* Light mode text color */
+    background-color: #d9cfcf;
+    color: black;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Dark Mode for the entire document (html and body) */
+/* Dark Mode */
 html.dark-mode, body.dark-mode {
-    background-color: #121212; /* Dark Mode Background */
-    color: #f0f0f0; /* Bright text for dark mode */
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
 /* Main content should take up available space */
 main {
-    flex-grow: 1; /* Allows the main content to expand and push the footer down */
-    max-width: 1000px; /* Limit the width of content on large screens */
+    flex-grow: 1;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px; /* Add some padding on the sides for spacing */
+    padding: 0 20px;
 }
 
-/* Center all headings */
+/* Center headings */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Centered hyperlinks styling */
+/* Centered hyperlinks */
 .centered-links {
     text-align: center;
-    margin: 20px 0; /* Add spacing around links */
+    margin: 20px 0;
 }
 
 .centered-links a {
-    color: blue; /* Customize link color */
-    text-decoration: none; /* Remove underline */
+    color: blue;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem;
 }
 
 .centered-links a:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
 
-/* Left-align paragraphs and lists for readability */
+/* Left-align text */
 p, ul, li {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px; /* Ensures text doesn't stretch too wide on larger screens */
+    max-width: 800px;
 }
 
-/* Header Section */
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -65,8 +65,8 @@ p, ul, li {
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
-    margin: 0 auto; /* Center the hero section */
-    max-width: 100%; /* Ensure it doesn't overflow */
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 /* Main Logo */
@@ -75,42 +75,42 @@ p, ul, li {
     height: auto;
     border-radius: 50%;
     padding: 10px;
-    background-color: #00FF41; /* Neon Green Padding */
+    background-color: #00FF41;
     margin-bottom: 1rem;
-    object-fit: cover; /* Ensure proper scaling */
+    object-fit: cover;
 }
 
 @media (max-width: 600px) {
     .main-logo {
-        width: 100px; /* Reduce logo size for mobile */
+        width: 100px;
     }
 }
 
 /* Social Icons */
 .social-icons {
-    position: fixed; /* Make sure it stays in the top-right */
+    position: fixed;
     top: 20px;
     right: 20px;
     display: flex;
     gap: 15px;
-    z-index: 1000; /* Ensures it's on top of other elements */
+    z-index: 1000;
 }
 
 .social-icons a {
     font-size: 2rem;
-    color: #FF3131; /* Red in Light Mode */
-    transition: transform 0.3s ease; /* Add hover animation */
+    color: #FF3131;
+    transition: transform 0.3s ease;
 }
 
-social-icons a:hover {
-    transform: scale(1.1); /* Hover effect for scaling */
+.social-icons a:hover {
+    transform: scale(1.1);
 }
 
 html.dark-mode .social-icons a {
-    color: #00FF41; /* Green in Dark Mode */
+    color: #00FF41;
 }
 
-/* Remove padding from HTB icons */
+/* HTB icons */
 .social-icons img, .footer-logo {
     width: 40px;
     height: 40px;
@@ -121,11 +121,11 @@ html.dark-mode .social-icons a {
 
 @media (max-width: 600px) {
     .social-icons {
-        gap: 8px; /* Reduce gap between social icons */
+        gap: 8px;
     }
 
     .social-icons a {
-        font-size: 1.3rem; /* Reduce icon size on mobile */
+        font-size: 1.3rem;
     }
 }
 
@@ -146,7 +146,7 @@ nav ul {
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s ease;
-    border: 2px solid #FF3131; /* Red Border */
+    border: 2px solid #FF3131;
 }
 
 .nav-button:hover {
@@ -156,18 +156,18 @@ nav ul {
 html.dark-mode .nav-button {
     background-color: #FF3131;
     color: #e0e0e0;
-    border: 2px solid #00FF41; /* Green Border in Dark Mode */
+    border: 2px solid #00FF41;
 }
 
 .nav-button:focus {
-    outline: 3px dashed #00FF41; /* High visibility focus indicator */
+    outline: 3px dashed #00FF41;
     outline-offset: 2px;
 }
 
 @media (max-width: 600px) {
     .nav-button {
-        padding: 6px 10px; /* Reduce padding for buttons on mobile */
-        width: 90%; /* Ensure buttons scale properly on small screens */
+        padding: 6px 10px;
+        width: 90%;
     }
 }
 
@@ -176,9 +176,9 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center; /* Ensure all elements are centered */
+    align-items: center;
     background-color: #f4f4f4;
-    padding: 2rem 1rem; /* Adjust padding */
+    padding: 2rem 1rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -205,50 +205,49 @@ footer p {
 
 @media (max-width: 600px) {
     footer {
-        padding: 1rem; /* Adjust padding on smaller screens */
+        padding: 1rem;
     }
 
     .footer-logo {
-        width: 30px; /* Reduce footer logo size on mobile */
+        width: 30px;
     }
 }
 
-/* Typography for Main Text */
+/* Typography */
 p {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: left; /* Ensure paragraphs are left-aligned for readability */
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px; /* Set a max-width to avoid wide lines on large screens */
+    max-width: 800px;
 }
 
 @media (max-width: 600px) {
     p {
-        font-size: 0.9rem; /* Adjust paragraph size for mobile */
+        font-size: 0.9rem;
     }
 }
 
-/* #intro-text styling to prevent page jumping during load */
+/* Typed.js Intro Text */
 #intro-text {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    min-height: 50px; /* Reserve space to prevent jumping */
+    min-height: 50px;
     overflow: hidden;
 }
 
 @media (max-width: 600px) {
     #intro-text {
-        font-size: 1.2rem; /* Adjust intro-text size for mobile */
+        font-size: 1.2rem;
     }
 }
 
-/* Hide the blinking cursor */
+/* Hide blinking cursor */
 .typed-cursor {
-    opacity: 0; /* Set opacity to 0 to hide the cursor */
-    display: none; /* Alternatively, use display: none to remove it */
+    opacity: 0;
+    display: none;
 }
 
 /* Dark Mode Toggle Button */
@@ -260,43 +259,42 @@ p {
     border: none;
     cursor: pointer;
     font-size: 2rem;
-    color: #FF3131; /* Red in light mode */
-    padding: 10px; /* Improve clickable area */
+    color: #FF3131;
+    padding: 10px;
     border-radius: 50%;
-    z-index: 2000; /* Ensure it's above other elements */
+    z-index: 2000;
 }
 
 html.dark-mode .toggle-button {
-    color: #00FF41; /* Green in dark mode */
+    color: #00FF41;
 }
 
 @media (max-width: 600px) {
     .toggle-button {
-        font-size: 1.5rem; /* Adjust toggle button size for mobile */
+        font-size: 1.5rem;
     }
 }
 
-/* Custom Styles for Meow and Fawn Images */
+/* Meow and Fawn Images */
 .meow-image, .fawn-image {
-    max-width: 80%; /* Reduce the image size to 80% for desktop */
-    height: auto; /* Maintain the original aspect ratio */
+    max-width: 90%; /* Make images smaller on all devices */
+    height: auto;
     display: block;
     margin-left: auto;
-    margin-right: auto; /* Center the images */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetics */
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* For larger screens (desktops), restrict the image size */
 @media (min-width: 768px) {
     .meow-image, .fawn-image {
-        max-width: 60%; /* Restrict to 60% width on larger screens */
+        max-width: 70%;
     }
 }
 
-/* For mobile screens (small devices) */
-@media (max-width: 600px) {
+@media (min-width: 1024px) {
     .meow-image, .fawn-image {
-        max-width: 90%; /* Restrict to 90% width on smaller screens */
+        max-width: 50%;
     }
 }
+
