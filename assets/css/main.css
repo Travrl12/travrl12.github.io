@@ -309,6 +309,10 @@ html.dark-mode .toggle-button {
 }
 
 /* Certification Badge Styling */
+.certifications {
+    text-align: center;  /* Centers both the image and text link */
+}
+
 .cert-badge {
     max-width: 90%;
     height: auto;
@@ -329,6 +333,20 @@ html.dark-mode .toggle-button {
     .cert-badge {
         max-width: 50%;  /* Responsive scaling for larger screens */
     }
+}
+
+.certifications p {
+    margin-top: 10px;  /* Adds spacing above the link */
+    font-size: 1.2rem;  /* Slightly larger font for the link text */
+    color: #00FF41;     /* Link text color */
+}
+
+.certifications p a {
+    text-decoration: none;  /* Remove underline from the link */
+}
+
+.certifications p a:hover {
+    text-decoration: underline;  /* Add underline on hover */
 }
 
 /* Optional Hover Effect for Certification Badge */
