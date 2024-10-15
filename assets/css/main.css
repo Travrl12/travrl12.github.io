@@ -342,6 +342,7 @@ html.dark-mode .toggle-button {
     text-align: center;  /* Centers both the image and text link */
 }
 
+/* Badge Image */
 .cert-badge {
     max-width: 90%;
     height: auto;
@@ -352,6 +353,7 @@ html.dark-mode .toggle-button {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Matching other images' shadow */
 }
 
+/* Responsive Image Scaling */
 @media (min-width: 768px) {
     .cert-badge {
         max-width: 70%;  /* Responsive scaling for medium screens */
@@ -364,13 +366,18 @@ html.dark-mode .toggle-button {
     }
 }
 
+/* Certification Link Styling */
 .certifications p {
     margin-top: 10px;  /* Adds spacing above the link */
     font-size: 1.2rem;  /* Slightly larger font for the link text */
+    text-align: center;  /* Ensures the paragraph and its contents are centered */
+    width: 100%;  /* Forces the paragraph to take up the full width */
 }
 
 .certifications p a {
+    display: inline-block;  /* Ensures the link behaves like a block-level element */
     text-decoration: none;  /* Remove underline from the link */
+    color: inherit;  /* Inherit color from global link styling */
 }
 
 .certifications p a:hover {
