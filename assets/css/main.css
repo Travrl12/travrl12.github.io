@@ -308,3 +308,31 @@ html.dark-mode .toggle-button {
     }
 }
 
+/* Certification Badge Styling */
+.cert-badge {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Matching other images' shadow */
+}
+
+@media (min-width: 768px) {
+    .cert-badge {
+        max-width: 70%;  /* Responsive scaling for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .cert-badge {
+        max-width: 50%;  /* Responsive scaling for larger screens */
+    }
+}
+
+/* Optional Hover Effect for Certification Badge */
+.cert-badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
