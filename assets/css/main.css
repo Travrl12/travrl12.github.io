@@ -394,3 +394,12 @@ html.dark-mode .toggle-button {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+/* Custom styling for avatar or work-in-progress images */
+.avatar-image {
+    max-width: 150px;  /* Set a custom maximum width */
+    height: auto;  /* Keep aspect ratio */
+    display: block;  /* Ensures proper block-level rendering */
+    margin-left: auto;
+    margin-right: auto;  /* Centers the image */
+    border-radius: 50%;  /* Optional: Make the image circular, like an avatar */
+}

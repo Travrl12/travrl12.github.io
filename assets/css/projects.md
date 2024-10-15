@@ -14,5 +14,4 @@ You can find my Hack The Box profile [here](https://app.hackthebox.com/profile/2
 
 In addition to Hack The Box, I’ll be showcasing other projects related to offensive security, web development, and penetration testing tools soon. Stay tuned for exciting updates and new content!
 
-![Work in Progress](https://travrl12.github.io/assets/images/work-in-progress.png)
-
+![Work in Progress](https://travrl12.github.io/assets/images/work-in-progress.png){: .avatar-image}
