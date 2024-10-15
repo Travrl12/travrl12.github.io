@@ -17,7 +17,7 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 ### Meow
 
 <div class="centered-links">
-    <a href="https://app.hackthebox.com/achievement/machine/2105172/393" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.hackthebox.com/achievement/machine/2105172/394" target="_blank" rel="noopener noreferrer">
         Completed Meow Machine on Hack The Box
     </a>
 </div>
@@ -27,7 +27,7 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 ### Fawn
 
 <div class="centered-links">
-    <a href="https://app.hackthebox.com/achievement/machine/2105172/394" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.hackthebox.com/achievement/machine/2105172/393" target="_blank" rel="noopener noreferrer">
         Completed Fawn Machine on Hack The Box
     </a>
 </div>
