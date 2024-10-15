@@ -1,6 +1,7 @@
 /* Light and Dark Modes for html and body */
 html, body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for both */
+}
 
 /* Light Mode (default) */
 body {
@@ -101,7 +102,7 @@ p, ul, li {
     transition: transform 0.3s ease; /* Add hover animation */
 }
 
-.social-icons a:hover {
+social-icons a:hover {
     transform: scale(1.1); /* Hover effect for scaling */
 }
 
@@ -277,7 +278,7 @@ html.dark-mode .toggle-button {
 
 /* Custom Styles for Meow and Fawn Images */
 .meow-image, .fawn-image {
-    max-width: 100%; /* Ensure the image is responsive on smaller screens */
+    max-width: 80%; /* Reduce the image size to 80% for desktop */
     height: auto; /* Maintain the original aspect ratio */
     display: block;
     margin-left: auto;
@@ -289,25 +290,13 @@ html.dark-mode .toggle-button {
 /* For larger screens (desktops), restrict the image size */
 @media (min-width: 768px) {
     .meow-image, .fawn-image {
-        max-width: 70%; /* Restrict to 70% width on larger screens */
+        max-width: 60%; /* Restrict to 60% width on larger screens */
     }
 }
-}
 
-/* Custom Styles for Meow and Fawn Images */
-.meow-image, .fawn-image {
-    max-width: 100%; /* Ensure the image is responsive on smaller screens */
-    height: auto; /* Maintain the original aspect ratio */
-    display: block;
-    margin-left: auto;
-    margin-right: auto; /* Center the images */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetics */
-}
-
-/* For larger screens (desktops), restrict the image size */
-@media (min-width: 768px) {
+/* For mobile screens (small devices) */
+@media (max-width: 600px) {
     .meow-image, .fawn-image {
-        max-width: 70%; /* Restrict to 70% width on larger screens */
+        max-width: 90%; /* Restrict to 90% width on smaller screens */
     }
 }
