@@ -125,29 +125,24 @@ html.dark-mode a:visited {
 }
 
 /* Navigation Buttons */
-.nav-buttons {
+nav ul {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 4px; /* Small horizontal space between buttons */
+    justify-content: center;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin: 10px 0; /* Small vertical margin */
-    flex-wrap: wrap; /* Allows wrapping if needed on smaller screens */
 }
 
 .nav-button {
-    padding: 8px 10px; /* Compact padding for a tighter fit */
-    background-color: var(--color-primary);
+    padding: 10px 20px;  /* Regular padding for larger screens */
+    background-color: #00FF41;
     color: black;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
     transition: background-color 0.3s ease;
-    border: 2px solid var(--color-accent);
-    white-space: nowrap; /* Prevents line breaks */
-    font-size: 0.95rem; /* Slightly smaller font for compact look */
-    max-width: 120px; /* Limits button width for a uniform appearance */
+    border: 2px solid #FF3131;
+    margin-top: 15px;  /* Add space above the buttons */
 }
 
 .nav-button:hover {
@@ -155,23 +150,28 @@ html.dark-mode a:visited {
 }
 
 html.dark-mode .nav-button {
-    background-color: var(--color-accent);
+    background-color: #FF3131;
     color: #e0e0e0;
-    border: 2px solid var(--color-primary);
+    border: 2px solid #00FF41;
 }
 
-/* Responsive Button Adjustments for Small Screens */
+.nav-button:focus {
+    outline: 3px dashed #00FF41;
+    outline-offset: 2px;
+}
+
+/* Mobile Button Styling */
 @media (max-width: 600px) {
-    .nav-buttons {
-        gap: 3px; /* Smaller gap on mobile */
-    }
-    
     .nav-button {
-        padding: 6px 8px; /* Further reduced padding on mobile */
-        font-size: 0.85rem; /* Slightly smaller font size for mobile */
-        flex: 1; /* Allows buttons to stretch equally on small screens */
-        max-width: none; /* Removes max width on mobile for a full fit */
+        padding: 8px 12px;  /* Reduced padding for smaller screens */
+        font-size: 0.9rem;  /* Slightly smaller font size to fit text */
+        width: auto;  /* Allow the button to adjust width dynamically */
     }
+
+    nav ul {
+        gap: 10px;  /* Slightly reduced gap between buttons */
+    }
+}
 }
 
 /* Social Icons at the Top Right */
