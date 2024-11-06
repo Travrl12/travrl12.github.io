@@ -1,3 +1,4 @@
+import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -27,12 +28,22 @@ starting_point_tasks = []
 
 # Loop through each machine and extract its name (e.g., Meow, Fawn)
 for machine in machines:
-    name = machine.find_element_by_tag_name("h5").text  # Adjust this tag based on actual structure
-    starting_point_tasks.append(name)
+    try:
+        # Extract the machine name and additional details, if available
+        name = machine.find_element_by_tag_name("h5").text  # Adjust based on actual HTML tag
+        # Add other elements here as needed, like difficulty, completion date, etc.
+        starting_point_tasks.append({
+            "name": name,
+            # Add more keys here if additional details are extracted
+        })
+    except Exception as e:
+        print(f"Error extracting data from machine: {e}")
 
-# Print the names of all Starting Point tasks/machines
-print("Starting Point Tasks/Machines:", starting_point_tasks)
+# Save the list to a JSON file
+with open("htb_machines.json", "w") as json_file:
+    json.dump(starting_point_tasks, json_file, indent=4)
+
+print("HTB Machines data saved to 'htb_machines.json'.")
 
 # Close the browser after we're done
 driver.quit()
-
