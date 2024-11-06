@@ -37,8 +37,15 @@ function initializeTyped() {
     }
 }
 
+// Function to toggle the hamburger menu visibility
+function toggleHamburgerMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active'); // Toggle the 'active' class
+}
+
 window.onload = function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
+    const hamburgerButton = document.getElementById('hamburgerMenu');
 
     // Event listener for dark mode toggle button
     if (darkModeToggle) {
@@ -49,7 +56,13 @@ window.onload = function () {
         });
     }
 
+    // Event listener for hamburger menu toggle
+    if (hamburgerButton) {
+        hamburgerButton.addEventListener('click', toggleHamburgerMenu);
+    }
+
     // Initialize Typed.js for dynamic typing effect
     initializeTyped();
 };
+
 
