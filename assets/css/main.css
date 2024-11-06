@@ -1,4 +1,4 @@
-/* CSS Variables */
+/* CSS Variables for Light and Dark Modes */
 :root {
     --color-light-bg: #d9cfcf;
     --color-light-text: #000;
@@ -8,15 +8,16 @@
     --color-accent: #FF3131;
 }
 
-/* Ensure the whole page background toggles */
-body, html {
+/* Basic Page Setup */
+html, body {
     background-color: var(--color-light-bg);
     color: var(--color-light-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    min-height: 100vh;  /* Ensures the body takes the full height */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 html.dark-mode, body.dark-mode {
@@ -24,28 +25,21 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Remove button-like style from Dark Mode Toggle */
+/* Dark Mode Toggle Button */
 .toggle-button {
     position: fixed;
     top: 20px;
     left: 20px;
-    background: none;
-    border: none;
     cursor: pointer;
     font-size: 2rem;
     color: var(--color-accent);
-    padding: 0;
 }
 
 html.dark-mode .toggle-button {
     color: var(--color-primary);
 }
 
-.toggle-button:focus {
-    outline: none;
-}
-
-/* Header and Main Content */
+/* Header and Hero Section */
 .hero {
     text-align: center;
     padding: 2rem 0;
@@ -56,36 +50,51 @@ html.dark-mode .toggle-button {
     font-size: 1.5rem;
 }
 
-/* Add padding between buttons and headers */
+/* Navigation Buttons */
 nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .nav-button {
     padding: 10px 20px;
-    font-weight: bold;
+    margin: 10px;
     background-color: var(--color-primary);
     color: #000;
     border: 2px solid var(--color-accent);
     border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: var(--color-accent);
+    color: #fff;
 }
 
 html.dark-mode .nav-button {
     background-color: var(--color-accent);
     color: var(--color-dark-text);
-    border-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
-/* Footer fixed at bottom */
+/* Footer Positioning */
 footer {
-    margin-top: auto;
     background-color: #f4f4f4;
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
 html.dark-mode footer {
     background-color: #222;
 }
+
+.footer-logo {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
