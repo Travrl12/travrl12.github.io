@@ -12,7 +12,7 @@
     --color-visited-dark: #8F00FF;
 }
 
-/* Base styles for HTML and Body */
+/* Base Styles for HTML and Body */
 html, body {
     background-color: var(--color-light-bg);
     color: var(--color-light-text);
@@ -43,7 +43,6 @@ main {
 p, ul, li {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -96,7 +95,6 @@ html.dark-mode a:visited {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
     background-color: transparent;
 }
 
@@ -124,54 +122,69 @@ html.dark-mode a:visited {
     display: none;
 }
 
-/* Navigation Buttons */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Hamburger Menu Button and Toggle */
+.hamburger-button {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 60px; /* Positioned beside the dark mode toggle */
+    z-index: 1000;
+    transition: color 0.3s ease;
+}
+
+html.dark-mode .hamburger-button {
+    color: var(--color-primary);
+}
+
+/* Dropdown Menu Styling */
+.nav-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: var(--color-light-bg);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    display: flex; /* Show menu when active */
+}
+
+.nav-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.nav-button {
-    padding: 10px 20px;  /* Regular padding for larger screens */
-    background-color: #00FF41;
+.nav-link {
+    padding: 10px 15px;
     color: black;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-accent);
     border-radius: 5px;
     font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    border: 2px solid #FF3131;
-    margin-top: 15px;  /* Add space above the buttons */
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.nav-button:hover {
+.nav-link:hover {
     background-color: #0CFCE5;
 }
 
-html.dark-mode .nav-button {
-    background-color: #FF3131;
+html.dark-mode .nav-link {
+    background-color: var(--color-accent);
     color: #e0e0e0;
-    border: 2px solid #00FF41;
-}
-
-.nav-button:focus {
-    outline: 3px dashed #00FF41;
-    outline-offset: 2px;
-}
-
-/* Mobile Button Styling */
-@media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 12px;  /* Reduced padding for smaller screens */
-        font-size: 0.9rem;  /* Slightly smaller font size to fit text */
-        width: auto;  /* Allow the button to adjust width dynamically */
-    }
-
-    nav ul {
-        gap: 10px;  /* Slightly reduced gap between buttons */
-    }
-}
+    border: 2px solid var(--color-primary);
 }
 
 /* Social Icons at the Top Right */
@@ -247,4 +260,3 @@ html.dark-mode footer {
         max-width: 50%;
     }
 }
-
