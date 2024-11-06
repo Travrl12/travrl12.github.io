@@ -12,16 +12,10 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 
 ---
 
-## My Hack The Box Journey
+## My Latest Tweets
 
-### Completed Machines
-
-<div id="htb-widget">
-  <!-- Hack The Box widget will be dynamically generated here -->
-  <p>Loading Hack The Box data...</p>
-</div>
-
-<script src="js/htb_widget.js"></script>
+<a class="twitter-timeline" href="https://twitter.com/C1pherKn1ght?ref_src=twsrc%5Etfw">Tweets by C1pherKn1ght</a> 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
 
