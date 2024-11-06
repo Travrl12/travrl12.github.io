@@ -122,8 +122,8 @@ html.dark-mode a:visited {
     display: none;
 }
 
-/* Hamburger and Dark Mode Buttons */
-.hamburger-button, .toggle-button {
+/* Hamburger Button */
+.hamburger-button {
     font-size: 1.5rem;
     color: var(--color-accent);
     background: none;
@@ -131,21 +131,16 @@ html.dark-mode a:visited {
     cursor: pointer;
     position: fixed;
     top: 20px;
-    right: 20px; /* Aligns to the top right */
+    left: 60px; /* Positioning beside the dark mode toggle */
     z-index: 1000;
     transition: color 0.3s ease;
-    margin-left: 10px;
 }
 
-.hamburger-button {
-    right: 50px; /* Positioning hamburger beside the dark mode toggle */
-}
-
-html.dark-mode .hamburger-button, html.dark-mode .toggle-button {
+html.dark-mode .hamburger-button {
     color: var(--color-primary);
 }
 
-/* Dropdown Menu Styling */
+/* Dropdown Navigation Menu Styling */
 .nav-menu {
     display: none; /* Hidden by default */
     flex-direction: column;
@@ -191,6 +186,7 @@ html.dark-mode .nav-link {
     color: #e0e0e0;
     border: 2px solid var(--color-primary);
 }
+
 
 /* Social Icons at the Top Right */
 .social-icons {
