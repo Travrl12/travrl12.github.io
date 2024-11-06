@@ -14,25 +14,14 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 
 ## My Hack The Box Journey
 
-### Meow
+### Completed Machines
 
-<div class="centered-links">
-    <a href="https://www.hackthebox.com/achievement/machine/2105172/394" target="_blank" rel="noopener noreferrer">
-        Completed Meow Machine on Hack The Box
-    </a>
+<div id="htb-widget">
+  <!-- Hack The Box widget will be dynamically generated here -->
+  <p>Loading Hack The Box data...</p>
 </div>
 
-![Meow Achievement](assets/images/Meow.jpg){: .meow-image }
-
-### Fawn
-
-<div class="centered-links">
-    <a href="https://www.hackthebox.com/achievement/machine/2105172/393" target="_blank" rel="noopener noreferrer">
-        Completed Fawn Machine on Hack The Box
-    </a>
-</div>
-
-![Fawn Achievement](assets/images/Fawn.jpg){: .fawn-image }
+<script src="js/htb_widget.js"></script>
 
 ---
 
