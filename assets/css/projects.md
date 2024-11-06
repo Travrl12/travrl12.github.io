@@ -13,5 +13,3 @@ I’m currently working hard on **Hack The Box**, sharpening my offensive securi
 You can find my Hack The Box profile [here](https://app.hackthebox.com/profile/2105172). Let’s work together and grow in the world of ethical hacking!
 
 In addition to Hack The Box, I’ll be showcasing other projects related to offensive security, web development, and penetration testing tools soon. Stay tuned for exciting updates and new content!
-
-![Work in Progress](https://travrl12.github.io/assets/images/work-in-progress.png){: .avatar-image}
