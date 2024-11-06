@@ -14,9 +14,14 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 
 ## My Latest Tweets
 
-<a class="twitter-timeline" href="https://twitter.com/C1pherKn1ght?ref_src=twsrc%5Etfw">Tweets by C1pherKn1ght</a> 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% raw %}
+<a class="twitter-timeline" href="https://twitter.com/C1pherKn1ght?ref_src=twsrc%5Etfw">Tweets by C1pherKn1ght</a>
+{% endraw %}
 
 ---
 
 I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on [GitHub](https://github.com/Travrl12) and [LinkedIn](https://www.linkedin.com/in/travisrlee) or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile for the latest progress!
+
+{% raw %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endraw %}
