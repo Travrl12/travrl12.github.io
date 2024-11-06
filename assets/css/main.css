@@ -55,7 +55,8 @@ html.dark-mode, body.dark-mode {
 #intro-text {
     font-size: 1.5rem;
     color: inherit;
-    margin-top: 0; /* Ensure it doesn't affect logo alignment */
+    min-height: 50px;  /* Prevents layout jump by reserving space */
+    margin-top: 0;
 }
 
 @media (max-width: 600px) {
@@ -67,6 +68,43 @@ html.dark-mode, body.dark-mode {
 /* Hide the blinking cursor added by Typed.js */
 .typed-cursor {
     display: none;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--color-accent);
+}
+
+.nav-button:hover {
+    background-color: #0CFCE5;
+}
+
+html.dark-mode .nav-button {
+    background-color: var(--color-accent);
+    color: #e0e0e0;
+    border: 2px solid var(--color-primary);
+}
+
+.nav-button:focus {
+    outline: 3px dashed var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* Social Icons at the Top Right */
@@ -87,6 +125,10 @@ html.dark-mode, body.dark-mode {
 
 html.dark-mode .social-icons a {
     color: var(--color-primary);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
 }
 
 /* HTB Icon Styling */
