@@ -128,15 +128,15 @@ html.dark-mode a:visited {
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 8px; /* Adjusted for better flow on desktop */
+    gap: 2px; /* Minimal horizontal gap between buttons */
     list-style: none;
     padding: 0;
-    margin: 15px 0;
-    flex-wrap: wrap;
+    margin: 10px 0; /* Small vertical margin */
+    flex-wrap: wrap; /* Allows wrapping if needed on smaller screens */
 }
 
 .nav-button {
-    padding: 8px 12px; /* Reduced padding for tighter fit */
+    padding: 8px 12px; /* Compact padding for a tighter fit */
     background-color: var(--color-primary);
     color: black;
     border-radius: 5px;
@@ -148,6 +148,7 @@ html.dark-mode a:visited {
     white-space: nowrap; /* Prevents line breaks */
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.95rem; /* Slightly smaller font for compact look */
 }
 
 .nav-button:hover {
@@ -160,14 +161,15 @@ html.dark-mode .nav-button {
     border: 2px solid var(--color-primary);
 }
 
-/* Responsive Button Adjustments */
+/* Responsive Button Adjustments for Small Screens */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-        flex-grow: 1; /* Makes buttons take equal width on mobile */
+        padding: 6px 8px; /* Reduced padding for mobile */
+        font-size: 0.85rem; /* Slightly reduced font size for mobile */
+        flex-grow: 1; /* Forces equal width on mobile */
     }
 }
+
 
 /* Social Icons at the Top Right */
 .social-icons {
