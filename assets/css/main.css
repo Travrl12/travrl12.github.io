@@ -104,7 +104,7 @@ html.dark-mode a:visited {
 #intro-text {
     font-size: 1.5rem;
     color: inherit;
-    min-height: 50px;
+    min-height: 50px; /* Prevents layout jump by reserving space */
     margin-top: 0;
 }
 
@@ -123,14 +123,14 @@ html.dark-mode a:visited {
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Reduced gap for mobile */
     list-style: none;
     padding: 0;
     margin: 15px 0;
 }
 
 .nav-button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: var(--color-primary);
     color: black;
     border-radius: 5px;
@@ -139,6 +139,11 @@ html.dark-mode a:visited {
     text-decoration: none;
     transition: background-color 0.3s ease;
     border: 2px solid var(--color-accent);
+    flex: 1; /* Ensures all buttons are equally spaced and fit */
+    max-width: 120px; /* Limits the maximum width for each button */
+    white-space: nowrap; /* Prevents buttons from breaking into multiple lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-button:hover {
@@ -151,9 +156,17 @@ html.dark-mode .nav-button {
     border: 2px solid var(--color-primary);
 }
 
-.nav-button:focus {
-    outline: 3px dashed var(--color-primary);
-    outline-offset: 2px;
+/* Adjustments for Small Screens */
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 8px 10px; /* Smaller padding for mobile */
+        font-size: 0.85rem; /* Slightly reduced font size for mobile */
+        max-width: none; /* Allows the buttons to stretch evenly */
+        flex-grow: 1; /* Each button takes equal width on small screens */
+    }
+    .nav-buttons {
+        flex-wrap: wrap; /* Allows buttons to wrap if needed */
+    }
 }
 
 /* Social Icons at the Top Right */
@@ -229,4 +242,3 @@ html.dark-mode footer {
         max-width: 50%;
     }
 }
-
