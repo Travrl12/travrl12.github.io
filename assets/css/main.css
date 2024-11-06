@@ -106,9 +106,9 @@ html.dark-mode footer {
     background-color: #222;
 }
 
-/* Specific Styles for HTB Icon in Header */
+/* Separate Styling for HTB Icon in Header and Footer Logo */
 .htb-icon {
-    width: 30px;
+    width: 30px; /* Specific width for HTB icon in header */
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
@@ -116,7 +116,7 @@ html.dark-mode footer {
 
 /* Footer Logo Styling */
 .footer-logo {
-    width: 40px;
+    width: 40px; /* Slightly larger size for footer logo */
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
@@ -184,3 +184,4 @@ html.dark-mode .toggle-button {
     margin: 0 auto;
     border-radius: 50%; /* Circular avatar styling */
 }
+
