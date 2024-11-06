@@ -1,288 +1,40 @@
-/* CSS Variables for easy color management */
+/* CSS Variables */
 :root {
     --color-light-bg: #d9cfcf;
     --color-light-text: #000;
     --color-dark-bg: #121212;
     --color-dark-text: #f0f0f0;
-    --color-link-light: #0000FF;
-    --color-link-dark: #00FF41;
-    --color-hover-light: #FF3131;
-    --color-hover-dark: #0CFCE5;
     --color-primary: #00FF41;
     --color-accent: #FF3131;
 }
 
-/* Base Styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* Ensure the whole page background toggles */
+body, html {
     background-color: var(--color-light-bg);
     color: var(--color-light-text);
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Dark Mode */
-html.dark-mode {
+html.dark-mode, body.dark-mode {
     background-color: var(--color-dark-bg);
     color: var(--color-dark-text);
 }
 
-/* Links */
-a {
-    color: var(--color-link-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--color-hover-light);
-}
-
-html.dark-mode a {
-    color: var(--color-link-dark);
-}
-
-html.dark-mode a:hover {
-    color: var(--color-hover-dark);
-}
-
-/* Main Content */
-main {
-    flex-grow: 1;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-    margin-top: 0;
-}
-
-#intro-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 40px auto 1rem;
-    min-height: 50px;
-    overflow: hidden;
-}
-
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
-}
-
-p, ul, li {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-@media (max-width: 600px) {
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Centered Link Styles */
-.centered-links {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.centered-links a {
-    color: var(--color-link-light);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-html.dark-mode .centered-links a {
-    color: var(--color-link-dark);
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 0;
-    width: 100%;
-}
-
-/* Logo */
-.main-logo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    padding: 10px;
-    background-color: var(--color-primary);
-    margin-bottom: 1rem;
-    object-fit: cover;
-}
-
-@media (max-width: 600px) {
-    .main-logo {
-        width: 100px;
-    }
-}
-
-/* Social Icons */
-.social-icons {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.social-icons a {
-    font-size: 2rem;
-    color: var(--color-accent);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1);
-}
-
-html.dark-mode .social-icons a {
-    color: var(--color-link-dark);
-}
-
-.social-icons img, .footer-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-@media (max-width: 600px) {
-    .social-icons {
-        position: relative;
-        justify-content: center;
-        top: auto;
-        right: auto;
-        gap: 8px;
-    }
-    .social-icons a {
-        font-size: 1.3rem;
-    }
-}
-
-/* Navigation */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-button {
-    padding: 10px 20px;
-    background-color: var(--color-primary);
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: 2px solid var(--color-accent);
-    margin-top: 15px;
-}
-
-.nav-button:hover {
-    background-color: var(--color-hover-dark);
-}
-
-html.dark-mode .nav-button {
-    background-color: var(--color-accent);
-    color: var(--color-dark-text);
-    border: 2px solid var(--color-link-dark);
-}
-
-.nav-button:focus {
-    outline: 3px dashed var(--color-link-dark);
-    outline-offset: 2px;
-}
-
-@media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    nav ul {
-        gap: 10px;
-    }
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
-    padding: 2rem 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-html.dark-mode footer {
-    background-color: #222;
-}
-
-footer .social-links {
-    margin-top: 10px;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-    text-align: center;
-}
-
-.footer-logo {
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
-}
-
-@media (max-width: 600px) {
-    footer {
-        padding: 1rem;
-    }
-    .footer-logo {
-        width: 30px;
-    }
-}
-
-/* Typed.js Text */
-.typed-cursor {
-    opacity: 0;
-    display: none;
-}
-
-/* Dark Mode Toggle */
+/* Remove button-like style from Dark Mode Toggle */
 .toggle-button {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: transparent;
+    background: none;
     border: none;
     cursor: pointer;
     font-size: 2rem;
     color: var(--color-accent);
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 2000;
+    padding: 0;
 }
 
 html.dark-mode .toggle-button {
@@ -290,39 +42,50 @@ html.dark-mode .toggle-button {
 }
 
 .toggle-button:focus {
-    outline: 2px solid var(--color-link-dark);
-    outline-offset: 4px;
+    outline: none;
 }
 
-@media (max-width: 600px) {
-    .toggle-button {
-        font-size: 1.5rem;
-    }
+/* Header and Main Content */
+.hero {
+    text-align: center;
+    padding: 2rem 0;
 }
 
-/* Responsive Images */
-.meow-image, .fawn-image, .cert-badge {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+#intro-text {
+    margin-top: 40px;
+    font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 70%;
-    }
+/* Add padding between buttons and headers */
+nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-@media (min-width: 1024px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 50%;
-    }
+.nav-button {
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    color: #000;
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
 }
 
-.cert-badge:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+html.dark-mode .nav-button {
+    background-color: var(--color-accent);
+    color: var(--color-dark-text);
+    border-color: var(--color-primary);
+}
+
+/* Footer fixed at bottom */
+footer {
+    margin-top: auto;
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+html.dark-mode footer {
+    background-color: #222;
 }
