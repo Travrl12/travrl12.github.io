@@ -64,4 +64,3 @@ window.onload = function () {
     // Initialize Typed.js for dynamic typing effect
     initializeTyped();
 };
-
