@@ -1,109 +1,48 @@
-html {
-    background-color: #121212;
-    color: #f0f0f0;
+/* CSS Variables */
+:root {
+    --color-light-bg: #d9cfcf;
+    --color-dark-bg: #121212;
+    --color-light-text: black;
+    --color-dark-text: #f0f0f0;
+    --color-primary: #00FF41;
+    --color-accent: #FF3131;
 }
 
-/* Light and Dark Modes */
+/* Base styles for HTML and Body */
 html, body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body {
-    background-color: #d9cfcf;
-    color: black;
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/* Link Styles */
-a {
-    color: #0000FF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #FF3131;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 html.dark-mode, body.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
-}
-
-html.dark-mode a {
-    color: #00FF41;
-}
-
-html.dark-mode a:hover {
-    color: #0CFCE5;
-}
-
-/* Main content */
-main {
-    flex-grow: 1;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-}
-
-#intro-text {
-    margin-top: 40px;
-}
-
-main h2 {
-    margin-top: 40px;
-}
-
-/* Centered Links */
-.centered-links {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.centered-links a {
-    color: #0000FF;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-html.dark-mode .centered-links a {
-    color: #00FF41;
-}
-
-/* Text Alignment */
-p, ul, li {
-    text-align: left;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
 }
 
 /* Hero Section */
 .hero {
+    text-align: center;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-    margin: 0 auto;
-    max-width: 100%;
+    gap: 1rem;
 }
 
 .main-logo {
     width: 150px;
+    height: auto;
     border-radius: 50%;
-    padding: 10px;
-    background-color: #00FF41;
+    object-fit: cover;
     margin-bottom: 1rem;
+    background-color: transparent;
 }
 
 @media (max-width: 600px) {
@@ -112,7 +51,25 @@ p, ul, li {
     }
 }
 
-/* Social Icons */
+/* Typed.js Intro Text */
+#intro-text {
+    font-size: 1.5rem;
+    color: inherit;
+    margin-top: 0; /* Ensure it doesn't affect logo alignment */
+}
+
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hide the blinking cursor added by Typed.js */
+.typed-cursor {
+    display: none;
+}
+
+/* Social Icons at the Top Right */
 .social-icons {
     position: fixed;
     top: 20px;
@@ -124,19 +81,15 @@ p, ul, li {
 
 .social-icons a {
     font-size: 1.5rem;
-    color: #FF3131;
-    transition: transform 0.3s ease;
+    color: var(--color-accent);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 html.dark-mode .social-icons a {
-    color: #00FF41;
+    color: var(--color-primary);
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
-}
-
-/* Specific Styling for HTB Icon in Header */
+/* HTB Icon Styling */
 .htb-icon {
     width: 24px;
     height: 24px;
@@ -144,50 +97,12 @@ html.dark-mode .social-icons a {
     object-fit: cover;
 }
 
-/* Navigation */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-button {
-    padding: 10px 20px;
-    background-color: #00FF41;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    border: 2px solid #FF3131;
-    margin-top: 15px;
-}
-
-.nav-button:hover {
-    background-color: #0CFCE5;
-}
-
-html.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41;
-}
-
-.nav-button:focus {
-    outline: 3px dashed #00FF41;
-    outline-offset: 2px;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    margin-top: auto;
     background-color: #f4f4f4;
     padding: 2rem 1rem;
+    text-align: center;
     width: 100%;
 }
 
@@ -197,85 +112,7 @@ html.dark-mode footer {
 
 .footer-logo {
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+    object-fit: cover;
 }
-
-@media (max-width: 600px) {
-    footer {
-        padding: 1rem;
-    }
-}
-
-/* Typography */
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    max-width: 800px;
-}
-
-@media (max-width: 600px) {
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Typed.js Intro Text */
-#intro-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
-}
-
-/* Dark Mode Toggle */
-.toggle-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #FF3131;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 2000;
-}
-
-html.dark-mode .toggle-button {
-    color: #00FF41;
-}
-
-@media (max-width: 600px) {
-    .toggle-button {
-        font-size: 1.5rem;
-    }
-}
-
-/* Responsive Image Styling */
-.meow-image, .fawn-image, .cert-badge {
-    max-width: 90%;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 70%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 50%;
-    }
-}
-
