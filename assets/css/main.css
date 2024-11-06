@@ -1,23 +1,29 @@
-/* CSS Variables for Light and Dark Modes */
+/* CSS Variables */
 :root {
     --color-light-bg: #d9cfcf;
-    --color-light-text: #000;
+    --color-light-text: black;
     --color-dark-bg: #121212;
     --color-dark-text: #f0f0f0;
+    --color-link-light: #0000FF;
+    --color-link-dark: #00FF41;
+    --color-hover-light: #FF3131;
+    --color-hover-dark: #0CFCE5;
     --color-primary: #00FF41;
     --color-accent: #FF3131;
 }
 
-/* Basic Page Setup */
+/* Light and Dark Modes for html and body */
 html, body {
-    background-color: var(--color-light-bg);
-    color: var(--color-light-text);
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
     margin: 0;
     padding: 0;
-    min-height: 100vh;  /* Ensures the body takes the full height */
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
 }
 
 html.dark-mode, body.dark-mode {
@@ -25,76 +31,292 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Dark Mode Toggle Button */
-.toggle-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    font-size: 2rem;
-    color: var(--color-accent);
+/* Links */
+a {
+    color: var(--color-link-light);
+    text-decoration: none;
 }
 
-html.dark-mode .toggle-button {
+a:hover {
+    color: var(--color-hover-light);
+    text-decoration: underline;
+}
+
+html.dark-mode a {
+    color: var(--color-link-dark);
+}
+
+html.dark-mode a:hover {
+    color: var(--color-hover-dark);
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#intro-text, main h2 {
+    margin-top: 40px;
+}
+
+/* Centered Links */
+.centered-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centered-links a {
+    color: var(--color-link-light);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+html.dark-mode .centered-links a {
+    color: var(--color-link-dark);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 100%;
+}
+
+/* Logo */
+.main-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .main-logo {
+        width: 100px;
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
 
-/* Header and Hero Section */
-.hero {
-    text-align: center;
-    padding: 2rem 0;
+.social-icons img, .footer-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-#intro-text {
-    margin-top: 40px;
-    font-size: 1.5rem;
-}
-
-/* Navigation Buttons */
-nav {
-    text-align: center;
-    margin-top: 20px;
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .nav-button {
     padding: 10px 20px;
-    margin: 10px;
     background-color: var(--color-primary);
-    color: #000;
+    color: var(--color-light-text);
     border: 2px solid var(--color-accent);
     border-radius: 5px;
     font-weight: bold;
-    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
 }
 
 .nav-button:hover {
-    background-color: var(--color-accent);
-    color: #fff;
+    background-color: var(--color-hover-dark);
 }
 
 html.dark-mode .nav-button {
     background-color: var(--color-accent);
     color: var(--color-dark-text);
-    border: 2px solid var(--color-primary);
+    border-color: var(--color-primary);
 }
 
-/* Footer Positioning */
+.nav-button:focus {
+    outline: 3px dashed var(--color-primary);
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    nav ul {
+        gap: 10px;
+    }
+}
+
+/* Footer */
 footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #f4f4f4;
     padding: 2rem 1rem;
-    text-align: center;
     width: 100%;
-    margin-top: auto; /* Pushes footer to the bottom */
+    box-sizing: border-box;
+    margin-top: auto;
 }
 
 html.dark-mode footer {
     background-color: #222;
 }
 
+footer .social-links {
+    margin-top: 10px;
+    text-align: center;
+}
+
 .footer-logo {
-    width: 30px;
+    width: 40px;
     height: auto;
     border-radius: 50%;
-    vertical-align: middle;
 }
+
+@media (max-width: 600px) {
+    footer {
+        padding: 1rem;
+    }
+    .footer-logo {
+        width: 30px;
+    }
+}
+
+/* Text Content */
+p, ul, li {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Typed.js Text */
+#intro-text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 1rem;
+    min-height: 50px;
+}
+
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--color-accent);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2000;
+}
+
+html.dark-mode .toggle-button {
+    color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Images */
+.meow-image, .fawn-image, .cert-badge {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .meow-image, .fawn-image, .cert-badge {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .meow-image, .fawn-image, .cert-badge {
+        max-width: 50%;
+    }
+}
+
+.cert-badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.avatar-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
 
