@@ -146,3 +146,41 @@ html.dark-mode .toggle-button {
         font-size: 1.5rem;
     }
 }
+
+/* Responsive Images for Projects and Certifications */
+.meow-image, .fawn-image, .cert-badge {
+    max-width: 90%;                  /* Set max-width to 90% for smaller screens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;              /* Rounded corners for images */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Light shadow for better display */
+}
+
+/* Responsive Scaling for Medium and Large Screens */
+@media (min-width: 768px) {
+    .meow-image, .fawn-image, .cert-badge {
+        max-width: 70%;              /* Reduced max-width for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .meow-image, .fawn-image, .cert-badge {
+        max-width: 50%;              /* Further reduced max-width for larger screens */
+    }
+}
+
+/* Optional Hover Effect for Certification Badge */
+.cert-badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Avatar or Work-in-Progress Image Styling */
+.avatar-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Circular avatar styling */
+}
