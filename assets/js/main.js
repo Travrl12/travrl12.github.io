@@ -21,6 +21,9 @@ applyDarkMode(isDarkModePreferred);
 function initializeTyped() {
     const introText = document.getElementById('intro-text');
     if (typeof Typed !== 'undefined' && introText) {
+        // Add min-height to prevent layout shift on initialization
+        introText.style.minHeight = '50px';
+        
         new Typed('#intro-text', {
             strings: [
                 "Hi, I'm Travis R. Lee...",
@@ -43,6 +46,7 @@ function toggleHamburgerMenu() {
     navMenu.classList.toggle('active'); // Toggle the 'active' class
 }
 
+// Ensure functions load after page content
 window.onload = function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const hamburgerButton = document.getElementById('hamburgerMenu');
