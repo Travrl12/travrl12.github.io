@@ -7,16 +7,20 @@
     
         <!-- Inline styles and scripts for dark mode to prevent flash -->
         <style>
+            /* Default background color for light mode */
             html {
-                background-color: #121212;
-                color: #f0f0f0;
+                background-color: #d9cfcf;
+                color: #000;
             }
+
+            /* Dark mode styles for html and body */
             html.dark-mode, body.dark-mode {
                 background-color: #121212;
                 color: #f0f0f0;
             }
         </style>
         <script>
+            // Immediately apply light or dark mode based on preferences before page load
             if (localStorage.getItem('darkMode') === 'true' || 
                 (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark-mode');
@@ -83,14 +87,14 @@
     <main>
         {{ content }} <!-- This will inject the content of each markdown file -->
 
- <!-- Twitter Timeline Embed Section -->
-<section class="twitter-timeline-section">
-    <h2>My Latest Tweets</h2>
-    <blockquote class="twitter-timeline">
-        <a href="https://twitter.com/C1pherKn1ght?ref_src=twsrc%5Etfw">Tweets by C1pherKn1ght</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</section>
+        <!-- Twitter Timeline Embed Section -->
+        <section class="twitter-timeline-section">
+            <h2>My Latest Tweets</h2>
+            <blockquote class="twitter-timeline">
+                <a href="https://twitter.com/C1pherKn1ght?ref_src=twsrc%5Etfw">Tweets by C1pherKn1ght</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </section>
 
     </main>
 
@@ -113,13 +117,12 @@
     <!-- Scripts should go here at the end of body -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="/assets/js/main.js"></script>
+    
+    <!-- Twitter Widgets Script -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 
 </html>
-
-
-
-
 
 
