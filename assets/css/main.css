@@ -1,3 +1,5 @@
+Here's the fully updated CSS based on all the points discussed:
+
 /* CSS Variables */
 :root {
     --color-light-bg: #d9cfcf;
@@ -39,6 +41,14 @@ main {
     text-align: left;
 }
 
+/* Typography */
+p, ul, li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Centered Headers */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
@@ -56,6 +66,64 @@ a:hover {
     color: var(--color-accent);
 }
 
+a:visited {
+    color: var(--color-visited-light);
+}
+
+html.dark-mode a {
+    color: var(--color-link-dark);
+}
+
+html.dark-mode a:hover {
+    color: var(--color-primary);
+}
+
+html.dark-mode a:visited {
+    color: var(--color-visited-dark);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .main-logo {
+        width: 100px;
+    }
+}
+
+/* Typed.js Intro Text */
+#intro-text {
+    font-size: 1.5rem;
+    color: inherit;
+    min-height: 50px;
+}
+
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hide the blinking cursor added by Typed.js */
+.typed-cursor {
+    display: none;
+}
+
 /* Hamburger Button */
 .hamburger-button {
     font-size: 1.5rem;
@@ -67,6 +135,7 @@ a:hover {
     top: 20px;
     left: 60px;
     z-index: 1000;
+    transition: color 0.3s ease;
 }
 
 html.dark-mode .hamburger-button {
@@ -81,25 +150,33 @@ html.dark-mode .hamburger-button {
     top: 60px;
     left: 60px;
     background-color: var(--color-light-bg);
-    padding: 8px;
-    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
     z-index: 999;
-    width: 150px; /* Adjusted width for mobile fit */
-    font-size: 0.9rem; /* Smaller font size */
 }
 
 .nav-menu.active {
     display: flex;
 }
 
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .nav-link {
-    padding: 8px 12px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
     color: black;
     background-color: var(--color-primary);
     border: 2px solid var(--color-accent);
-    border-radius: 4px;
+    border-radius: 5px;
+    font-weight: bold;
     text-align: left;
     text-decoration: none;
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -113,15 +190,7 @@ html.dark-mode .nav-link {
     border: 2px solid var(--color-primary);
 }
 
-/* Mobile-Fit View */
-@media (max-width: 600px) {
-    .nav-menu {
-        width: 90%;
-        left: 5%; /* Centered for mobile */
-    }
-}
-
-/* Social Icons */
+/* Social Icons at the Top Right */
 .social-icons {
     position: fixed;
     top: 20px;
@@ -134,9 +203,83 @@ html.dark-mode .nav-link {
 .social-icons a {
     font-size: 1.5rem;
     color: var(--color-accent);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* HTB Icon Styling */
+.htb-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: auto;
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+html.dark-mode footer {
+    background-color: #222;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Responsive Image Styling for Project and Certification Pages */
+.cert-badge, .avatar-image, .meow-image, .fawn-image {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .cert-badge, .avatar-image, .meow-image, .fawn-image {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cert-badge, .avatar-image, .meow-image, .fawn-image {
+        max-width: 50%;
+    }
+}
+
+/* Ensuring Mobile Responsiveness */
+@media (max-width: 600px) {
+    .nav-link {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+Summary of Updates:
+
+Menu Button: Dropdown menu is aligned with the hamburger button and scaled down.
+
+Logo and HTB Icon: Sizing updated to keep the logo and HTB icon consistent and appropriately sized.
+
+Responsive Improvements: Adjustments for mobile view and menu button size in mobile.
+
+Dark Mode Styling Consistency: Updated link and footer color changes in dark mode.
+
+
