@@ -8,8 +8,8 @@
     --color-accent: #FF3131;
     --color-link-light: #0000FF;
     --color-link-dark: #00FF41;
-    --color-visited-light: #551A8B; /* Purple for visited links in light mode */
-    --color-visited-dark: #8F00FF; /* Purple for visited links in dark mode */
+    --color-visited-light: #551A8B;
+    --color-visited-dark: #8F00FF;
 }
 
 /* Base styles for HTML and Body */
@@ -36,16 +36,22 @@ main {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    text-align: left; /* Aligns text naturally on the left */
+    text-align: left;
 }
 
 /* Typography */
 p, ul, li {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 100%; /* Ensures no text overflow */
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Centered Headers */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-top: 0;
 }
 
 /* Link Styling */
@@ -104,8 +110,7 @@ html.dark-mode a:visited {
 #intro-text {
     font-size: 1.5rem;
     color: inherit;
-    min-height: 50px; /* Prevents layout jump by reserving space */
-    margin-top: 0;
+    min-height: 50px;
 }
 
 @media (max-width: 600px) {
@@ -123,14 +128,15 @@ html.dark-mode a:visited {
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 8px; /* Adjusted for better flow on desktop */
     list-style: none;
     padding: 0;
     margin: 15px 0;
+    flex-wrap: wrap;
 }
 
 .nav-button {
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced padding for tighter fit */
     background-color: var(--color-primary);
     color: black;
     border-radius: 5px;
@@ -139,9 +145,7 @@ html.dark-mode a:visited {
     text-decoration: none;
     transition: background-color 0.3s ease;
     border: 2px solid var(--color-accent);
-    flex: 1; /* Ensures all buttons are equally spaced and fit */
-    max-width: 120px; /* Limits the maximum width for each button */
-    white-space: nowrap; /* Prevents buttons from breaking into multiple lines */
+    white-space: nowrap; /* Prevents line breaks */
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -156,16 +160,12 @@ html.dark-mode .nav-button {
     border: 2px solid var(--color-primary);
 }
 
-/* Adjustments for Small Screens */
+/* Responsive Button Adjustments */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 10px; /* Smaller padding for mobile */
-        font-size: 0.85rem; /* Slightly reduced font size for mobile */
-        max-width: none; /* Allows the buttons to stretch evenly */
-        flex-grow: 1; /* Each button takes equal width on small screens */
-    }
-    .nav-buttons {
-        flex-wrap: wrap; /* Allows buttons to wrap if needed */
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        flex-grow: 1; /* Makes buttons take equal width on mobile */
     }
 }
 
@@ -175,7 +175,7 @@ html.dark-mode .nav-button {
     top: 20px;
     right: 20px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     z-index: 1000;
 }
 
@@ -242,3 +242,4 @@ html.dark-mode footer {
         max-width: 50%;
     }
 }
+
