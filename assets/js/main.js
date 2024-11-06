@@ -1,52 +1,44 @@
-// Immediately apply light mode by default and adjust if necessary for dark mode preferences
-if (localStorage.getItem('darkMode') === 'true' || 
-    (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark-mode');
-    document.body.classList.add('dark-mode');
+// Function to apply dark mode styling
+function applyDarkMode(darkModeEnabled) {
+    document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+    const introText = document.getElementById('intro-text');
+    if (introText) {
+        introText.style.color = darkModeEnabled ? '#00FF41' : '#FF3131';  // Neon green for dark, red for light
+    }
 }
 
+// Initial check for dark mode based on preference or system setting
+const isDarkModePreferred = localStorage.getItem('darkMode') === 'true' || 
+    (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+applyDarkMode(isDarkModePreferred);
+
 window.onload = function () {
-    // Dark mode related code
     const darkModeToggle = document.getElementById('darkModeToggle');
-    const introText = document.getElementById('intro-text');
-    
-    // Load dark mode preference from localStorage
-    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-    if (darkModeEnabled) {
-        document.documentElement.classList.add('dark-mode');
-        document.body.classList.add('dark-mode');
-        introText.style.color = '#00FF41';  // Neon green for dark mode
-    } else {
-        document.documentElement.classList.remove('dark-mode');
-        document.body.classList.remove('dark-mode');
-        introText.style.color = '#FF3131';  // Red for light mode
+
+    // Event listener for dark mode toggle button
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function () {
+            const isDarkMode = document.documentElement.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            applyDarkMode(isDarkMode);
+        });
     }
 
-    // Dark mode toggle button functionality
-    darkModeToggle.addEventListener('click', function () {
-        document.documentElement.classList.toggle('dark-mode');
-        document.body.classList.toggle('dark-mode');
-        const darkModeStatus = document.documentElement.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', darkModeStatus);
-
-        // Update Typed.js text color dynamically
-        if (darkModeStatus) {
-            introText.style.color = '#00FF41';  // Neon green for dark mode
-        } else {
-            introText.style.color = '#FF3131';  // Red for light mode
-        }
-    });
-
-    // Initialize Typed.js for the dynamic text
-    const typed = new Typed('#intro-text', {
-        strings: [
-            "Hi, I'm Travis R. Lee...",
-            "Passionate About Ethical Hacking",
-            "Challenging Myself with Offensive Security Projects"
-        ],
-        typeSpeed: 50,
-        backSpeed: 30,
-        loop: true
-    });
+    // Initialize Typed.js if the library is available
+    if (typeof Typed !== 'undefined' && document.getElementById('intro-text')) {
+        new Typed('#intro-text', {
+            strings: [
+                "Hi, I'm Travis R. Lee...",
+                "Passionate About Ethical Hacking",
+                "Challenging Myself with Offensive Security Projects"
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    } else {
+        console.warn("Typed.js is not loaded or #intro-text element is missing.");
+    }
 };
+
 
