@@ -2,9 +2,12 @@ import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
 
-# Path to ChromeDriver
-CHROME_DRIVER_PATH = "C:/path_to_chromedriver/chromedriver.exe"
+# Correct Path to GeckoDriver
+GECKO_DRIVER_PATH = "/usr/local/bin/geckodriver"
+
 
 # Set Chrome options (optional, headless mode)
 options = Options()
@@ -16,34 +19,55 @@ options.add_argument('--no-sandbox')
 service = Service(CHROME_DRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 
-# Navigate to Hack The Box Starting Point page
-driver.get("https://app.hackthebox.com/starting-point")
+# Your Hack The Box login details
+HTB_USERNAME = "your_username"
+HTB_PASSWORD = "your_password"
 
-# Example: Find all task/machine cards under Starting Point
-# Adjust the selectors based on the actual HTML structure of the page
-machines = driver.find_elements_by_class_name("machine-card")  # Adjust this based on HTML
+def login_htb():
+    driver.get("https://app.hackthebox.com/login")
+    time.sleep(2)  # Wait for page to load
 
-# List to store all Starting Point tasks/machines
-starting_point_tasks = []
+    username_field = driver.find_element(By.NAME, "email")
+    password_field = driver.find_element(By.NAME, "password")
+    username_field.send_keys(HTB_USERNAME)
+    password_field.send_keys(HTB_PASSWORD)
 
-# Loop through each machine and extract its name (e.g., Meow, Fawn)
-for machine in machines:
-    try:
-        # Extract the machine name and additional details, if available
-        name = machine.find_element_by_tag_name("h5").text  # Adjust based on actual HTML tag
-        # Add other elements here as needed, like difficulty, completion date, etc.
-        starting_point_tasks.append({
-            "name": name,
-            # Add more keys here if additional details are extracted
-        })
-    except Exception as e:
-        print(f"Error extracting data from machine: {e}")
+    login_button = driver.find_element(By.XPATH, "//button[contains(text(), 'Sign In')]")
+    login_button.click()
+    time.sleep(5)  # Wait for the login process to complete
 
-# Save the list to a JSON file
-with open("htb_machines.json", "w") as json_file:
-    json.dump(starting_point_tasks, json_file, indent=4)
+def scrape_completed_machines():
+    # Navigate to your profile activity page
+    driver.get("https://app.hackthebox.com/profile/activity")
+    time.sleep(3)  # Wait for the profile page to load
 
-print("HTB Machines data saved to 'htb_machines.json'.")
+    activities = driver.find_elements(By.XPATH, "//div[contains(@class, 'activity-card')]")
 
-# Close the browser after we're done
-driver.quit()
+    completed_machines = []
+
+    for activity in activities:
+        try:
+            description = activity.find_element(By.CLASS_NAME, "activity-description").text
+            if "Owned" in description:
+                parts = description.split("-")
+                achievement_type = parts[0].strip()
+                machine_name = parts[1].strip()
+                completed_machines.append({
+                    "name": machine_name,
+                    "achievement_type": achievement_type
+                })
+        except Exception as e:
+            print(f"Error extracting data from activity: {e}")
+
+    with open("htb_machines.json", "w") as json_file:
+        json.dump(completed_machines, json_file, indent=4)
+
+    print("HTB Machines data saved to 'htb_machines.json'.")
+
+# Run the script
+try:
+    login_htb()
+    scrape_completed_machines()
+finally:
+    driver.quit()
+
