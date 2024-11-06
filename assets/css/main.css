@@ -1,102 +1,108 @@
-html { 
-    background-color: #121212; 
-    color: #f0f0f0; 
+/* CSS Variables for easy color management */
+:root {
+    --color-light-bg: #d9cfcf;
+    --color-light-text: #000;
+    --color-dark-bg: #121212;
+    --color-dark-text: #f0f0f0;
+    --color-link-light: #0000FF;
+    --color-link-dark: #00FF41;
+    --color-hover-light: #FF3131;
+    --color-hover-dark: #0CFCE5;
+    --color-primary: #00FF41;
+    --color-accent: #FF3131;
 }
-/* Light and Dark Modes for html and body */
+
+/* Base Styles */
 html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light Mode */
-body {
-    background-color: #d9cfcf;
-    color: black;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+html.dark-mode {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
 }
 
 a {
-    color: #0000FF; /* Default link color in light mode (blue) */
+    color: var(--color-link-light);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #FF3131; /* Hover color in light mode */
-}
-
-/* Dark Mode */
-html.dark-mode, body.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
+    color: var(--color-hover-light);
 }
 
 html.dark-mode a {
-    color: #00FF41; /* Link color in dark mode (green) */
+    color: var(--color-link-dark);
 }
 
 html.dark-mode a:hover {
-    text-decoration: underline;
-    color: #0CFCE5; /* Hover color in dark mode (light green) */
+    color: var(--color-hover-dark);
 }
 
-/* Main content should take up available space */
+/* Centered Container */
 main {
     flex-grow: 1;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Center headings */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    margin-top: 0;
 }
 
-/* Add space above main headings */
 #intro-text {
-    margin-top: 40px;  /* Adds space above "Welcome to C1pherKn1ght" heading */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    overflow: hidden;
 }
 
-main h2 {
-    margin-top: 40px;  /* Adds space above main headings like on the "About" page */
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
 }
 
-/* Centered hyperlinks */
+p, ul, li {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Link Styles in Centered Sections */
 .centered-links {
     text-align: center;
     margin: 20px 0;
 }
 
 .centered-links a {
-    color: #0000FF; /* Light mode link color for general links (blue) */
-    text-decoration: none;
+    color: var(--color-link-light);
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.centered-links a:hover {
-    text-decoration: underline;
-    color: #FF3131; /* Hover color in light mode */
-}
-
 html.dark-mode .centered-links a {
-    color: #00FF41; /* Link color in dark mode */
-}
-
-html.dark-mode .centered-links a:hover {
-    text-decoration: underline;
-    color: #0CFCE5; /* Hover color in dark mode */
-}
-
-/* Left-align text */
-p, ul, li {
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
+    color: var(--color-link-dark);
 }
 
 /* Hero Section */
@@ -107,17 +113,16 @@ p, ul, li {
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
-    margin: 0 auto;
     max-width: 100%;
 }
 
-/* Main Logo */
+/* Logo Styling */
 .main-logo {
     width: 150px;
     height: auto;
     border-radius: 50%;
     padding: 10px;
-    background-color: #00FF41;
+    background-color: var(--color-primary);
     margin-bottom: 1rem;
     object-fit: cover;
 }
@@ -140,8 +145,8 @@ p, ul, li {
 
 .social-icons a {
     font-size: 2rem;
-    color: #FF3131;
-    transition: transform 0.3s ease;
+    color: var(--color-accent);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -149,23 +154,24 @@ p, ul, li {
 }
 
 html.dark-mode .social-icons a {
-    color: #00FF41;
+    color: var(--color-link-dark);
 }
 
-/* HTB icons */
 .social-icons img, .footer-logo {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
-    background: none;
 }
 
 @media (max-width: 600px) {
     .social-icons {
+        position: relative;
+        justify-content: center;
+        top: auto;
+        right: auto;
         gap: 8px;
     }
-
     .social-icons a {
         font-size: 1.3rem;
     }
@@ -181,42 +187,38 @@ nav ul {
 }
 
 .nav-button {
-    padding: 10px 20px;  /* Regular padding for larger screens */
-    background-color: #00FF41;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
     color: black;
     border-radius: 5px;
     font-weight: bold;
-    text-align: center;
     transition: background-color 0.3s ease;
-    border: 2px solid #FF3131;
-    margin-top: 15px;  /* Add space above the buttons */
+    border: 2px solid var(--color-accent);
+    margin-top: 15px;
 }
 
 .nav-button:hover {
-    background-color: #0CFCE5;
+    background-color: var(--color-hover-dark);
 }
 
 html.dark-mode .nav-button {
-    background-color: #FF3131;
-    color: #e0e0e0;
-    border: 2px solid #00FF41;
+    background-color: var(--color-accent);
+    color: var(--color-dark-text);
+    border: 2px solid var(--color-link-dark);
 }
 
 .nav-button:focus {
-    outline: 3px dashed #00FF41;
+    outline: 3px dashed var(--color-link-dark);
     outline-offset: 2px;
 }
 
-/* Mobile Button Styling */
 @media (max-width: 600px) {
     .nav-button {
-        padding: 8px 12px;  /* Reduced padding for smaller screens */
-        font-size: 0.9rem;  /* Slightly smaller font size to fit text */
-        width: auto;  /* Allow the button to adjust width dynamically */
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
-
     nav ul {
-        gap: 10px;  /* Slightly reduced gap between buttons */
+        gap: 10px;
     }
 }
 
@@ -256,44 +258,12 @@ footer p {
     footer {
         padding: 1rem;
     }
-
     .footer-logo {
         width: 30px;
     }
 }
 
-/* Typography */
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-}
-
-@media (max-width: 600px) {
-    p {
-        font-size: 0.9rem;
-    }
-}
-
 /* Typed.js Intro Text */
-#intro-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 40px;  /* Updated: adds space above the intro text */
-    margin-bottom: 1rem;
-    min-height: 50px;
-    overflow: hidden;
-}
-
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-    }
-}
-
-/* Hide blinking cursor */
 .typed-cursor {
     opacity: 0;
     display: none;
@@ -308,14 +278,19 @@ p {
     border: none;
     cursor: pointer;
     font-size: 2rem;
-    color: #FF3131;
+    color: var(--color-accent);
     padding: 10px;
     border-radius: 50%;
     z-index: 2000;
 }
 
 html.dark-mode .toggle-button {
-    color: #00FF41;
+    color: var(--color-primary);
+}
+
+.toggle-button:focus {
+    outline: 2px solid var(--color-link-dark);
+    outline-offset: 4px;
 }
 
 @media (max-width: 600px) {
@@ -324,8 +299,8 @@ html.dark-mode .toggle-button {
     }
 }
 
-/* Meow and Fawn Images */
-.meow-image, .fawn-image {
+/* Responsive Image Scaling */
+.meow-image, .fawn-image, .cert-badge {
     max-width: 90%;
     height: auto;
     display: block;
@@ -336,74 +311,19 @@ html.dark-mode .toggle-button {
 }
 
 @media (min-width: 768px) {
-    .meow-image, .fawn-image {
+    .meow-image, .fawn-image, .cert-badge {
         max-width: 70%;
     }
 }
 
 @media (min-width: 1024px) {
-    .meow-image, .fawn-image {
+    .meow-image, .fawn-image, .cert-badge {
         max-width: 50%;
     }
 }
 
-/* Certification Badge Styling */
-.certifications {
-    text-align: center;  /* Centers both the image and text link */
-}
-
-/* Badge Image */
-.cert-badge {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Matching other images' shadow */
-}
-
-/* Responsive Image Scaling */
-@media (min-width: 768px) {
-    .cert-badge {
-        max-width: 70%;  /* Responsive scaling for medium screens */
-    }
-}
-
-@media (min-width: 1024px) {
-    .cert-badge {
-        max-width: 50%;  /* Responsive scaling for larger screens */
-    }
-}
-
-/* Certification Link Styling */
-.certifications p {
-    margin-top: 10px;  /* Adds spacing above the link */
-    font-size: 1.2rem;  /* Slightly larger font for the link text */
-    text-align: center;  /* Ensures the paragraph and its contents are centered */
-    width: 100%;  /* Forces the paragraph to take up the full width */
-}
-
-.certifications p a {
-    display: inline-block;  /* Ensures the link behaves like a block-level element */
-    text-decoration: none;  /* Remove underline from the link */
-}
-
-.certifications p a:hover {
-    text-decoration: underline;  /* Add underline on hover */
-}
-
-/* Optional Hover Effect for Certification Badge */
 .cert-badge:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-/* Custom styling for avatar or work-in-progress images */
-.avatar-image {
-    max-width: 150px;  /* Set a custom maximum width */
-    height: auto;  /* Keep aspect ratio */
-    display: block;  /* Ensures proper block-level rendering */
-    margin-left: auto;
-    margin-right: auto;  /* Centers the image */
-    border-radius: 50%;  /* Optional: Make the image circular, like an avatar */
-}
+
