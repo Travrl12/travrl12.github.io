@@ -6,6 +6,10 @@
     --color-dark-text: #f0f0f0;
     --color-primary: #00FF41;
     --color-accent: #FF3131;
+    --color-link-light: #0000FF;
+    --color-link-dark: #00FF41;
+    --color-visited-light: #551A8B; /* Purple for visited links in light mode */
+    --color-visited-dark: #8F00FF; /* Purple for visited links in dark mode */
 }
 
 /* Base styles for HTML and Body */
@@ -24,6 +28,51 @@ html, body {
 html.dark-mode, body.dark-mode {
     background-color: var(--color-dark-bg);
     color: var(--color-dark-text);
+}
+
+/* Main Content Centering */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* Aligns text naturally on the left */
+}
+
+/* Typography */
+p, ul, li {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%; /* Ensures no text overflow */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Link Styling */
+a {
+    color: var(--color-link-light);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+a:visited {
+    color: var(--color-visited-light);
+}
+
+html.dark-mode a {
+    color: var(--color-link-dark);
+}
+
+html.dark-mode a:hover {
+    color: var(--color-primary);
+}
+
+html.dark-mode a:visited {
+    color: var(--color-visited-dark);
 }
 
 /* Hero Section */
@@ -55,7 +104,7 @@ html.dark-mode, body.dark-mode {
 #intro-text {
     font-size: 1.5rem;
     color: inherit;
-    min-height: 50px;  /* Prevents layout jump by reserving space */
+    min-height: 50px;
     margin-top: 0;
 }
 
@@ -158,3 +207,26 @@ html.dark-mode footer {
     border-radius: 50%;
     object-fit: cover;
 }
+
+/* Responsive Image Styling for Project and Certification Pages */
+.cert-badge, .avatar-image, .meow-image, .fawn-image {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .cert-badge, .avatar-image, .meow-image, .fawn-image {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cert-badge, .avatar-image, .meow-image, .fawn-image {
+        max-width: 50%;
+    }
+}
+
