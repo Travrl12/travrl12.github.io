@@ -181,3 +181,8 @@ html.dark-mode .hamburger-button {
 }
 
 html.dark-mode .nav-link {
+    background-color: var(--color-accent);
+}
+
+
+
