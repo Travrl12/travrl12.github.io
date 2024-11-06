@@ -9,7 +9,7 @@ window.onload = function () {
     // Dark mode related code
     const darkModeToggle = document.getElementById('darkModeToggle');
     const introText = document.getElementById('intro-text');
-
+    
     // Load dark mode preference from localStorage
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     if (darkModeEnabled) {
@@ -48,6 +48,8 @@ window.onload = function () {
         backSpeed: 30,
         loop: true
     });
+};
+
 
     // Hack The Box widget integration code
     fetch('htb_machines.json')  // Adjust the path if needed
