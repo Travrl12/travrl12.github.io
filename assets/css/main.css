@@ -127,8 +127,8 @@ html.dark-mode a:visited {
 /* Navigation Buttons */
 .nav-buttons {
     display: flex;
-    justify-content: center;
-    gap: 2px; /* Minimal horizontal gap between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 4px; /* Small horizontal space between buttons */
     list-style: none;
     padding: 0;
     margin: 10px 0; /* Small vertical margin */
@@ -136,7 +136,7 @@ html.dark-mode a:visited {
 }
 
 .nav-button {
-    padding: 8px 12px; /* Compact padding for a tighter fit */
+    padding: 8px 10px; /* Compact padding for a tighter fit */
     background-color: var(--color-primary);
     color: black;
     border-radius: 5px;
@@ -146,9 +146,8 @@ html.dark-mode a:visited {
     transition: background-color 0.3s ease;
     border: 2px solid var(--color-accent);
     white-space: nowrap; /* Prevents line breaks */
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 0.95rem; /* Slightly smaller font for compact look */
+    max-width: 120px; /* Limits button width for a uniform appearance */
 }
 
 .nav-button:hover {
@@ -163,13 +162,17 @@ html.dark-mode .nav-button {
 
 /* Responsive Button Adjustments for Small Screens */
 @media (max-width: 600px) {
+    .nav-buttons {
+        gap: 3px; /* Smaller gap on mobile */
+    }
+    
     .nav-button {
-        padding: 6px 8px; /* Reduced padding for mobile */
-        font-size: 0.85rem; /* Slightly reduced font size for mobile */
-        flex-grow: 1; /* Forces equal width on mobile */
+        padding: 6px 8px; /* Further reduced padding on mobile */
+        font-size: 0.85rem; /* Slightly smaller font size for mobile */
+        flex: 1; /* Allows buttons to stretch equally on small screens */
+        max-width: none; /* Removes max width on mobile for a full fit */
     }
 }
-
 
 /* Social Icons at the Top Right */
 .social-icons {
