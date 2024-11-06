@@ -2,31 +2,25 @@
 function applyDarkMode(darkModeEnabled) {
     document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
     document.body.classList.toggle('dark-mode', darkModeEnabled); // Ensures body also toggles dark mode
+    
     const introText = document.getElementById('intro-text');
     if (introText) {
-        introText.style.color = darkModeEnabled ? '#00FF41' : '#FF3131';  // Neon green for dark, red for light
+        // Neon green for dark mode, red for light mode
+        introText.style.color = darkModeEnabled ? '#00FF41' : '#FF3131';
     }
 }
 
 // Initial check for dark mode based on preference or system setting
 const isDarkModePreferred = localStorage.getItem('darkMode') === 'true' || 
     (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+// Apply dark mode based on stored preference or system setting
 applyDarkMode(isDarkModePreferred);
 
-window.onload = function () {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-
-    // Event listener for dark mode toggle button
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', function () {
-            const isDarkMode = document.documentElement.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-            applyDarkMode(isDarkMode);
-        });
-    }
-
-    // Initialize Typed.js with cursor disabled
-    if (typeof Typed !== 'undefined' && document.getElementById('intro-text')) {
+// Function to initialize Typed.js with specific options
+function initializeTyped() {
+    const introText = document.getElementById('intro-text');
+    if (typeof Typed !== 'undefined' && introText) {
         new Typed('#intro-text', {
             strings: [
                 "Hi, I'm Travis R. Lee...",
@@ -36,9 +30,26 @@ window.onload = function () {
             typeSpeed: 50,
             backSpeed: 30,
             loop: true,
-            showCursor: false  // Disable blinking cursor
+            showCursor: false // Disable blinking cursor
         });
     } else {
         console.warn("Typed.js is not loaded or #intro-text element is missing.");
     }
+}
+
+window.onload = function () {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+
+    // Event listener for dark mode toggle button
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function () {
+            const isDarkMode = !document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            applyDarkMode(isDarkMode);
+        });
+    }
+
+    // Initialize Typed.js for dynamic typing effect
+    initializeTyped();
 };
+
