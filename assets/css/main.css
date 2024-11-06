@@ -55,6 +55,15 @@ main {
     }
 }
 
+/* Specific Styling for HTB Icon in Header */
+.htb-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px; /* Optional: adds spacing next to the icon */
+}
+
 /* Navigation Buttons */
 .nav-buttons {
     display: flex;
@@ -100,6 +109,7 @@ html.dark-mode footer {
     background-color: #222;
 }
 
+/* Footer Logo Styling */
 .footer-logo {
     width: 40px;
     height: 40px;
@@ -147,4 +157,3 @@ html.dark-mode .toggle-button {
         max-width: 50%;
     }
 }
-
