@@ -1,6 +1,7 @@
 // Function to apply dark mode styling
 function applyDarkMode(darkModeEnabled) {
     document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+    document.body.classList.toggle('dark-mode', darkModeEnabled); // Ensures body also toggles dark mode
     const introText = document.getElementById('intro-text');
     if (introText) {
         introText.style.color = darkModeEnabled ? '#00FF41' : '#FF3131';  // Neon green for dark, red for light
@@ -24,7 +25,7 @@ window.onload = function () {
         });
     }
 
-    // Initialize Typed.js if the library is available
+    // Initialize Typed.js with cursor disabled
     if (typeof Typed !== 'undefined' && document.getElementById('intro-text')) {
         new Typed('#intro-text', {
             strings: [
@@ -34,11 +35,10 @@ window.onload = function () {
             ],
             typeSpeed: 50,
             backSpeed: 30,
-            loop: true
+            loop: true,
+            showCursor: false  // Disable blinking cursor
         });
     } else {
         console.warn("Typed.js is not loaded or #intro-text element is missing.");
     }
 };
-
-
