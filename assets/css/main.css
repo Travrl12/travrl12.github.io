@@ -122,8 +122,8 @@ html.dark-mode a:visited {
     display: none;
 }
 
-/* Hamburger Menu Button and Toggle */
-.hamburger-button {
+/* Hamburger and Dark Mode Buttons */
+.hamburger-button, .toggle-button {
     font-size: 1.5rem;
     color: var(--color-accent);
     background: none;
@@ -131,12 +131,17 @@ html.dark-mode a:visited {
     cursor: pointer;
     position: fixed;
     top: 20px;
-    left: 60px; /* Positioned beside the dark mode toggle */
+    right: 20px; /* Aligns to the top right */
     z-index: 1000;
     transition: color 0.3s ease;
+    margin-left: 10px;
 }
 
-html.dark-mode .hamburger-button {
+.hamburger-button {
+    right: 50px; /* Positioning hamburger beside the dark mode toggle */
+}
+
+html.dark-mode .hamburger-button, html.dark-mode .toggle-button {
     color: var(--color-primary);
 }
 
@@ -260,3 +265,4 @@ html.dark-mode footer {
         max-width: 50%;
     }
 }
+
