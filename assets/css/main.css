@@ -131,12 +131,28 @@ html.dark-mode a:visited {
     cursor: pointer;
     position: fixed;
     top: 20px;
-    left: 60px; /* Positioning beside the dark mode toggle */
+    left: 20px;
     z-index: 1000;
     transition: color 0.3s ease;
 }
 
 html.dark-mode .hamburger-button {
+    color: var(--color-primary);
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    left: 60px;
+    z-index: 1000;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+html.dark-mode #darkModeToggle {
     color: var(--color-primary);
 }
 
@@ -146,12 +162,13 @@ html.dark-mode .hamburger-button {
     flex-direction: column;
     position: fixed;
     top: 60px;
-    right: 20px;
+    left: 20px;
     background-color: var(--color-light-bg);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 5px;
     border-radius: 8px;
     z-index: 999;
+    width: 150px; /* Smaller dropdown width */
 }
 
 .nav-menu.active {
@@ -165,7 +182,7 @@ html.dark-mode .hamburger-button {
 }
 
 .nav-link {
-    padding: 10px 15px;
+    padding: 8px 10px;
     color: black;
     background-color: var(--color-primary);
     border: 2px solid var(--color-accent);
@@ -175,6 +192,7 @@ html.dark-mode .hamburger-button {
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
 .nav-link:hover {
@@ -186,7 +204,6 @@ html.dark-mode .nav-link {
     color: #e0e0e0;
     border: 2px solid var(--color-primary);
 }
-
 
 /* Social Icons at the Top Right */
 .social-icons {
@@ -261,4 +278,3 @@ html.dark-mode footer {
         max-width: 50%;
     }
 }
-
