@@ -26,23 +26,13 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Links */
-a {
-    color: #0000FF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #FF3131;
-    text-decoration: underline;
-}
-
-html.dark-mode a {
-    color: #00FF41;
-}
-
-html.dark-mode a:hover {
-    color: #0CFCE5;
+/* Center the Main Content */
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Hero Section */
@@ -66,6 +56,15 @@ html.dark-mode a:hover {
 }
 
 /* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
 .nav-button {
     padding: 10px 20px;
     background-color: var(--color-primary);
@@ -74,7 +73,7 @@ html.dark-mode a:hover {
     font-weight: bold;
     text-align: center;
     border: 2px solid var(--color-accent);
-    margin-top: 15px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -86,11 +85,6 @@ html.dark-mode .nav-button {
     background-color: var(--color-accent);
     color: var(--color-dark-text);
     border-color: var(--color-primary);
-}
-
-.nav-button:focus {
-    outline: 3px dashed var(--color-primary);
-    outline-offset: 2px;
 }
 
 /* Footer Positioned at Bottom */
@@ -106,17 +100,8 @@ html.dark-mode footer {
     background-color: #222;
 }
 
-/* Separate Styling for HTB Icon in Header and Footer Logo */
-.htb-icon {
-    width: 30px; /* Specific width for HTB icon in header */
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Footer Logo Styling */
 .footer-logo {
-    width: 40px; /* Slightly larger size for footer logo */
+    width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
@@ -141,47 +126,25 @@ html.dark-mode .toggle-button {
     color: var(--color-primary);
 }
 
-@media (max-width: 600px) {
-    .toggle-button {
-        font-size: 1.5rem;
-    }
-}
-
 /* Responsive Images for Projects and Certifications */
-.meow-image, .fawn-image, .cert-badge {
-    max-width: 90%;                  /* Set max-width to 90% for smaller screens */
+.cert-badge, .meow-image, .fawn-image {
+    max-width: 90%;
     height: auto;
+    margin: 20px auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 10px;              /* Rounded corners for images */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Light shadow for better display */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Scaling for Medium and Large Screens */
 @media (min-width: 768px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 70%;              /* Reduced max-width for medium screens */
+    .cert-badge, .meow-image, .fawn-image {
+        max-width: 70%;
     }
 }
 
 @media (min-width: 1024px) {
-    .meow-image, .fawn-image, .cert-badge {
-        max-width: 50%;              /* Further reduced max-width for larger screens */
+    .cert-badge, .meow-image, .fawn-image {
+        max-width: 50%;
     }
-}
-
-/* Optional Hover Effect for Certification Badge */
-.cert-badge:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-/* Avatar or Work-in-Progress Image Styling */
-.avatar-image {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%; /* Circular avatar styling */
 }
 
