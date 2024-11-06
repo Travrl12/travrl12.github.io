@@ -50,36 +50,3 @@ window.onload = function () {
     });
 };
 
-
-    // Hack The Box widget integration code
-    fetch('htb_machines.json')  // Adjust the path if needed
-        .then(response => response.json())
-        .then(data => {
-            let widgetDiv = document.getElementById("htb-widget");
-            widgetDiv.innerHTML = "";  // Clear the loading text
-
-            // Create a list to display machine names
-            let ul = document.createElement("ul");
-            data.forEach(machine => {
-                let li = document.createElement("li");
-
-                // Create the link element for each machine
-                let link = document.createElement("a");
-                link.href = machine.link;  // Assuming each machine has a link property
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                link.textContent = `Completed ${machine.name} Machine on Hack The Box`;
-
-                li.appendChild(link);
-                ul.appendChild(li);
-            });
-
-            widgetDiv.appendChild(ul);
-        })
-        .catch(error => {
-            console.error("Error loading Hack The Box data:", error);
-            document.getElementById("htb-widget").innerHTML = "<p>Error loading Hack The Box data. Please try again later.</p>";
-        });
-};
-
-};
