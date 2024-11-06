@@ -22,11 +22,13 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode */
 html.dark-mode {
     background-color: var(--color-dark-bg);
     color: var(--color-dark-text);
 }
 
+/* Links */
 a {
     color: var(--color-link-light);
     text-decoration: none;
@@ -46,7 +48,7 @@ html.dark-mode a:hover {
     color: var(--color-hover-dark);
 }
 
-/* Centered Container */
+/* Main Content */
 main {
     flex-grow: 1;
     max-width: 1000px;
@@ -63,8 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro-text {
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 1rem;
+    margin: 40px auto 1rem;
     min-height: 50px;
     overflow: hidden;
 }
@@ -89,7 +90,7 @@ p, ul, li {
     }
 }
 
-/* Link Styles in Centered Sections */
+/* Centered Link Styles */
 .centered-links {
     text-align: center;
     margin: 20px 0;
@@ -113,10 +114,10 @@ html.dark-mode .centered-links a {
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
-    max-width: 100%;
+    width: 100%;
 }
 
-/* Logo Styling */
+/* Logo */
 .main-logo {
     width: 150px;
     height: auto;
@@ -177,7 +178,7 @@ html.dark-mode .social-icons a {
     }
 }
 
-/* Navigation Buttons */
+/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
@@ -263,13 +264,13 @@ footer p {
     }
 }
 
-/* Typed.js Intro Text */
+/* Typed.js Text */
 .typed-cursor {
     opacity: 0;
     display: none;
 }
 
-/* Dark Mode Toggle Button */
+/* Dark Mode Toggle */
 .toggle-button {
     position: fixed;
     top: 20px;
@@ -299,13 +300,12 @@ html.dark-mode .toggle-button {
     }
 }
 
-/* Responsive Image Scaling */
+/* Responsive Images */
 .meow-image, .fawn-image, .cert-badge {
     max-width: 90%;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -326,4 +326,3 @@ html.dark-mode .toggle-button {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
