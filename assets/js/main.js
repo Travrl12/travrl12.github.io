@@ -2,7 +2,7 @@
 function applyDarkMode(darkModeEnabled) {
     document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
     document.body.classList.toggle('dark-mode', darkModeEnabled); // Ensures body also toggles dark mode
-
+    
     const introText = document.getElementById('intro-text');
     if (introText) {
         // Neon green for dark mode, red for light mode
@@ -43,16 +43,6 @@ function toggleHamburgerMenu() {
     navMenu.classList.toggle('active'); // Toggle the 'active' class
 }
 
-// Function to close the menu if clicked outside
-function handleClickOutside(event) {
-    const navMenu = document.getElementById('navMenu');
-    const hamburgerButton = document.getElementById('hamburgerMenu');
-
-    if (navMenu.classList.contains('active') && !navMenu.contains(event.target) && event.target !== hamburgerButton) {
-        navMenu.classList.remove('active'); // Close menu if click is outside
-    }
-}
-
 window.onload = function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const hamburgerButton = document.getElementById('hamburgerMenu');
@@ -71,12 +61,7 @@ window.onload = function () {
         hamburgerButton.addEventListener('click', toggleHamburgerMenu);
     }
 
-    // Close menu when clicking outside
-    document.addEventListener('click', handleClickOutside);
-
     // Initialize Typed.js for dynamic typing effect
     initializeTyped();
 };
-
-
 
