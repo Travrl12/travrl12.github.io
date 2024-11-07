@@ -11,74 +11,55 @@
 </head>
 
 <body>
-    <div class="page-wrapper"> <!-- Wrapper to handle sticky footer -->
-
-        <!-- Header Section with Dark Mode Toggle, Navigation Buttons, and Social Icons -->
-        <header class="header-bar">
-            <!-- Dark Mode Toggle Button -->
-            <div id="darkModeToggle" class="toggle-button" aria-label="Toggle Dark Mode">
-                <i class="fas fa-adjust" aria-hidden="true"></i>
-            </div>
-
-            <!-- Navigation Buttons with Correct Permalinks -->
-            <nav class="nav-buttons">
-                <a href="/" class="nav-button">Home</a>
-                <a href="/about/" class="nav-button">About</a>
-                <a href="/projects/" class="nav-button">Projects</a>
-                <a href="/certifications/" class="nav-button">Certifications</a>
-            </nav>
-
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/travisrlee" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://app.hackthebox.com/profile/2105172" target="_blank" aria-label="Hack The Box" rel="noopener noreferrer">
-                    <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="Hack The Box" class="htb-icon">
-                </a>
-            </div>
-        </header>
-
-        <!-- Underline for Header Bar -->
-        <div class="header-underline"></div>
-
-        <!-- Main Logo -->
-        <div class="main-logo-container">
-            <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" class="main-logo">
+    <!-- Header Bar with Dark Mode Toggle, Navigation Buttons, and Social Icons -->
+    <header class="header-bar">
+        <div id="darkModeToggle" class="toggle-button" aria-label="Toggle Dark Mode">
+            <i class="fas fa-adjust" aria-hidden="true"></i>
         </div>
-
-        <!-- Main Content Section -->
-        <main>
-            <h1>Welcome to C1pherKn1ght</h1>
-            <p>Welcome to the portfolio of Travis R. Lee, specializing in Red Teaming and Offensive Security tactics.</p>
-            <p>I’m passionate about offensive security and red teaming. This portfolio highlights my progress, my completed projects, and my journey through Hack The Box and other platforms as I hone my skills in penetration testing and ethical hacking.</p>
-            <p>I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on <a href="https://github.com/Travrl12" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/travisrlee" target="_blank">LinkedIn</a> or check out my <a href="https://app.hackthebox.com/profile/2105172" target="_blank">Hack The Box</a> profile for the latest progress!</p>
-        </main>
-
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
-            <div class="social-links">
-                <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                </a> |
-                <a href="https://www.linkedin.com/in/travisrlee" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-                </a> |
-                <a href="https://app.hackthebox.com/profile/2105172" target="_blank" aria-label="Hack The Box" rel="noopener noreferrer">
-                    <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="Hack The Box" class="footer-logo"> HTB
-                </a>
-            </div>
-        </footer>
         
-    </div> <!-- End of page-wrapper -->
+        <nav class="nav-buttons">
+            <a href="/" class="nav-button">Home</a>
+            <a href="/about/" class="nav-button">About</a>
+            <a href="/projects/" class="nav-button">Projects</a>
+            <a href="/certifications/" class="nav-button">Certifications</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/travisrlee" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://app.hackthebox.com/profile/2105172" target="_blank" aria-label="Hack The Box" rel="noopener noreferrer">
+                <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="Hack The Box" class="htb-icon">
+            </a>
+        </div>
+    </header>
+
+    <!-- Logo and Main Content -->
+    <div class="hero">
+        <img src="/assets/images/C1pherKn1ght_logo.jpeg" alt="C1pherKn1ght Logo" class="main-logo">
+        <h2 id="intro-text">Welcome to C1pherKn1ght</h2>
+    </div>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Travis R. Lee | <strong>C1pherKn1ght</strong></p>
+        <div class="social-links">
+            <a href="https://github.com/Travrl12" target="_blank" aria-label="GitHub" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://www.linkedin.com/in/travisrlee" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://app.hackthebox.com/profile/2105172" target="_blank" aria-label="Hack The Box" rel="noopener noreferrer">HTB</a>
+        </div>
+    </footer>
 
     <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-    <script src="/assets/js/darkModeToggle.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
+
