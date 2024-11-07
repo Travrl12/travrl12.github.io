@@ -112,3 +112,32 @@ html.dark-mode a {
 html.dark-mode a:visited {
     color: var(--color-visited-dark);
 }
+
+/* Social Icons Styling */
+.social-icons a, .social-icons-mobile a, .social-links a {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover, .social-icons-mobile a:hover, .social-links a:hover {
+    transform: scale(1.1);
+}
+
+html.dark-mode .social-icons a, .social-icons-mobile a, .social-links a {
+    color: var(--color-primary);
+}
+
+/* HTB Icon Styling for Consistent Size */
+.htb-icon {
+    width: 24px; /* Ensures HTB icon matches other icons */
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ensure Footer Social Icons Match */
+.social-links .htb-icon {
+    width: 24px;
+    height: 24px;
+}
