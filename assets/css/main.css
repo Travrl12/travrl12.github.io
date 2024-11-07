@@ -91,10 +91,10 @@ html.dark-mode .toggle-button {
 }
 
 .htb-icon {
-    width: 24px; /* Ensure size matches other social icons */
+    width: 24px; /* Match other icon sizes */
     height: 24px;
-    border-radius: 50%;
-    object-fit: cover; /* Ensure it looks uniform */
+    object-fit: contain; /* Keep the entire image within bounds */
+    /* Remove border-radius so the icon remains square */
 }
 
 html.dark-mode .social-icons a {
