@@ -29,12 +29,18 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* Header Bar */
 .header-bar {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: var(--color-light-bg);
+    background-color: #000; /* Always black */
 }
 
 .toggle-button {
@@ -70,6 +76,16 @@ html.dark-mode .toggle-button {
 html.dark-mode .nav-button {
     background-color: var(--color-primary);
     color: var(--color-dark-text);
+}
+
+/* Header Underline */
+.header-underline {
+    height: 4px;
+    background-color: var(--color-accent);
+}
+
+html.dark-mode .header-underline {
+    background-color: var(--color-primary);
 }
 
 /* Social Icons */
@@ -113,12 +129,13 @@ main {
     text-align: center;
 }
 
-/* Footer */
+/* Sticky Footer */
 footer {
     background-color: #f4f4f4;
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
+    margin-top: auto;
 }
 
 html.dark-mode footer {
