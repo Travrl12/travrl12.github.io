@@ -168,4 +168,21 @@ main {
     text-align: center;
 }
 
-/
+/* Link Styling for Body and Footer */
+a {
+    color: var(--color-link-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+html.dark-mode a {
+    color: var(--color-link-dark);
+}
+
+html.dark-mode a:visited {
+    color: var(--color-visited-dark);
+}
