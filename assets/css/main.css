@@ -84,23 +84,46 @@ html.dark-mode .toggle-button {
     color: var(--color-accent);
 }
 
-/* Social Icons Styling for Both Desktop and Mobile */
-.social-icons a, .social-icons-mobile a {
-    font-size: 1.5rem;
-    color: var(--color-accent);
+/* Social Icons for Mobile Only */
+.social-icons-mobile {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center-aligns icons in the row */
+    align-items: center; /* Vertically aligns icons */
+    margin-top: 10px;
 }
 
-.social-icons a .htb-icon,
+.social-icons-mobile a {
+    display: flex;
+    align-items: center; /* Ensures icon contents are centered */
+}
+
+/* Adjust HTB icon size specifically for mobile alignment */
 .social-icons-mobile .htb-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%; /* Rounded for consistent look */
-    object-fit: contain; /* Prevents clipping */
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+html.dark-mode .social-icons a {
+    color: var(--color-primary);
 }
 
-html.dark-mode .social-icons a,
-html.dark-mode .social-icons-mobile a {
-    color: var(--color-primary);
+/* Centered Main Logo */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1rem;
+    text-align: center;
+    padding-left: 10px; /* Add padding for mobile */
+    padding-right: 10px;
+}
+
+.main-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
 }
 
 /* Social Icons for Mobile Only */
@@ -109,33 +132,32 @@ html.dark-mode .social-icons-mobile a {
 }
 
 @media (max-width: 600px) {
-    /* Display social icons below the type script on mobile */
+    .nav-button {
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+
+    .main-logo {
+        width: 100px;
+    }
+
+    /* Move social icons below intro text on mobile */
     .social-icons {
         display: none; /* Hide header social icons */
     }
 
     .social-icons-mobile {
         display: flex;
-        gap: 15px; /* Adjust spacing for balance */
+        gap: 10px;
         justify-content: center;
-        align-items: center;
         margin-top: 10px;
     }
-
-    /* Mobile-specific size for HTB icon */
-    .social-icons-mobile .htb-icon {
-        width: 32px;
-        height: 32px;
-        object-fit: cover; /* Full image fit */
-        border-radius: 50%;
-    }
-}
 
     /* Padding adjustments for mobile */
     .hero, footer, .cert-badge, .project-image {
         padding-left: 10px;
         padding-right: 10px;
-        max-width: 100vw;
+        max-width: 100vw; /* Prevents overflow */
         overflow-wrap: break-word;
     }
 
@@ -144,7 +166,7 @@ html.dark-mode .social-icons-mobile a {
         padding-right: 10px;
         overflow-wrap: break-word;
         max-width: 100vw;
-        box-sizing: border-box;
+        box-sizing: border-box; /* Ensure padding is included within width */
     }
 }
 
@@ -189,22 +211,3 @@ html.dark-mode a {
 
 html.dark-mode a:visited {
     color: var(--color-visited-dark);
-}
-
-/* Centered Main Logo */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    gap: 1rem;
-    text-align: center;
-    padding-left: 10px; /* Add padding for mobile */
-    padding-right: 10px;
-}
-
-.main-logo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
