@@ -190,3 +190,21 @@ html.dark-mode a {
 html.dark-mode a:visited {
     color: var(--color-visited-dark);
 }
+
+/* Centered Main Logo */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1rem;
+    text-align: center;
+    padding-left: 10px; /* Add padding for mobile */
+    padding-right: 10px;
+}
+
+.main-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
