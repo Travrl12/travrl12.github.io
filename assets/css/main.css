@@ -12,7 +12,7 @@
     --color-visited-dark: #8F00FF;
 }
 
-/* Base Styles for HTML and Body */
+/* Base Styles */
 html, body {
     background-color: var(--color-light-bg);
     color: var(--color-light-text);
@@ -20,10 +20,8 @@ html, body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 html.dark-mode, body.dark-mode {
@@ -36,16 +34,16 @@ html.dark-mode, body.dark-mode {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: var(--color-dark-bg);
+    background-color: var(--color-light-bg);
 }
 
-.toggle-button, .nav-button, .social-icons a {
-    color: var(--color-light-text);
+.toggle-button {
+    color: var(--color-accent);
     margin-right: 10px;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-html.dark-mode .toggle-button, html.dark-mode .nav-button, html.dark-mode .social-icons a {
+html.dark-mode .toggle-button {
     color: var(--color-primary);
 }
 
@@ -57,23 +55,24 @@ html.dark-mode .toggle-button, html.dark-mode .nav-button, html.dark-mode .socia
 
 .nav-button {
     padding: 5px 10px;
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
     border-radius: 3px;
     font-weight: bold;
     text-align: center;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-button:hover {
-    background-color: #0CFCE5;
+    background-color: #FF5757;
 }
 
 html.dark-mode .nav-button {
-    background-color: var(--color-accent);
-    color: var(--color-light-text);
+    background-color: var(--color-primary);
+    color: var(--color-dark-text);
 }
 
+/* Social Icons */
 .social-icons {
     display: flex;
     gap: 8px;
@@ -82,11 +81,11 @@ html.dark-mode .nav-button {
 
 .social-icons a {
     font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--color-accent);
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
+html.dark-mode .social-icons a {
+    color: var(--color-primary);
 }
 
 .htb-icon {
@@ -95,20 +94,48 @@ html.dark-mode .nav-button {
     border-radius: 50%;
 }
 
-html.dark-mode .social-icons a {
-    color: var(--color-primary);
+/* Main Logo Centered */
+.main-logo-container {
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Responsive Header Layout */
-@media (max-width: 768px) {
-    .header-bar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.main-logo {
+    width: 150px;
+    border-radius: 50%;
+}
 
-    .nav-buttons, .social-icons {
-        order: 1;
-        justify-content: center;
-        width: 100%;
-    }
+/* Centered Main Content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+html.dark-mode footer {
+    background-color: #222;
+}
+
+.footer-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* Links in Footer */
+.social-links a {
+    color: var(--color-link-light);
+}
+
+html.dark-mode .social-links a {
+    color: var(--color-link-dark);
 }
