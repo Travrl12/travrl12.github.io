@@ -84,21 +84,23 @@ html.dark-mode .toggle-button {
     color: var(--color-accent);
 }
 
-/* Social Icons Styling */
-.social-icons a {
-    font-size: 1.5rem;
-    color: var(--color-accent);
+/* Social Icons for Mobile Only */
+.social-icons-mobile {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center-aligns icons in the row */
+    align-items: center; /* Vertically aligns icons */
+    margin-top: 10px;
 }
 
-.htb-icon {
-    width: 24px; /* Standard size in header bar */
-    height: 24px;
-    object-fit: contain;
+.social-icons-mobile a {
+    display: flex;
+    align-items: center; /* Ensures icon contents are centered */
 }
 
-/* Adjust size when icon is under type script (mobile layout) */
+/* Adjust HTB icon size specifically for mobile alignment */
 .social-icons-mobile .htb-icon {
-    width: 32px; /* Slightly larger to match visual balance */
+    width: 32px;
     height: 32px;
     object-fit: contain;
 }
