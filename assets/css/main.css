@@ -84,27 +84,21 @@ html.dark-mode .toggle-button {
     color: var(--color-accent);
 }
 
-/* Social Icons for Mobile Only */
-.social-icons-mobile {
-    display: flex;
-    gap: 10px;
-    justify-content: center; /* Center-aligns icons in the row */
-    align-items: center; /* Vertically aligns icons */
-    margin-top: 10px;
+/* Social Icons Styling for Both Desktop and Mobile */
+.social-icons a, .social-icons-mobile a {
+    font-size: 1.5rem;
+    color: var(--color-accent);
 }
 
-.social-icons-mobile a {
-    display: flex;
-    align-items: center; /* Ensures icon contents are centered */
-}
-
-/* Adjust HTB icon size specifically for mobile alignment */
+.social-icons a .htb-icon,
 .social-icons-mobile .htb-icon {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
 }
-html.dark-mode .social-icons a {
+
+html.dark-mode .social-icons a,
+html.dark-mode .social-icons-mobile a {
     color: var(--color-primary);
 }
 
@@ -116,7 +110,7 @@ html.dark-mode .social-icons a {
     padding-top: 2rem;
     gap: 1rem;
     text-align: center;
-    padding-left: 10px; /* Add padding for mobile */
+    padding-left: 10px;
     padding-right: 10px;
 }
 
@@ -148,8 +142,9 @@ html.dark-mode .social-icons a {
 
     .social-icons-mobile {
         display: flex;
-        gap: 10px;
+        gap: 15px; /* Adjust gap for even spacing */
         justify-content: center;
+        align-items: center;
         margin-top: 10px;
     }
 
@@ -157,7 +152,7 @@ html.dark-mode .social-icons a {
     .hero, footer, .cert-badge, .project-image {
         padding-left: 10px;
         padding-right: 10px;
-        max-width: 100vw; /* Prevents overflow */
+        max-width: 100vw;
         overflow-wrap: break-word;
     }
 
@@ -166,7 +161,7 @@ html.dark-mode .social-icons a {
         padding-right: 10px;
         overflow-wrap: break-word;
         max-width: 100vw;
-        box-sizing: border-box; /* Ensure padding is included within width */
+        box-sizing: border-box;
     }
 }
 
