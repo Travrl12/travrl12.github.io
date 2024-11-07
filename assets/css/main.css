@@ -23,6 +23,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 html.dark-mode, body.dark-mode {
@@ -30,91 +31,79 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Header Bar Styling */
+/* Header Bar */
 .header-bar {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     background-color: var(--color-dark-bg);
 }
 
-/* Dark Mode Toggle */
-.toggle-button {
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--color-accent);
+.toggle-button, .nav-button, .social-icons a {
+    color: var(--color-light-text);
+    margin-right: 10px;
+    text-decoration: none;
 }
 
-html.dark-mode .toggle-button {
+html.dark-mode .toggle-button, html.dark-mode .nav-button, html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
 
-/* Logo */
-.main-logo {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Navigation Buttons */
 .nav-buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    margin-left: 10px;
 }
 
-.nav-link {
-    padding: 8px 12px;
-    color: white;
-    background-color: var(--color-accent);
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.nav-link:hover {
+.nav-button {
+    padding: 5px 10px;
     background-color: var(--color-primary);
+    border: 1px solid var(--color-accent);
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-/* Social Icons */
+.nav-button:hover {
+    background-color: #0CFCE5;
+}
+
+html.dark-mode .nav-button {
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+}
+
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    margin-left: auto;
 }
 
 .social-icons a {
     font-size: 1.2rem;
-    color: var(--color-accent);
-    transition: color 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
 
-.htb-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+/* Responsive Header Layout */
+@media (max-width: 768px) {
+    .header-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-buttons, .social-icons {
+        order: 1;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
-/* Footer Styling */
-footer {
-    margin-top: auto;
-    background-color: #f4f4f4;
-    padding: 2rem 1rem;
-    text-align: center;
-    width: 100%;
-}
-
-html.dark-mode footer {
-    background-color: #222;
-}
-
-.footer-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-}
