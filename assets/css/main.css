@@ -84,27 +84,24 @@ html.dark-mode .toggle-button {
     color: var(--color-accent);
 }
 
-/* Social Icons for Mobile Only */
-.social-icons-mobile {
+/* Social Icons Styling for Both Desktop and Mobile */
+.social-icons a, .social-icons-mobile a {
+    font-size: 1.5rem;
+    color: var(--color-accent);
     display: flex;
-    gap: 10px;
-    justify-content: center; /* Center-aligns icons in the row */
-    align-items: center; /* Vertically aligns icons */
-    margin-top: 10px;
+    align-items: center;
 }
 
-.social-icons-mobile a {
-    display: flex;
-    align-items: center; /* Ensures icon contents are centered */
-}
-
-/* Adjust HTB icon size specifically for mobile alignment */
+.social-icons .htb-icon,
 .social-icons-mobile .htb-icon {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
+    border-radius: 50%;
 }
-html.dark-mode .social-icons a {
+
+html.dark-mode .social-icons a, 
+html.dark-mode .social-icons-mobile a {
     color: var(--color-primary);
 }
 
