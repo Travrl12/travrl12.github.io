@@ -91,9 +91,10 @@ html.dark-mode .toggle-button {
 }
 
 .htb-icon {
-    width: 24px;
+    width: 24px; /* Ensure size matches other social icons */
     height: 24px;
     border-radius: 50%;
+    object-fit: cover; /* Ensure it looks uniform */
 }
 
 html.dark-mode .social-icons a {
@@ -108,6 +109,8 @@ html.dark-mode .social-icons a {
     padding-top: 2rem;
     gap: 1rem;
     text-align: center;
+    padding-left: 10px; /* Add padding for mobile */
+    padding-right: 10px;
 }
 
 .main-logo {
@@ -151,7 +154,6 @@ html.dark-mode .social-icons a {
         overflow-wrap: break-word;
     }
 
-    /* Ensuring body text doesn’t hit the edges on mobile */
     main, p, img, .content {
         padding-left: 10px;
         padding-right: 10px;
