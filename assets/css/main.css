@@ -84,6 +84,12 @@ html.dark-mode .toggle-button {
     color: var(--color-accent);
 }
 
+.htb-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
 html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
@@ -127,12 +133,6 @@ footer {
 
 html.dark-mode footer {
     background-color: #222;
-}
-
-.footer-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
 }
 
 /* Link Styling for Body and Footer */
