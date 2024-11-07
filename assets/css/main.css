@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
     --color-light-bg: #d9cfcf;
     --color-dark-bg: #121212;
@@ -11,7 +12,7 @@
     --color-visited-dark: #8F00FF;
 }
 
-/* Base Styles for HTML and Body */
+/* Base Styles for Body */
 html, body {
     background-color: var(--color-light-bg);
     color: var(--color-light-text);
@@ -30,158 +31,158 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Header Bar Styling */
+/* Header Bar */
 .header-bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    background-color: #000;
-    color: var(--color-light-text);
-    width: 100%;
 }
 
-.toggle-button {
-    font-size: 1.5rem;
-    color: var(--color-accent);
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.nav-buttons, .social-icons {
+    display: flex;
+    gap: 10px;
 }
 
-html.dark-mode .toggle-button {
-    color: var(--color-primary);
-}
-
-/* Navigation Button Styling */
-.nav-buttons .nav-button {
-    padding: 8px 15px;
+.nav-button {
+    background-color: var(--color-accent);
     color: black;
-    background-color: var(--color-primary);
+    padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-html.dark-mode .nav-button {
-    background-color: var(--color-accent);
-    color: #f0f0f0;
+.nav-button:hover {
+    background-color: var(--color-primary);
 }
 
-/* Social Icons */
-.social-icons a {
-    font-size: 1.2rem;
+html.dark-mode .nav-button {
+    background-color: var(--color-primary);
+    color: black;
+}
+
+.toggle-button {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+html.dark-mode .toggle-button {
     color: var(--color-accent);
-    transition: color 0.3s ease;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+.htb-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
 
 html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
 
-.htb-icon, .footer-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-}
-
-/* Hero Section with Typing Text */
+/* Centered Main Logo */
 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1rem;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 20px;
 }
 
 .main-logo {
     width: 150px;
     height: auto;
     border-radius: 50%;
-    object-fit: cover;
+}
+
+/* Social Icons for Mobile Only */
+.social-icons-mobile {
+    display: none; /* Hidden by default */
 }
 
 @media (max-width: 600px) {
+    .nav-button {
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+
     .main-logo {
         width: 100px;
     }
-}
 
-/* Typing Text to Prevent Layout Shift */
-#intro-text {
-    font-size: 1.5rem;
-    color: inherit;
-    min-height: 50px; /* Sets min-height to prevent jumping */
-    padding: 0 20px; /* Adds left and right padding for readability on mobile */
-}
+    /* Move social icons below intro text on mobile */
+    .social-icons {
+        display: none; /* Hide header social icons */
+    }
 
-@media (max-width: 600px) {
-    #intro-text {
-        font-size: 1.2rem;
-        padding: 0 15px; /* Adds padding for smaller screens */
+    .social-icons-mobile {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
     }
 }
 
-/* Main Content Centering */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
-}
-
-/* Link Styling */
-a {
-    color: var(--color-link-light);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--color-accent);
-}
-
-html.dark-mode a {
-    color: var(--color-link-dark);
-}
-
-html.dark-mode a:hover {
-    color: var(--color-primary);
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
     margin-top: auto;
     background-color: #f4f4f4;
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 html.dark-mode footer {
     background-color: #222;
 }
 
-/* Responsive Image Styling for Project and Certification Pages */
-.cert-badge, .project-image {
-    max-width: 100%;
+/* Centering Main Content */
+main {
+    max-width: 800px;
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Tablet Screens */
-@media (min-width: 768px) {
-    .cert-badge, .project-image {
-        max-width: 70%;
-    }
+/* Link Styling for Body and Footer */
+a {
+    color: var(--color-link-light);
+    text-decoration: none;
 }
 
-/* Desktop Screens */
-@media (min-width: 1024px) {
-    .cert-badge, .project-image {
-        max-width: 50%;
-    }
+a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+html.dark-mode a {
+    color: var(--color-link-dark);
+}
+
+html.dark-mode a:visited {
+    color: var(--color-visited-dark);
 }
