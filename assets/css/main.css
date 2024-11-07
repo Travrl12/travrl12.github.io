@@ -29,18 +29,13 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 /* Header Bar */
 .header-bar {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: #000; /* Always black */
+    background-color: #000;
+    position: relative;
 }
 
 .toggle-button {
@@ -56,13 +51,12 @@ html.dark-mode .toggle-button {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 10px;
 }
 
 .nav-button {
     padding: 5px 10px;
     background-color: var(--color-accent);
-    color: var(--color-light-text);
+    color: black; /* Ensures readability in both modes */
     border-radius: 3px;
     font-weight: bold;
     text-align: center;
@@ -75,7 +69,6 @@ html.dark-mode .toggle-button {
 
 html.dark-mode .nav-button {
     background-color: var(--color-primary);
-    color: var(--color-dark-text);
 }
 
 /* Header Underline */
@@ -146,13 +139,4 @@ html.dark-mode footer {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-}
-
-/* Links in Footer */
-.social-links a {
-    color: var(--color-link-light);
-}
-
-html.dark-mode .social-links a {
-    color: var(--color-link-dark);
 }
