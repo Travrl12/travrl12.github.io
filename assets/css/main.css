@@ -116,6 +116,11 @@ html.dark-mode .social-icons a {
     border-radius: 50%;
 }
 
+/* Social Icons for Mobile Only */
+.social-icons-mobile {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 600px) {
     .nav-button {
         padding: 3px 8px;
@@ -124,6 +129,18 @@ html.dark-mode .social-icons a {
 
     .main-logo {
         width: 100px;
+    }
+
+    /* Move social icons below intro text on mobile */
+    .social-icons {
+        display: none; /* Hide header social icons */
+    }
+
+    .social-icons-mobile {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
     }
 }
 
@@ -134,7 +151,7 @@ footer {
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -151,21 +168,4 @@ main {
     text-align: center;
 }
 
-/* Link Styling for Body and Footer */
-a {
-    color: var(--color-link-light);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
-}
-
-html.dark-mode a {
-    color: var(--color-link-dark);
-}
-
-html.dark-mode a:visited {
-    color: var(--color-visited-dark);
-}
+/
