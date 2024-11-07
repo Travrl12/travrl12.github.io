@@ -89,6 +89,12 @@ html.dark-mode .nav-button {
     transform: scale(1.1);
 }
 
+.htb-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
 html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
@@ -106,4 +112,3 @@ html.dark-mode .social-icons a {
         width: 100%;
     }
 }
-
