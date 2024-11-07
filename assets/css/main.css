@@ -92,12 +92,18 @@ html.dark-mode .toggle-button {
     align-items: center;
 }
 
+/* Standard size for all social icons */
 .social-icons .htb-icon,
 .social-icons-mobile .htb-icon {
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
     border-radius: 50%;
+}
+
+/* Additional adjustment specifically for mobile version */
+.social-icons-mobile .htb-icon {
+    padding: 0.1rem; /* Only applies padding on mobile layout */
 }
 
 html.dark-mode .social-icons a, 
