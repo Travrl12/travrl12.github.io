@@ -29,6 +29,21 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
+/* Ensure footer sticks to bottom */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Header Bar */
 .header-bar {
     display: flex;
@@ -56,22 +71,21 @@ html.dark-mode .toggle-button {
 .nav-button {
     padding: 5px 10px;
     background-color: var(--color-accent);
-    color: black; /* Ensures readability in both modes */
+    color: black;
     border-radius: 3px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
 }
 
-.nav-button:hover {
-    background-color: #FF5757;
-}
-
 html.dark-mode .nav-button {
     background-color: var(--color-primary);
 }
 
-/* Header Underline */
+.nav-button:hover {
+    background-color: #FF5757;
+}
+
 .header-underline {
     height: 4px;
     background-color: var(--color-accent);
@@ -103,7 +117,7 @@ html.dark-mode .social-icons a {
     border-radius: 50%;
 }
 
-/* Main Logo Centered */
+/* Centered Main Logo */
 .main-logo-container {
     text-align: center;
     padding: 20px 0;
@@ -114,21 +128,12 @@ html.dark-mode .social-icons a {
     border-radius: 50%;
 }
 
-/* Centered Main Content */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Sticky Footer */
+/* Footer Styling */
 footer {
     background-color: #f4f4f4;
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
-    margin-top: auto;
 }
 
 html.dark-mode footer {
@@ -140,3 +145,4 @@ html.dark-mode footer {
     height: 24px;
     border-radius: 50%;
 }
+
