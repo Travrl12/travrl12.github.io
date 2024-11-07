@@ -44,6 +44,12 @@ html.dark-mode, body.dark-mode {
     border-bottom: 2px solid var(--color-accent);
 }
 
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .nav-buttons, .social-icons {
     display: flex;
     gap: 10px;
@@ -101,6 +107,7 @@ html.dark-mode .social-icons a {
     align-items: center;
     padding-top: 2rem;
     gap: 1rem;
+    text-align: center;
 }
 
 .main-logo {
@@ -133,6 +140,15 @@ footer {
 
 html.dark-mode footer {
     background-color: #222;
+}
+
+/* Centering Main Content */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Link Styling for Body and Footer */
