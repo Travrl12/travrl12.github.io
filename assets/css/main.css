@@ -44,7 +44,7 @@ html.dark-mode, body.dark-mode {
     border-bottom: 2px solid var(--color-accent);
 }
 
-.left-section {
+.header-left {
     display: flex;
     align-items: center;
     gap: 10px;
