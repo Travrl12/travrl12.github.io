@@ -108,6 +108,8 @@ html.dark-mode .social-icons a {
     padding-top: 2rem;
     gap: 1rem;
     text-align: center;
+    padding-left: 10px; /* Add padding for mobile */
+    padding-right: 10px;
 }
 
 .main-logo {
@@ -144,11 +146,18 @@ html.dark-mode .social-icons a {
     }
 
     /* Padding adjustments for mobile */
-    main, .hero, footer {
+    .hero, footer, .cert-badge, .project-image {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100vw; /* Prevents overflow */
+        overflow-wrap: break-word;
+    }
+
+    main, p, img {
         padding-left: 10px;
         padding-right: 10px;
         overflow-wrap: break-word;
-        max-width: 100vw; /* Prevents overflow */
+        max-width: 100vw;
     }
 }
 
