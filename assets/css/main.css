@@ -143,10 +143,12 @@ html.dark-mode .social-icons a {
         margin-top: 10px;
     }
 
-    /* Add padding to right side to prevent text touching edges */
+    /* Padding adjustments for mobile */
     main, .hero, footer {
         padding-left: 10px;
         padding-right: 10px;
+        overflow-wrap: break-word;
+        max-width: 100vw; /* Prevents overflow */
     }
 }
 
