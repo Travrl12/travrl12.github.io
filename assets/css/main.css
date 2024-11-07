@@ -91,12 +91,17 @@ html.dark-mode .toggle-button {
 }
 
 .htb-icon {
-    width: 24px; /* Match other icon sizes */
+    width: 24px; /* Standard size in header bar */
     height: 24px;
-    object-fit: contain; /* Keep the entire image within bounds */
-    /* Remove border-radius so the icon remains square */
+    object-fit: contain;
 }
 
+/* Adjust size when icon is under type script (mobile layout) */
+.social-icons-mobile .htb-icon {
+    width: 32px; /* Slightly larger to match visual balance */
+    height: 32px;
+    object-fit: contain;
+}
 html.dark-mode .social-icons a {
     color: var(--color-primary);
 }
