@@ -31,99 +31,32 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
-/* Header Bar */
-.header-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--color-accent);
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-buttons, .social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-button {
-    background-color: var(--color-accent);
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: var(--color-primary);
-}
-
-html.dark-mode .nav-button {
-    background-color: var(--color-primary);
-    color: black;
-}
-
-.toggle-button {
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    cursor: pointer;
-}
-
-html.dark-mode .toggle-button {
-    color: var(--color-accent);
-}
-
-/* Social Icons Styling */
-.social-icons a {
-    font-size: 1.5rem;
-    color: var(--color-accent);
-}
-
-.htb-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-}
-
-html.dark-mode .social-icons a {
-    color: var(--color-primary);
-}
-
-/* Centered Main Logo */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    gap: 1rem;
+/* Main Content Centering */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-    padding-left: 10px; /* Add padding for mobile */
-    padding-right: 10px;
 }
 
-.main-logo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Social Icons for Mobile Only */
-.social-icons-mobile {
-    display: none; /* Hidden by default */
-}
-
+/* Ensure Padding for Text Content on Mobile */
 @media (max-width: 600px) {
+    .hero, footer, .cert-badge, .project-image {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100vw; /* Prevents overflow */
+        overflow-wrap: break-word;
+    }
+
+    main, p, h1, h2, h3, h4, h5, h6, ul, ol {
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-wrap: break-word;
+        max-width: 100vw;
+        text-align: left; /* Left-align text for readability */
+    }
+
     .nav-button {
         padding: 3px 8px;
         font-size: 0.8rem;
@@ -133,9 +66,9 @@ html.dark-mode .social-icons a {
         width: 100px;
     }
 
-    /* Move social icons below intro text on mobile */
+    /* Hide header social icons on mobile */
     .social-icons {
-        display: none; /* Hide header social icons */
+        display: none;
     }
 
     .social-icons-mobile {
@@ -143,21 +76,6 @@ html.dark-mode .social-icons a {
         gap: 10px;
         justify-content: center;
         margin-top: 10px;
-    }
-
-    /* Padding adjustments for mobile */
-    .hero, footer, .cert-badge, .project-image {
-        padding-left: 10px;
-        padding-right: 10px;
-        max-width: 100vw; /* Prevents overflow */
-        overflow-wrap: break-word;
-    }
-
-    main, p, img {
-        padding-left: 10px;
-        padding-right: 10px;
-        overflow-wrap: break-word;
-        max-width: 100vw;
     }
 }
 
@@ -174,15 +92,6 @@ footer {
 
 html.dark-mode footer {
     background-color: #222;
-}
-
-/* Centering Main Content */
-main {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
 }
 
 /* Link Styling for Body and Footer */
