@@ -187,15 +187,36 @@ html.dark-mode a:visited {
     color: var(--color-visited-dark);
 }
 
-/* Base Styles for Mobile Padding */
-main, .hero, .social-icons-mobile {
+/* General Padding for Main Content */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    text-align: left;
 }
 
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 15px; /* Ensures padding on both sides */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px; /* Matches main content width */
+    margin: 0 auto;
+}
+
+/* Mobile-specific adjustments to prevent edge overflow */
 @media (max-width: 600px) {
-    /* Additional padding for mobile to prevent edge overflow */
-    body, main, .hero, footer {
+    main, .hero {
+        max-width: 95vw; /* Keeps content from hitting screen edges */
+    }
+
+    body, footer {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -203,10 +224,5 @@ main, .hero, .social-icons-mobile {
     .nav-buttons, .social-icons-mobile {
         padding-left: 5px;
         padding-right: 5px;
-    }
-
-    /* Ensure the main content area respects mobile screen width */
-    main {
-        max-width: 95vw;
     }
 }
