@@ -94,8 +94,8 @@ html.dark-mode .toggle-button {
 
 .social-icons .htb-icon,
 .social-icons-mobile .htb-icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     object-fit: contain;
     border-radius: 50%;
 }
