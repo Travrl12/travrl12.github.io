@@ -224,9 +224,9 @@ html.dark-mode a:visited {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
 }
 
-/* Base styling for certification images */
+/* Base styling for certification images (desktop) */
 .cert-badge {
-    max-width: 90%; /* Prevents the image from occupying full width */
+    max-width: 80%; /* Limits width on larger screens */
     width: auto;
     height: auto;
     display: block;
@@ -235,11 +235,19 @@ html.dark-mode a:visited {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional padding and constraint for mobile screens */
+/* Adjustments for tablet screens */
+@media (max-width: 1024px) {
+    .cert-badge {
+        max-width: 70%; /* Slightly smaller on tablets */
+    }
+}
+
+/* Adjustments for mobile screens */
 @media (max-width: 600px) {
     .cert-badge {
-        padding: 0 10px; /* Applies padding to both left and right */
-        max-width: 90%; /* Constrains width further for small screens */
-        box-sizing: border-box; /* Ensures padding doesn’t overflow */
+        max-width: 90%; /* Further reduction for small screens */
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
 }
