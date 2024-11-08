@@ -31,6 +31,33 @@ html.dark-mode, body.dark-mode {
     color: var(--color-dark-text);
 }
 
+/* Centered Main Content */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Paragraph Padding for Tablet Screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    p {
+        padding-left: 20px; /* Extra padding for tablet screens */
+        padding-right: 20px;
+        box-sizing: border-box; /* Ensures padding is included within width */
+    }
+}
+
+/* Additional Adjustments for Mobile Screens */
+@media (max-width: 600px) {
+    p {
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box; /* Ensures padding is included within width */
+    }
+}
+
 /* Header Bar */
 .header-bar {
     display: flex;
