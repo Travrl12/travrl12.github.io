@@ -327,4 +327,22 @@ html.dark-mode a:visited {
         padding: 20px 15px;
     }
 }
+/* Intro Text Styling */
+#intro-text {
+    font-size: 1.5rem; /* Adjust font size as desired */
+    color: inherit;
+    min-height: 60px; /* Set a height to accommodate two lines comfortably */
+    line-height: 1.4; /* Adjust line spacing for readability */
+    text-align: center;
+    overflow-wrap: break-word; /* Ensures text wraps within the container */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem; /* Slightly smaller font for mobile */
+        min-height: 80px; /* Increase height to fit wrapped text on mobile */
+    }
+}
+
 
