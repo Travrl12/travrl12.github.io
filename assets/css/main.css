@@ -43,6 +43,24 @@ main {
     word-break: break-word;    /* Breaks long words if needed */
 }
 
+/* Intro Text Styling */
+#intro-text-container {
+    min-height: 50px; /* Consistent height to prevent layout shift */
+}
+
+#intro-text {
+    font-size: 1.5rem;
+    color: inherit;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensures words break as needed */
+}
+
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+}
+
 /* Paragraph Styling for Text Wrapping */
 p {
     overflow-wrap: break-word; /* Forces text to wrap within the element */
@@ -68,7 +86,6 @@ p {
     }
 }
 
-
 /* Header Bar */
 .header-bar {
     display: flex;
@@ -81,6 +98,9 @@ p {
     z-index: 1000;
     border-bottom: 2px solid var(--color-accent);
 }
+
+/* Further styles continue as before... */
+
 
 .header-left {
     display: flex;
