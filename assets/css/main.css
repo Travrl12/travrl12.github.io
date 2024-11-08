@@ -345,4 +345,28 @@ html.dark-mode a:visited {
     }
 }
 
+/* Container for the intro text */
+#intro-text-container {
+    min-height: 80px; /* Adjust this based on expected height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Intro Text Styling */
+#intro-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: inherit;
+    overflow-wrap: break-word;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    #intro-text {
+        font-size: 1.2rem;
+    }
+    #intro-text-container {
+        min-height: 100px; /* Extra space for two lines */
+    }
+}
