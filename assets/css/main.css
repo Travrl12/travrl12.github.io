@@ -288,4 +288,43 @@ html.dark-mode a:visited {
         box-sizing: border-box;
     }
 }
+/* Tablet-specific styling */
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Ensure the main content and paragraphs are padded */
+    main, .content, p {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto; /* Center align content */
+        max-width: 95%; /* Prevents content from touching edges */
+        overflow-wrap: break-word;
+    }
+
+    /* Adjust header and social icons for tablet view */
+    .header-bar {
+        padding: 10px 15px; /* Slightly smaller padding */
+    }
+
+    .nav-buttons .nav-button {
+        font-size: 1rem;
+        padding: 6px 12px; /* Reduce button size */
+    }
+
+    /* Ensure centered logo with appropriate size */
+    .main-logo {
+        max-width: 120px; /* Adjust logo size for tablet */
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Social icons positioning */
+    .social-icons {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    /* Additional padding for footer */
+    footer {
+        padding: 20px 15px;
+    }
+}
 
