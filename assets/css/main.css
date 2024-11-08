@@ -23,7 +23,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
 html.dark-mode, body.dark-mode {
@@ -38,12 +38,22 @@ main {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    overflow-wrap: break-word; /* Forces text to wrap within container */
+    word-wrap: break-word;     /* Ensures compatibility with older browsers */
+    word-break: break-word;    /* Breaks long words if needed */
 }
 
-/* Responsive Paragraph Padding for Tablet Screens */
+/* Paragraph Styling for Text Wrapping */
+p {
+    overflow-wrap: break-word; /* Forces text to wrap within the element */
+    word-wrap: break-word;     /* Ensures compatibility with older browsers */
+    word-break: break-word;    /* Breaks long words if necessary */
+}
+
+/* Responsive Padding for Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
     p {
-        padding-left: 20px; /* Extra padding for tablet screens */
+        padding-left: 20px; /* Adds padding for readability on tablet screens */
         padding-right: 20px;
         box-sizing: border-box; /* Ensures padding is included within width */
     }
@@ -57,6 +67,7 @@ main {
         box-sizing: border-box; /* Ensures padding is included within width */
     }
 }
+
 
 /* Header Bar */
 .header-bar {
