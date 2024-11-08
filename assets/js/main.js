@@ -68,3 +68,4 @@ window.onload = function () {
     // Initialize Typed.js for dynamic typing effect
     initializeTyped();
 };
+document.getElementById('intro-text').style.minHeight = '60px';
