@@ -12,7 +12,4 @@ I’m passionate about offensive security and red teaming. This portfolio highli
 
 ---
 
-### Hack The Box Progress
-- **HTB Student ID/API:** HTB-092B7967A4
-
 I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on [GitHub](https://github.com/Travrl12) and [LinkedIn](https://www.linkedin.com/in/travisrlee) or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile for the latest progress!
