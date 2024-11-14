@@ -11,4 +11,8 @@ Welcome to the portfolio of Travis R. Lee, specializing in Red Teaming and Offen
 I’m passionate about offensive security and red teaming. This portfolio highlights my progress, my completed projects, and my journey through Hack The Box and other platforms as I hone my skills in penetration testing and ethical hacking.
 
 ---
+
+### Hack The Box Progress
+- **HTB Student ID/API:** HTB-092B7967A4
+
 I continue to challenge myself and grow in this field. Stay tuned as I work through more machines and gain new certifications. Feel free to connect with me on [GitHub](https://github.com/Travrl12) and [LinkedIn](https://www.linkedin.com/in/travisrlee) or check out my [Hack The Box](https://app.hackthebox.com/profile/2105172) profile for the latest progress!
